@@ -471,7 +471,7 @@ Le premier vrai duel de course instantané et équitable.
 3. **Validation en temps réel** : les coureurs voient le parcours avant d'accepter
 
 **Exemple d'usage concret :**
-Paul est à 800m au nord du parc, Emma à 700m au sud → l'algorithme trouve un point à 1,2km pour chacun vers l'est → départ synchronisé → course équitable garantie
+Paul est à 800m au nord du parc, Emma à 800m au sud → l'algorithme trouve un point à 1,2km à l'est pour chacun → départ synchronisé → course équitable garantie
 
 **Bénéfices utilisateur :**
 ✅ Pas de triche de position → course 100% équitable
