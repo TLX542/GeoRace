@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="420">
-  <rect width="100%" height="100%" fill="#fff"/>
-  <text x="40" y="60" font-family="Arial" font-size="22">Résultat</text>
-  <text x="40" y="110" font-family="Arial" font-size="18">1. Vous</text>
-  <text x="40" y="200" font-family="Arial" font-size="16">+25 ELO</text>
-  <rect x="460" y="320" width="160" height="50" fill="#007bff"/>
-  <text x="510" y="350" font-family="Arial" font-size="14" fill="#fff">Partager</text>
-</svg>
