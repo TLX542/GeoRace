@@ -16,22 +16,33 @@ else
   set -eu
 fi
 
-# Output to build_output directory next to the script (not zipped)
+# Output directly to repository root
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 if [ -z "$SCRIPT_DIR" ]; then
   echo "Error: Failed to determine script directory"
   exit 1
 fi
-OUTDIR="$SCRIPT_DIR/build_output"
+OUTDIR="$SCRIPT_DIR"
 AUTHOR="TLX542"
 
-echo "Creating output dir: $OUTDIR"
-rm -rf "$OUTDIR"
+# Backup function: renames existing file with timestamp
+backup_if_exists() {
+  local file="$1"
+  if [ -f "$file" ]; then
+    local timestamp=$(date +%Y%m%d%H%M%S)
+    local backup="${file}.bak.${timestamp}"
+    echo "  Backing up existing file: $(basename "$file") -> $(basename "$backup")"
+    mv "$file" "$backup"
+  fi
+}
+
+echo "Creating assets directory if needed..."
 mkdir -p "$OUTDIR/assets"
 
 echo "Generating markdown and assets..."
 
 # --- GeoRace.md (original) ---
+backup_if_exists "$OUTDIR/GeoRace.md"
 cat > "$OUTDIR/GeoRace.md" <<'EOF'
 # GeoRace
 
@@ -407,6 +418,7 @@ L'ambition est de devenir **la référence de la course compétitive en temps r�
 EOF
 
 # --- GeoRace_ppt.md ---
+backup_if_exists "$OUTDIR/GeoRace_ppt.md"
 cat > "$OUTDIR/GeoRace_ppt.md" <<'EOF'
 ### 🟦 Slide 1 - Titre
 
@@ -861,6 +873,7 @@ EOF
 
 
 # --- Other MD files (shortened for brevity) ---
+backup_if_exists "$OUTDIR/GeoRace_Personas.md"
 cat > "$OUTDIR/GeoRace_Personas.md" <<'EOFPERS'
 # Personas GeoRace
 
@@ -880,6 +893,7 @@ cat > "$OUTDIR/GeoRace_Personas.md" <<'EOFPERS'
 - Besoins : stats avancées, anti-triche robuste
 EOFPERS
 
+backup_if_exists "$OUTDIR/GeoRace_PBS.md"
 cat > "$OUTDIR/GeoRace_PBS.md" <<'EOFPBS'
 # PBS — Périmètre fonctionnel
 
@@ -894,6 +908,7 @@ cat > "$OUTDIR/GeoRace_PBS.md" <<'EOFPBS'
 - Tests 2-3 villes
 EOFPBS
 
+backup_if_exists "$OUTDIR/GeoRace_Benchmark_Matrix.md"
 cat > "$OUTDIR/GeoRace_Benchmark_Matrix.md" <<'EOFBENCH'
 # Benchmark concurrents
 
@@ -905,6 +920,7 @@ cat > "$OUTDIR/GeoRace_Benchmark_Matrix.md" <<'EOFBENCH'
 | **GeoRace** | **Oui** | **Oui** | **Oui** | **Oui** |
 EOFBENCH
 
+backup_if_exists "$OUTDIR/GeoRace_Contexte_Securite.md"
 cat > "$OUTDIR/GeoRace_Contexte_Securite.md" <<'EOFCTX'
 # Contexte & Sécurité
 
@@ -924,6 +940,7 @@ cat > "$OUTDIR/GeoRace_Contexte_Securite.md" <<'EOFCTX'
 - DDoS gateway
 EOFCTX
 
+backup_if_exists "$OUTDIR/assets/architecture.mmd"
 cat > "$OUTDIR/assets/architecture.mmd" <<'EOFMMD'
 flowchart LR
   A[App Mobile] -->|WebSocket| GW[Gateway]
@@ -936,6 +953,7 @@ flowchart LR
   Race --> DB[(PostGIS)]
 EOFMMD
 
+backup_if_exists "$OUTDIR/GeoRace_Architecture.md"
 cat > "$OUTDIR/GeoRace_Architecture.md" <<'EOFARCH'
 # Architecture MVP
 
@@ -946,6 +964,7 @@ cat > "$OUTDIR/GeoRace_Architecture.md" <<'EOFARCH'
 - Kubernetes auto-scaling
 EOFARCH
 
+backup_if_exists "$OUTDIR/GeoRace_Stack_Justification.md"
 cat > "$OUTDIR/GeoRace_Stack_Justification.md" <<'EOFSTACK'
 # Stack technique
 
@@ -964,6 +983,7 @@ cat > "$OUTDIR/GeoRace_Stack_Justification.md" <<'EOFSTACK'
 - GitHub Actions
 EOFSTACK
 
+backup_if_exists "$OUTDIR/GeoRace_Wireframes.md"
 cat > "$OUTDIR/GeoRace_Wireframes.md" <<'EOFWIRE'
 # Wireframes
 
@@ -984,6 +1004,7 @@ cat > "$OUTDIR/GeoRace_Wireframes.md" <<'EOFWIRE'
 ![Result](assets/wireframe_result.svg)
 EOFWIRE
 
+backup_if_exists "$OUTDIR/GeoRace_Couts_Table.md"
 cat > "$OUTDIR/GeoRace_Couts_Table.md" <<'EOFCOST'
 # Chiffrage MVP (6 mois)
 
@@ -994,6 +1015,7 @@ cat > "$OUTDIR/GeoRace_Couts_Table.md" <<'EOFCOST'
 **Total: ~302.5k EUR**
 EOFCOST
 
+backup_if_exists "$OUTDIR/GeoRace_Etude_Comparative.md"
 cat > "$OUTDIR/GeoRace_Etude_Comparative.md" <<'EOFCOMP'
 # Étude hébergement
 
@@ -1008,6 +1030,7 @@ cat > "$OUTDIR/GeoRace_Etude_Comparative.md" <<'EOFCOMP'
 **Choix: Cloud managed**
 EOFCOMP
 
+backup_if_exists "$OUTDIR/GeoRace_Risques_Mitigation.md"
 cat > "$OUTDIR/GeoRace_Risques_Mitigation.md" <<'EOFRISK'
 # Matrice risques
 
@@ -1019,6 +1042,7 @@ cat > "$OUTDIR/GeoRace_Risques_Mitigation.md" <<'EOFRISK'
 | Rejet Store | M | H | Flow onboarding |
 EOFRISK
 
+backup_if_exists "$OUTDIR/GeoRace_EcoScore.md"
 cat > "$OUTDIR/GeoRace_EcoScore.md" <<'EOFECO'
 # Éco-score
 
@@ -1034,6 +1058,7 @@ cat > "$OUTDIR/GeoRace_EcoScore.md" <<'EOFECO'
 EOFECO
 
 # --- SVGs ---
+backup_if_exists "$OUTDIR/assets/wireframe_home.svg"
 cat > "$OUTDIR/assets/wireframe_home.svg" <<'EOFSVG1'
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="500">
   <rect width="100%" height="100%" fill="#fff"/>
@@ -1046,6 +1071,7 @@ cat > "$OUTDIR/assets/wireframe_home.svg" <<'EOFSVG1'
 </svg>
 EOFSVG1
 
+backup_if_exists "$OUTDIR/assets/wireframe_duel_modal.svg"
 cat > "$OUTDIR/assets/wireframe_duel_modal.svg" <<'EOFSVG2'
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="360">
   <rect width="100%" height="100%" fill="#fff"/>
@@ -1058,6 +1084,7 @@ cat > "$OUTDIR/assets/wireframe_duel_modal.svg" <<'EOFSVG2'
 </svg>
 EOFSVG2
 
+backup_if_exists "$OUTDIR/assets/wireframe_live.svg"
 cat > "$OUTDIR/assets/wireframe_live.svg" <<'EOFSVG3'
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="500">
   <rect width="100%" height="100%" fill="#fff"/>
@@ -1068,6 +1095,7 @@ cat > "$OUTDIR/assets/wireframe_live.svg" <<'EOFSVG3'
 </svg>
 EOFSVG3
 
+backup_if_exists "$OUTDIR/assets/wireframe_result.svg"
 cat > "$OUTDIR/assets/wireframe_result.svg" <<'EOFSVG4'
 <svg xmlns="http://www.w3.org/2000/svg" width="700" height="420">
   <rect width="100%" height="100%" fill="#fff"/>
@@ -1115,16 +1143,23 @@ cd "$ORIGDIR"
 echo ""
 echo "✅ Build complete!"
 echo ""
-echo "Output files created in: $OUTDIR"
+echo "Files generated in repository root:"
 echo ""
-echo "Generated files:"
+echo "Generated markdown files:"
 if [ -d "$OUTDIR" ]; then
-  find "$OUTDIR" -type f | sort | sed 's|^|  - |'
+  find "$OUTDIR" -maxdepth 1 -name "*.md" -type f | sort | sed 's|^|  - |'
 else
   echo "  (none - build may have failed)"
   exit 1
 fi
 echo ""
-echo "To inspect the generated files, navigate to:"
-echo "  $OUTDIR"
+echo "Generated assets:"
+if [ -d "$OUTDIR/assets" ]; then
+  find "$OUTDIR/assets" -type f | sort | sed 's|^|  - |'
+else
+  echo "  (no assets directory)"
+fi
+echo ""
+echo "Generated documents (if pandoc available):"
+find "$OUTDIR" -maxdepth 1 -name "*.docx" -o -name "*.pptx" -type f 2>/dev/null | sort | sed 's|^|  - |'
 echo ""

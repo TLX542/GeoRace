@@ -3,6 +3,9 @@ geo_race_export/
 build_output/
 GeoRace_documents_bundle.zip
 
+# Backup files from build scripts
+*.bak.*
+
 # OS files
 .DS_Store
 Thumbs.db
