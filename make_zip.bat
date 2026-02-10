@@ -26,11 +26,11 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "& { ^
     $ZIPNAME = '%ZIPNAME%'; ^
     ^
     if (Test-Path $ZIPNAME) { ^
-        Write-Host 'Removing existing ZIP: $ZIPNAME'; ^
+        Write-Host \"Removing existing ZIP: $ZIPNAME\"; ^
         Remove-Item -Force $ZIPNAME; ^
     }; ^
     ^
-    Write-Host 'Compressing $OUTDIR to $ZIPNAME...'; ^
+    Write-Host \"Compressing $OUTDIR to $ZIPNAME...\"; ^
     Compress-Archive -Force -LiteralPath $OUTDIR -DestinationPath $ZIPNAME; ^
     ^
     if (Test-Path $ZIPNAME) { ^

@@ -118,7 +118,7 @@ Le premier vrai duel de course instantané et équitable. ^
 ❌ **Segments fixes** : toujours les mêmes parcours, aucune surprise ^
 ❌ **Motivation en déclin** : partager des stats ne crée pas d'excitation ^
 ^
-**Résultat :** 60%% des utilisateurs abandonnent après 3 mois ^
+**Résultat :** 60% des utilisateurs abandonnent après 3 mois ^
 '@; ^
 $pptContent | Out-File -FilePath (Join-Path $OUTDIR 'GeoRace_ppt.md') -Encoding UTF8; ^
 ^
@@ -145,7 +145,7 @@ $pandocPath = Get-Command pandoc -ErrorAction SilentlyContinue; ^
 if ($pandocPath) { ^
     Write-Host 'Pandoc found, generating PPTX...'; ^
     Push-Location $OUTDIR; ^
-    pandoc -M title='GeoRace' -M author='$AUTHOR' -f markdown -t pptx -o 'GeoRace_presentation.pptx' 'GeoRace_ppt.md' 2>&1; ^
+    pandoc -M title='GeoRace' -M author=\"$AUTHOR\" -f markdown -t pptx -o 'GeoRace_presentation.pptx' 'GeoRace_ppt.md' 2>&1; ^
     if ($LASTEXITCODE -eq 0) { ^
         Write-Host '  PPTX generated successfully'; ^
     } else { ^
