@@ -30,7 +30,7 @@ $OUTDIR = 'geo_race_export'; ^
 $ZIPNAME = 'GeoRace_documents_bundle.zip'; ^
 $AUTHOR = 'TLX542'; ^
 ^
-Write-Host 'Creating output directory: $OUTDIR'; ^
+Write-Host \"Creating output directory: $OUTDIR\"; ^
 if (Test-Path $OUTDIR) { Remove-Item -Recurse -Force $OUTDIR }; ^
 New-Item -ItemType Directory -Force -Path $OUTDIR | Out-Null; ^
 New-Item -ItemType Directory -Force -Path (Join-Path $OUTDIR 'assets') | Out-Null; ^
@@ -163,7 +163,7 @@ if (Test-Path $ZIPNAME) { Remove-Item -Force $ZIPNAME }; ^
 Compress-Archive -Force -LiteralPath $OUTDIR -DestinationPath $ZIPNAME; ^
 ^
 if (Test-Path $ZIPNAME) { ^
-    Write-Host '✅ ZIP created: $ZIPNAME'; ^
+    Write-Host \"✅ ZIP created: $ZIPNAME\"; ^
     Write-Host ''; ^
     Write-Host 'Build complete!'; ^
     exit 0; ^
