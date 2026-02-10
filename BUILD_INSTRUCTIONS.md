@@ -33,9 +33,11 @@ build_zip.bat
 ```
 
 **Behavior:**
-1. **Priority 1:** If Git Bash is available, delegates to `build_zip.sh`
-2. **Priority 2:** If WSL (Windows Subsystem for Linux) is available, delegates to `build_zip.sh` via WSL
-3. **Fallback:** Uses embedded PowerShell to generate essential files and create ZIP
+1. **Priority 1:** If Git Bash is available, delegates to `build_zip.sh` (generates full 22-slide presentation)
+2. **Priority 2:** If WSL (Windows Subsystem for Linux) is available, delegates to `build_zip.sh` via WSL (generates full 22-slide presentation)
+3. **Fallback:** Uses embedded PowerShell to generate essential files and create ZIP (generates minimal 3-slide presentation)
+
+**Note:** For the complete 22-slide presentation with all new content, install Git Bash or WSL. The PowerShell fallback generates a minimal version with only the first 3 slides to avoid content duplication.
 
 **Requirements:**
 - Windows 7 or later (for PowerShell)
@@ -92,11 +94,13 @@ The build scripts generate:
 
 ## Key Features of the Presentation
 
-The generated `GeoRace_ppt.md` includes **22 slides** with:
+The generated `GeoRace_ppt.md` includes **22 slides** (when using bash/WSL or build_zip.sh) with:
 
 1. **Slide 2 - Pitch 30-45s pour mercredi**: Ready-to-present 30-45 second pitch
 2. **Slide 10 - Pourquoi nous nous démarquons**: Barriers to entry and competitive advantages
 3. **Slide 12 - Comment convertir les utilisateurs existants**: Concrete tactics for converting users from Strava/Nike Run Club
+
+**Note:** The PowerShell fallback in `build_zip.bat` (when bash/WSL is not available) generates only the first 3 slides. For the complete 22-slide presentation, use bash/WSL or run `build_zip.sh` directly.
 
 Enhanced emphasis on:
 - **DUEL mode** as the core differentiator

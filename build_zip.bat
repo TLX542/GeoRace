@@ -1,6 +1,7 @@
 @echo off
 REM build_zip.bat - Windows batch script to create GeoRace documents bundle
 REM Priority: use bash if available, otherwise fallback to PowerShell
+REM NOTE: Full 22-slide presentation requires bash/WSL. PowerShell fallback generates minimal 3-slide version.
 
 echo GeoRace Documents Builder (Windows)
 echo =====================================
@@ -122,7 +123,7 @@ Le premier vrai duel de course instantané et équitable. ^
 '@; ^
 $pptContent | Out-File -FilePath (Join-Path $OUTDIR 'GeoRace_ppt.md') -Encoding UTF8; ^
 ^
-Write-Host 'Generated GeoRace_ppt.md (partial - for pandoc conversion)'; ^
+Write-Host 'Generated GeoRace_ppt.md (minimal 3-slide version - use bash/WSL for full 22-slide presentation)'; ^
 ^
 # Create minimal assets ^
 $mmdContent = @' ^
@@ -145,7 +146,7 @@ $pandocPath = Get-Command pandoc -ErrorAction SilentlyContinue; ^
 if ($pandocPath) { ^
     Write-Host 'Pandoc found, generating PPTX...'; ^
     Push-Location $OUTDIR; ^
-    pandoc -M title='GeoRace' -M author=\"$AUTHOR\" -f markdown -t pptx -o 'GeoRace_presentation.pptx' 'GeoRace_ppt.md' 2>&1; ^
+    pandoc -M title='GeoRace' -M author='TLX542' -f markdown -t pptx -o 'GeoRace_presentation.pptx' 'GeoRace_ppt.md' 2>&1; ^
     if ($LASTEXITCODE -eq 0) { ^
         Write-Host '  PPTX generated successfully'; ^
     } else { ^
