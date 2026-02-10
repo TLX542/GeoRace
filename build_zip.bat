@@ -1,5 +1,5 @@
 @echo off
-REM build_zip.bat - Windows batch script to create GeoRace documents bundle
+REM build_zip.bat - Windows batch script to build GeoRace documents
 REM Priority: use bash if available, otherwise fallback to PowerShell
 REM NOTE: Full 22-slide presentation requires bash/WSL. PowerShell fallback generates minimal 3-slide version.
 
@@ -27,8 +27,7 @@ echo.
 
 REM Use PowerShell to execute the embedded script
 powershell -NoProfile -ExecutionPolicy Bypass -Command "& { ^
-$OUTDIR = 'geo_race_export'; ^
-$ZIPNAME = 'GeoRace_documents_bundle.zip'; ^
+$OUTDIR = 'build_output'; ^
 $AUTHOR = 'TLX542'; ^
 ^
 Write-Host \"Creating output directory: $OUTDIR\"; ^
@@ -158,20 +157,20 @@ if ($pandocPath) { ^
     Write-Host '  Install pandoc from https://pandoc.org/ to enable PPTX generation'; ^
 }; ^
 ^
-# Create ZIP archive ^
-Write-Host 'Creating ZIP archive...'; ^
-if (Test-Path $ZIPNAME) { Remove-Item -Force $ZIPNAME }; ^
-Compress-Archive -Force -LiteralPath $OUTDIR -DestinationPath $ZIPNAME; ^
-^
-if (Test-Path $ZIPNAME) { ^
-    Write-Host \"✅ ZIP created: $ZIPNAME\"; ^
-    Write-Host ''; ^
-    Write-Host 'Build complete!'; ^
-    exit 0; ^
-} else { ^
-    Write-Host '❌ Error: Failed to create ZIP'; ^
-    exit 1; ^
+# Summary of generated files ^
+Write-Host ''; ^
+Write-Host '✅ Build complete!'; ^
+Write-Host ''; ^
+Write-Host \"Output files created in: $OUTDIR\"; ^
+Write-Host ''; ^
+Write-Host 'Generated files:'; ^
+Get-ChildItem -Path $OUTDIR -Recurse -File | ForEach-Object { ^
+    Write-Host \"  - $($_.FullName.Replace((Get-Location).Path + [IO.Path]::DirectorySeparatorChar, ''))\"; ^
 }; ^
+Write-Host ''; ^
+Write-Host \"To inspect the generated files, navigate to: $OUTDIR\"; ^
+Write-Host ''; ^
+exit 0; ^
 }"
 
 if %ERRORLEVEL% neq 0 (

@@ -1,8 +1,24 @@
 #!/usr/bin/env bash
-set -euo pipefail
 
-OUTDIR="geo_race_export"
-ZIPNAME="GeoRace_documents_bundle.zip"
+# Re-exec under bash if not already running under bash (for Windows compatibility)
+# This avoids "set: pipefail: invalid option name" errors with dash/sh
+if [ -z "$BASH_VERSION" ]; then
+  if command -v bash >/dev/null 2>&1; then
+    exec bash "$0" "$@"
+  fi
+  # If bash not found, continue anyway (pipefail won't be set below)
+fi
+
+# Only enable pipefail if running under bash
+if [ -n "$BASH_VERSION" ]; then
+  set -euo pipefail
+else
+  set -eu
+fi
+
+# Output to build_output directory next to the script (not zipped)
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+OUTDIR="$SCRIPT_DIR/build_output"
 AUTHOR="TLX542"
 
 echo "Creating output dir: $OUTDIR"
@@ -1091,8 +1107,20 @@ fi
 
 cd "$ORIGDIR"
 
-# --- ZIP ---
-echo "Creating ZIP..."
-zip -q -r "$ZIPNAME" "$OUTDIR" || zip -r "$ZIPNAME" "$OUTDIR"
-echo "✅ ZIP: $ZIPNAME"
-echo "Done!"
+# --- Summary ---
+echo ""
+echo "✅ Build complete!"
+echo ""
+echo "Output files created in: $OUTDIR"
+echo ""
+echo "Generated files:"
+if [ -d "$OUTDIR" ]; then
+  find "$OUTDIR" -type f | sort | sed 's|^|  - |'
+else
+  echo "  (none - build may have failed)"
+  exit 1
+fi
+echo ""
+echo "To inspect the generated files, navigate to:"
+echo "  $OUTDIR"
+echo ""
