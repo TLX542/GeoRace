@@ -1,5 +1,6 @@
 # Build artifacts
 geo_race_export/
+build_output/
 GeoRace_documents_bundle.zip
 
 # OS files
