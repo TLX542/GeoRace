@@ -1161,5 +1161,5 @@ else
 fi
 echo ""
 echo "Generated documents (if pandoc available):"
-find "$OUTDIR" -maxdepth 1 -name "*.docx" -o -name "*.pptx" -type f 2>/dev/null | sort | sed 's|^|  - |'
+find "$OUTDIR" -maxdepth 1 \( -name "*.docx" -o -name "*.pptx" \) -type f | sort | sed 's|^|  - |'
 echo ""
