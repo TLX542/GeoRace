@@ -20,13 +20,13 @@ Write-Host ""
 $bashAvailable = Get-Command bash -ErrorAction SilentlyContinue
 
 if ($bashAvailable) {
-    Write-Host "Found bash - executing build_presentation.sh..." -ForegroundColor Green
+    Write-Host "Found bash - executing build_zip.sh..." -ForegroundColor Green
     Write-Host ""
     
     # Make sure the shell script is executable (if on WSL/Git Bash)
-    if (Test-Path "build_presentation.sh") {
+    if (Test-Path "build_zip.sh") {
         try {
-            bash build_presentation.sh
+            bash build_zip.sh
             
             if ($LASTEXITCODE -eq 0) {
                 Write-Host ""
@@ -40,16 +40,16 @@ if ($bashAvailable) {
                 Get-ChildItem -Filter "*.docx" | ForEach-Object { Write-Host "  - $($_.Name)" -ForegroundColor White }
                 exit 0
             } else {
-                Write-Host "ERROR: build_presentation.sh failed with exit code $LASTEXITCODE" -ForegroundColor Red
+                Write-Host "ERROR: build_zip.sh failed with exit code $LASTEXITCODE" -ForegroundColor Red
                 exit 1
             }
         } catch {
-            Write-Host "ERROR: Failed to execute build_presentation.sh" -ForegroundColor Red
+            Write-Host "ERROR: Failed to execute build_zip.sh" -ForegroundColor Red
             Write-Host $_.Exception.Message -ForegroundColor Red
             exit 1
         }
     } else {
-        Write-Host "ERROR: build_presentation.sh not found in current directory" -ForegroundColor Red
+        Write-Host "ERROR: build_zip.sh not found in current directory" -ForegroundColor Red
         exit 1
     }
 } else {
@@ -67,7 +67,7 @@ if ($bashAvailable) {
     Write-Host "OPTION 2 - Use WSL (Windows Subsystem for Linux):" -ForegroundColor Cyan
     Write-Host "  1. Enable WSL: wsl --install" -ForegroundColor White
     Write-Host "  2. Restart your computer" -ForegroundColor White
-    Write-Host "  3. Run: wsl bash build_presentation.sh" -ForegroundColor White
+    Write-Host "  3. Run: wsl bash build_zip.sh" -ForegroundColor White
     Write-Host ""
     Write-Host "OPTION 3 - Install Chocolatey and then bash:" -ForegroundColor Cyan
     Write-Host "  1. Install Chocolatey: https://chocolatey.org/install" -ForegroundColor White

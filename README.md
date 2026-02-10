@@ -23,10 +23,10 @@ Ce repository contient :
 
 ```bash
 # Rendre le script exécutable (si nécessaire)
-chmod +x build_presentation.sh
+chmod +x build_zip.sh
 
 # Exécuter le builder
-./build_presentation.sh
+./build_zip.sh
 ```
 
 Le script va générer tous les fichiers (`.md`, `.docx`, `.pptx`) **directement dans le répertoire courant**.
@@ -48,10 +48,10 @@ build_presentation.bat
 **Option 3 - Git Bash / WSL** :
 ```bash
 # Si vous avez Git Bash ou WSL installé
-bash build_presentation.sh
+bash build_zip.sh
 ```
 
-> **Note** : Les scripts Windows (.bat et .ps1) utilisent en interne le script shell principal (`build_presentation.sh`). Ils vérifient d'abord si `bash` est disponible (via Git Bash ou WSL).
+> **Note** : Les scripts Windows (.bat et .ps1) utilisent en interne le script shell principal (`build_zip.sh`). Ils vérifient d'abord si `bash` est disponible (via Git Bash ou WSL).
 
 ### Fichiers générés
 
@@ -60,8 +60,11 @@ Après l'exécution du script, vous trouverez dans le répertoire courant :
 - **GeoRace_presentation.pptx** : Présentation PowerPoint principale
 - **GeoRace.docx**, **GeoRace_Architecture.docx**, etc. : Documents Word
 - **assets/** : Répertoire contenant les images et SVG
+- **GeoRace_ppt.md**, **GeoRace.md**, etc. : Fichiers markdown intermédiaires
 
 > **Important** : Les fichiers sont générés **dans le même répertoire** que les scripts (pas dans un dossier séparé, pas dans un ZIP). Cela facilite la révision par le jury.
+
+> **Note** : Le script `build_zip.sh` a été modifié pour ne plus créer de fichier ZIP. Il génère maintenant tous les fichiers directement dans le répertoire courant.
 
 ## 📊 Modifications apportées à la présentation
 
@@ -104,11 +107,12 @@ Le jury a demandé :
 
 ## 📝 Checklist pour les revieweurs
 
-- [ ] Vérifier que `build_presentation.sh` génère les fichiers dans le répertoire courant (pas de ZIP)
+- [ ] Vérifier que `build_zip.sh` génère les fichiers dans le répertoire courant (pas de ZIP)
 - [ ] Vérifier que les scripts Windows (.bat et .ps1) fonctionnent correctement
 - [ ] Ouvrir `GeoRace_presentation.pptx` et valider les slides 7, 8 et 10
 - [ ] Confirmer que les arguments de différenciation sont clairs et convaincants
 - [ ] Confirmer que la stratégie d'acquisition est concrète et actionnable
+- [ ] Vérifier que le script ne crée plus de fichier ZIP "GeoRace_documents_bundle.zip"
 
 ## 🚀 Prochaines étapes
 

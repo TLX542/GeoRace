@@ -43,8 +43,8 @@ REM Or you can run this from WSL/Git Bash which includes bash
 REM Check if we're in a WSL/Git Bash compatible environment
 where bash >nul 2>&1
 if %ERRORLEVEL% EQU 0 (
-    echo Found bash - executing build_presentation.sh...
-    bash build_presentation.sh
+    echo Found bash - executing build_zip.sh...
+    bash build_zip.sh
     if %ERRORLEVEL% EQU 0 (
         echo.
         echo ========================================
@@ -53,7 +53,7 @@ if %ERRORLEVEL% EQU 0 (
         echo ========================================
         exit /b 0
     ) else (
-        echo ERROR: build_presentation.sh failed
+        echo ERROR: build_zip.sh failed
         exit /b 1
     )
 ) else (
@@ -70,7 +70,7 @@ if %ERRORLEVEL% EQU 0 (
     echo.
     echo OPTION 2 - Use WSL (Windows Subsystem for Linux):
     echo   1. Enable WSL: wsl --install
-    echo   2. Run: wsl bash build_presentation.sh
+    echo   2. Run: wsl bash build_zip.sh
     echo.
     echo OPTION 3 - Use PowerShell script instead:
     echo   Run: powershell -ExecutionPolicy Bypass -File build_presentation.ps1

@@ -1,18 +1,23 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-OUTDIR="geo_race_export"
-ZIPNAME="GeoRace_documents_bundle.zip"
+# Modified build script - outputs are now created in the same directory to facilitate reviewers
+# No longer creates a ZIP bundle, all files are generated directly in the current directory
+
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+cd "$SCRIPT_DIR"
+
 AUTHOR="TLX542"
 
-echo "Creating output dir: $OUTDIR"
-rm -rf "$OUTDIR"
-mkdir -p "$OUTDIR/assets"
+echo "Generating presentation files in current directory: $SCRIPT_DIR"
+echo "Creating assets subdirectory..."
+mkdir -p "assets"
 
 echo "Generating markdown and assets..."
 
 # --- GeoRace.md (original) ---
-cat > "$OUTDIR/GeoRace.md" <<'EOF'
+cat > "GeoRace.md" <<'EOF'
 # GeoRace
 
 ## GeoRace (Competitive Running App)
@@ -387,7 +392,7 @@ L'ambition est de devenir **la référence de la course compétitive en temps r�
 EOF
 
 # --- GeoRace_ppt.md ---
-cat > "$OUTDIR/GeoRace_ppt.md" <<'EOF'
+cat > "GeoRace_ppt.md" <<'EOF'
 ### 🟦 Slide 1 - Titre
 
 **GeoRace**
@@ -485,40 +490,87 @@ Le premier vrai duel de course instantané et équitable.
 
 ---
 
-### 🟦 Slide 7 - Pourquoi les utilisateurs vont switcher
+### 🟦 Slide 7 - Pourquoi les utilisateurs nous rejoindront
 
-**3 raisons concrètes de quitter Strava/Nike Run Club**
+**ARGUMENTS CONCRETS POUR CONVAINCRE LES UTILISATEURS ACTIFS SUR D'AUTRES APPS**
 
-**1️⃣ LA COMPÉTITION RÉELLE**
-- Strava : "J'ai fait 5km en 28min" → 0 émotion
-- GeoRace : "J'ai BATTU ce coureur qui me narguait !" → adrénaline ++
+**1️⃣ DUEL INSTANTANÉ : L'ADRÉNALINE D'UNE VRAIE COURSE**
+- Fini l'ennui de courir seul en comparant des chiffres
+- Compétition réelle, en temps réel, avec des adversaires proches
+- Gratification immédiate : "J'ai gagné !" au lieu de "J'ai fait 5km en 28min"
 
-**2️⃣ L'INTERACTION SOCIALE ACTIVE**
-- Nike Run Club : partage de stats passives
-- GeoRace : duels live, chat en direct, défis entre amis
+**2️⃣ PROGRESSION VISIBLE VIA ELO**
+- Système de classement clair et motivant (comme les échecs)
+- Chaque victoire vous fait monter : Bronze → Argent → Or → Platine
+- Objectif tangible : "Je veux atteindre 1500 ELO ce mois-ci"
+- Contrairement à Strava : pas besoin de courir plus vite, juste de battre des adversaires de votre niveau
 
-**3️⃣ LA PROGRESSION VISIBLE**
-- Runkeeper : graphiques de distance et temps
-- GeoRace : classement ELO qui monte, badges débloqués, statut (Bronze → Or)
+**3️⃣ FAIR PLAY GARANTI**
+- Point d'arrivée équidistant : tout le monde parcourt la même distance
+- Matchmaking intelligent : oppositions équilibrées (pas de débutant vs expert)
+- Anti-triche robuste : détection automatique des tricheurs et bannissement
+- Justice sportive : vous gagnez si vous courez mieux, pas si vous trichez
 
-**Les utilisateurs ne veulent plus juste "tracker" leurs courses.**  
-**Ils veulent GAGNER.**
+**4️⃣ PRIVACY-FIRST : VIE PRIVÉE RESPECTÉE**
+- Position GPS partagée UNIQUEMENT pendant les duels actifs
+- Pas de tracking permanent comme sur Strava (qui sait où vous habitez)
+- Mode anonyme : pas besoin de donner votre vraie identité
+- Contrôle total : bloquez des utilisateurs, limitez votre zone de confort
+
+**5️⃣ MICRO-COMPÉTITIONS LOCALES**
+- Affrontez vos voisins et collègues : "Top 10 de Paris 15e"
+- Tournois hebdomadaires dans votre quartier
+- Effet communauté : vous courez avec des gens de votre ville, pas des inconnus lointains
+
+**6️⃣ GAIN DE STATUT SOCIAL GRÂCE AUX BADGES**
+- Badges débloquables : "5 victoires d'affilée", "Champion local", "Tueur de géants"
+- Profil de compétiteur : montrez vos exploits, pas juste vos kilomètres
+- Chat et smack talk : créez des rivalités amicales
+
+**➜ STRAVA VOUS DIT COMBIEN VOUS AVEZ COURU.**  
+**➜ GEORACE VOUS DIT SI VOUS AVEZ GAGNÉ.**
+
+**La motivation ne vient pas du tracking. Elle vient de la COMPÉTITION.**
 
 ---
 
-### 🟦 Slide 8 - Tableau comparatif : GeoRace vs Concurrents
+### 🟦 Slide 8 - Fonctionnalités différenciantes : Ce qui nous distingue
 
-| Fonctionnalité | Strava | Nike Run Club | Runkeeper | **GeoRace** |
-|----------------|:------:|:-------------:|:---------:|:-----------:|
-| Duels en temps réel | ❌ | ❌ | ❌ | ✅ |
-| Point d'arrivée équidistant | ❌ | ❌ | ❌ | ✅ |
-| Matchmaking ELO | ❌ | ❌ | ❌ | ✅ |
-| Compétition synchrone | ❌ | ❌ | ❌ | ✅ |
-| Tracking GPS | ✅ | ✅ | ✅ | ✅ |
-| Segments fixes | ✅ | ❌ | ❌ | ❌ |
-| Défis asynchrones | ✅ | ✅ | ❌ | ✅ |
+**NOS AVANTAGES UNIQUES**
 
-**GeoRace = Seule app de duel instantané et équitable**
+🏁 **DUEL EN TEMPS RÉEL AVEC FINISH ÉQUIDISTANT**
+- Algorithme propriétaire : calcul d'un point d'arrivée équidistant pour tous
+- Garantie d'équité : chaque participant parcourt exactement la même distance
+- Aucun concurrent ne propose cette technologie
+
+🎯 **MATCHMAKING ELO INTELLIGENT**
+- Système de classement comme aux échecs
+- Oppositions équilibrées : adversaires de niveau similaire (±100 ELO)
+- Progression motivante : chaque victoire compte, chaque défaite enseigne
+
+🔒 **RESPECT DE LA VIE PRIVÉE**
+- Position GPS partagée UNIQUEMENT pendant les duels actifs
+- Pas de tracking permanent contrairement à Strava
+- Mode anonyme disponible : pseudonyme, pas d'identité réelle
+
+🛡️ **SYSTÈME ANTI-TRICHE ROBUSTE**
+- Détection automatique de vitesses anormales (>18 km/h prolongé)
+- Analyse des patterns GPS : accélération impossible détectée
+- Signalement communautaire + vérification manuelle
+- Bannissement permanent des tricheurs
+
+🔐 **SÉCURITÉ ET PROTECTION**
+- Blocage d'utilisateurs indésirables
+- Zone de confort paramétrable : accepter duels uniquement dans votre périmètre
+- Alertes de sécurité si rythme cardiaque trop élevé (intégration montres connectées)
+
+👥 **SOCIAL & ENGAGEMENT**
+- Profils de compétiteurs avec historique des duels
+- Chat en direct avant/après les courses
+- Badges et récompenses débloquables
+- Ligues locales et tournois hebdomadaires
+
+**➜ Ces 6 piliers créent une expérience que nos concurrents ne peuvent pas copier**
 
 ---
 
@@ -543,26 +595,46 @@ Le premier vrai duel de course instantané et équitable.
 
 ---
 
-### 🟦 Slide 10 - Stratégie d'acquisition : convertir les utilisateurs de Strava
+### 🟦 Slide 10 - Stratégie d'acquisition : Convertir les utilisateurs actifs sur d'autres apps
 
-**Comment faire venir 10 000 utilisateurs Strava en 6 mois**
+**TACTIQUES CONCRÈTES POUR ATTIRER LES UTILISATEURS DE STRAVA/NIKE RUN CLUB**
 
-**Phase 1 : Ciblage hyper-local (Mois 1-3)**
-- Lancement dans 2-3 villes (Paris, Lyon, Marseille)
-- Partenariats avec running clubs locaux
-- Événements "GeoRace Challenge" dans les parcs populaires
+**1️⃣ CAMPAGNES DE MIGRATION PAR DUEL CHALLENGES LOCAUX**
+- Événements "Duel Challenge" dans les parcs populaires (Bois de Boulogne, Parc de la Tête d'Or)
+- Invitations ciblées aux membres de clubs de running via partenariats
+- Premier duel gratuit et récompensé : bonus +100 ELO de démarrage
 
-**Phase 2 : Viralité par le défi (Mois 4-6)**
-- Feature "Inviter un ami Strava à un duel"
-- Bonus ELO si vous faites venir un nouveau coureur
-- Classements par ville → compétition entre communautés
+**2️⃣ INVITATIONS POUSSÉES PAR NOTIFICATIONS/IN-APP**
+- Feature "Défier un ami Strava" : invitation directe depuis GeoRace
+- Notifications push personnalisées : "3 coureurs Strava près de chez vous attendent un duel"
+- Bonus de parrainage : invitez 3 amis → accès Premium gratuit 1 mois
 
-**Phase 3 : Proof of concept (Mois 6)**
-- 500 utilisateurs actifs
-- Taux de rétention J7 >40%
-- Moyenne 6 duels/semaine par utilisateur
+**3️⃣ CAMPAGNE D'INFLUENCE (GROUP RUNS)**
+- Partenariats avec influenceurs running (YouTube, Instagram, TikTok)
+- Organisation de "GeoRace Group Runs" avec streamers locaux
+- Challenges viraux : "Défiez votre running crew et filmez le résultat"
 
-**Objectif final :** Devenir l'app #1 pour la compétition, Strava reste pour le tracking
+**4️⃣ PARTENARIATS LOCAUX (CLUBS, MAGASINS RUNNING)**
+- Accords avec magasins spécialisés (Décathlon, Running Conseil)
+- Sponsoring de clubs de running : essai gratuit Premium pour tous les membres
+- Bornes QR Code dans les lieux de passage des coureurs
+
+**5️⃣ FONCTIONNALITÉS D'ONBOARDING SOCIAL**
+- Import facile des résultats Strava/Nike Run Club (API)
+- Transfert de vos records personnels pour comparaison
+- "Retrouvez vos amis Strava déjà sur GeoRace" (graph social)
+
+**6️⃣ OFFRES DE PARRAINAGE ET RÉCOMPENSES**
+- Programme ambassadeur : gagnez du Premium en recrutant
+- Challenges mensuels : "Amenez le plus de nouveaux coureurs = prix Nike"
+- Badges exclusifs pour les early adopters
+
+**7️⃣ VISIBILITÉ SUR STORES ET ASO (APP STORE OPTIMIZATION)**
+- Mots-clés ciblés : "duel running", "compétition course", "course en temps réel"
+- Screenshots montrant la différence avec Strava
+- Témoignages : "J'ai quitté Strava pour GeoRace et je ne regrette rien"
+
+**OBJECTIF 6 MOIS :** 10 000 utilisateurs actifs, 60% provenant de Strava/Nike Run Club
 
 ---
 
@@ -776,7 +848,7 @@ EOF
 
 
 # --- Other MD files (shortened for brevity) ---
-cat > "$OUTDIR/GeoRace_Personas.md" <<'EOFPERS'
+cat > "GeoRace_Personas.md" <<'EOFPERS'
 # Personas GeoRace
 
 ## Persona 1 — Emma, 29 ans
@@ -795,7 +867,7 @@ cat > "$OUTDIR/GeoRace_Personas.md" <<'EOFPERS'
 - Besoins : stats avancées, anti-triche robuste
 EOFPERS
 
-cat > "$OUTDIR/GeoRace_PBS.md" <<'EOFPBS'
+cat > "GeoRace_PBS.md" <<'EOFPBS'
 # PBS — Périmètre fonctionnel
 
 ## MVP (Phase 1)
@@ -809,7 +881,7 @@ cat > "$OUTDIR/GeoRace_PBS.md" <<'EOFPBS'
 - Tests 2-3 villes
 EOFPBS
 
-cat > "$OUTDIR/GeoRace_Benchmark_Matrix.md" <<'EOFBENCH'
+cat > "GeoRace_Benchmark_Matrix.md" <<'EOFBENCH'
 # Benchmark concurrents
 
 | App | Duels réel | Point équidistant | ELO | 1v1 local |
@@ -820,7 +892,7 @@ cat > "$OUTDIR/GeoRace_Benchmark_Matrix.md" <<'EOFBENCH'
 | **GeoRace** | **Oui** | **Oui** | **Oui** | **Oui** |
 EOFBENCH
 
-cat > "$OUTDIR/GeoRace_Contexte_Securite.md" <<'EOFCTX'
+cat > "GeoRace_Contexte_Securite.md" <<'EOFCTX'
 # Contexte & Sécurité
 
 ## Marché
@@ -839,7 +911,7 @@ cat > "$OUTDIR/GeoRace_Contexte_Securite.md" <<'EOFCTX'
 - DDoS gateway
 EOFCTX
 
-cat > "$OUTDIR/assets/architecture.mmd" <<'EOFMMD'
+cat > "assets/architecture.mmd" <<'EOFMMD'
 flowchart LR
   A[App Mobile] -->|WebSocket| GW[Gateway]
   A -->|REST| API[API]
@@ -851,7 +923,7 @@ flowchart LR
   Race --> DB[(PostGIS)]
 EOFMMD
 
-cat > "$OUTDIR/GeoRace_Architecture.md" <<'EOFARCH'
+cat > "GeoRace_Architecture.md" <<'EOFARCH'
 # Architecture MVP
 
 ![Architecture](assets/architecture.png)
@@ -861,7 +933,7 @@ cat > "$OUTDIR/GeoRace_Architecture.md" <<'EOFARCH'
 - Kubernetes auto-scaling
 EOFARCH
 
-cat > "$OUTDIR/GeoRace_Stack_Justification.md" <<'EOFSTACK'
+cat > "GeoRace_Stack_Justification.md" <<'EOFSTACK'
 # Stack technique
 
 ## Mobile
@@ -879,7 +951,7 @@ cat > "$OUTDIR/GeoRace_Stack_Justification.md" <<'EOFSTACK'
 - GitHub Actions
 EOFSTACK
 
-cat > "$OUTDIR/GeoRace_Wireframes.md" <<'EOFWIRE'
+cat > "GeoRace_Wireframes.md" <<'EOFWIRE'
 # Wireframes
 
 ## Home
@@ -899,7 +971,7 @@ cat > "$OUTDIR/GeoRace_Wireframes.md" <<'EOFWIRE'
 ![Result](assets/wireframe_result.svg)
 EOFWIRE
 
-cat > "$OUTDIR/GeoRace_Couts_Table.md" <<'EOFCOST'
+cat > "GeoRace_Couts_Table.md" <<'EOFCOST'
 # Chiffrage MVP (6 mois)
 
 ## Humains: 215.5k EUR
@@ -909,7 +981,7 @@ cat > "$OUTDIR/GeoRace_Couts_Table.md" <<'EOFCOST'
 **Total: ~302.5k EUR**
 EOFCOST
 
-cat > "$OUTDIR/GeoRace_Etude_Comparative.md" <<'EOFCOMP'
+cat > "GeoRace_Etude_Comparative.md" <<'EOFCOMP'
 # Étude hébergement
 
 ## Cloud managed (recommandé)
@@ -923,7 +995,7 @@ cat > "$OUTDIR/GeoRace_Etude_Comparative.md" <<'EOFCOMP'
 **Choix: Cloud managed**
 EOFCOMP
 
-cat > "$OUTDIR/GeoRace_Risques_Mitigation.md" <<'EOFRISK'
+cat > "GeoRace_Risques_Mitigation.md" <<'EOFRISK'
 # Matrice risques
 
 | Risque | Prob | Impact | Mitigation |
@@ -934,7 +1006,7 @@ cat > "$OUTDIR/GeoRace_Risques_Mitigation.md" <<'EOFRISK'
 | Rejet Store | M | H | Flow onboarding |
 EOFRISK
 
-cat > "$OUTDIR/GeoRace_EcoScore.md" <<'EOFECO'
+cat > "GeoRace_EcoScore.md" <<'EOFECO'
 # Éco-score
 
 ## Empreinte MVP
@@ -949,7 +1021,7 @@ cat > "$OUTDIR/GeoRace_EcoScore.md" <<'EOFECO'
 EOFECO
 
 # --- SVGs ---
-cat > "$OUTDIR/assets/wireframe_home.svg" <<'EOFSVG1'
+cat > "assets/wireframe_home.svg" <<'EOFSVG1'
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="500">
   <rect width="100%" height="100%" fill="#fff"/>
   <rect x="20" y="20" width="760" height="140" fill="#eee" stroke="#ccc"/>
@@ -961,7 +1033,7 @@ cat > "$OUTDIR/assets/wireframe_home.svg" <<'EOFSVG1'
 </svg>
 EOFSVG1
 
-cat > "$OUTDIR/assets/wireframe_duel_modal.svg" <<'EOFSVG2'
+cat > "assets/wireframe_duel_modal.svg" <<'EOFSVG2'
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="360">
   <rect width="100%" height="100%" fill="#fff"/>
   <rect x="40" y="30" width="520" height="300" fill="#f6f6f6" stroke="#ddd"/>
@@ -973,7 +1045,7 @@ cat > "$OUTDIR/assets/wireframe_duel_modal.svg" <<'EOFSVG2'
 </svg>
 EOFSVG2
 
-cat > "$OUTDIR/assets/wireframe_live.svg" <<'EOFSVG3'
+cat > "assets/wireframe_live.svg" <<'EOFSVG3'
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="500">
   <rect width="100%" height="100%" fill="#fff"/>
   <rect x="20" y="20" width="860" height="360" fill="#eef6ff" stroke="#cfe2ff"/>
@@ -983,7 +1055,7 @@ cat > "$OUTDIR/assets/wireframe_live.svg" <<'EOFSVG3'
 </svg>
 EOFSVG3
 
-cat > "$OUTDIR/assets/wireframe_result.svg" <<'EOFSVG4'
+cat > "assets/wireframe_result.svg" <<'EOFSVG4'
 <svg xmlns="http://www.w3.org/2000/svg" width="700" height="420">
   <rect width="100%" height="100%" fill="#fff"/>
   <text x="40" y="60" font-family="Arial" font-size="22">Résultat</text>
@@ -999,17 +1071,14 @@ echo "Assets created."
 # --- Mermaid ---
 if command -v mmdc >/dev/null 2>&1; then
   echo "Rendering mermaid..."
-  mmdc -i "$OUTDIR/assets/architecture.mmd" -o "$OUTDIR/assets/architecture.png" -p /dev/null --puppeteerConfigFile <(echo '{"args":["--no-sandbox","--disable-setuid-sandbox"]}') 2>/dev/null || \
-  mmdc -i "$OUTDIR/assets/architecture.mmd" -o "$OUTDIR/assets/architecture.png" || echo "Warning: mermaid failed"
+  mmdc -i "assets/architecture.mmd" -o "assets/architecture.png" -p /dev/null --puppeteerConfigFile <(echo '{"args":["--no-sandbox","--disable-setuid-sandbox"]}') 2>/dev/null || \
+  mmdc -i "assets/architecture.mmd" -o "assets/architecture.png" || echo "Warning: mermaid failed"
 else
   echo "mmdc not found, skipping PNG."
 fi
 
 # --- Convert (FIX: proper loop syntax) ---
 echo "Converting to .docx and .pptx..."
-
-ORIGDIR=$(pwd)
-cd "$OUTDIR"
 
 # Fix: use proper glob without redirect
 for f in *.md; do
@@ -1024,10 +1093,6 @@ if command -v pandoc >/dev/null 2>&1; then
   pandoc -M title="GeoRace" -M author="$AUTHOR" -f markdown -t pptx -o "GeoRace_presentation.pptx" "GeoRace_ppt.md" || echo "  → PPTX failed"
 fi
 
-cd "$ORIGDIR"
-
-# --- ZIP ---
-echo "Creating ZIP..."
-zip -q -r "$ZIPNAME" "$OUTDIR" || zip -r "$ZIPNAME" "$OUTDIR"
-echo "✅ ZIP: $ZIPNAME"
+# All files have been generated in the current directory
+echo "✅ All presentation files generated in: $SCRIPT_DIR"
 echo "Done!"
