@@ -384,6 +384,25 @@ L'ambition est de devenir **la référence de la course compétitive en temps r�
 ✅ **Équité** : système ELO garantit des matchs équilibrés
 ✅ **Marché** : coureurs cherchant motivation et interaction
 ✅ **Différenciation forte** : aucune app ne propose cette mécanique de duel spontané
+
+---
+
+## Ce que nous faisons mieux que les concurrents
+
+- **Duel mode en temps réel** : proposition automatique d'un duel avec point d'arrivée équidistant pour garantir l'équité — expérience distinctive difficile à reproduire.
+- **Matchmaking ELO** : oppositions entre coureurs de niveau comparable pour des matchs motivants et progressifs.
+- **Sécurité & vie privée** : partage de position limité aux duels actifs; anonymisation possible; dispositifs anti‑triche intégrés.
+- **Conversion sociale native** : intégration de badges, challenges locaux, classements de quartier et partages pour attirer des communautés existantes.
+
+---
+
+## Plan d'acquisition & conversion (comment nous ferons venir des utilisateurs déjà sur d'autres apps)
+
+- **Partenariats locaux** : clubs de running, boutiques, événements locaux — organiser des tournois GeoRace exclusifs.
+- **Incentives de conversion** : défis d'accueil, crédits ou badges pour premiers duels gagnés, parrainage in-app (rewards pour inviter des coureurs).
+- **Expérience produit supérieure** : mise en avant du duel équitable et de l'ELO dans la communication produit pour expliquer pourquoi l'expérience est meilleure que les apps de course standard.
+- **Campagnes micro-ciblées** : publicités et posts sponsorisés autour d'événements locaux et groupes Facebook / Strava clubs.
+- **Migration frictionless** : importer profils/segments (opt-in) ou proposer challenge d'entraînement pour démontrer la valeur en 1 duel.
 EOF
 
 # --- GeoRace_ppt.md ---
@@ -1020,8 +1039,13 @@ for f in *.md; do
 done
 
 if command -v pandoc >/dev/null 2>&1; then
-  echo "Generating PPTX..."
+  echo "Generating PPTX from GeoRace_ppt.md..."
   pandoc -M title="GeoRace" -M author="$AUTHOR" -f markdown -t pptx -o "GeoRace_presentation.pptx" "GeoRace_ppt.md" || echo "  → PPTX failed"
+  echo "Generating investor pitch PPTX from GeoRace.md..."
+  pandoc -M title="GeoRace - Pitch Investisseur" -M author="$AUTHOR" -f markdown -t pptx -o "GeoRace_pitch.pptx" "GeoRace.md" || echo "  → GeoRace pitch PPTX failed"
+else
+  echo "⚠️  pandoc not found - skipping PPTX generation"
+  echo "    Install pandoc to generate PowerPoint presentations: https://pandoc.org/installing.html"
 fi
 
 cd "$ORIGDIR"
