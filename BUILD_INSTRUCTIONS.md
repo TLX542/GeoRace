@@ -1,12 +1,12 @@
 # GeoRace Documents Build Instructions
 
-This repository contains scripts to generate a comprehensive documentation bundle for the GeoRace project, including markdown files, presentations (PPTX), and other assets.
+This repository contains scripts to generate comprehensive documentation for the GeoRace project, including markdown files, presentations (PPTX), and other assets.
 
 ## Available Scripts
 
 ### Unix/Linux/macOS: `build_zip.sh`
 
-The main build script that creates all documentation and packages it into a ZIP file.
+The main build script that generates all documentation files directly in the repository root.
 
 **Usage:**
 ```bash
@@ -15,64 +15,63 @@ bash build_zip.sh
 
 **Requirements:**
 - `bash` (any POSIX-compliant shell)
-- `zip` command (standard on most Unix systems)
 - `pandoc` (optional, for DOCX/PPTX generation)
 - `mmdc` (optional, for diagram rendering)
 
 **Output:**
-- Creates `geo_race_export/` directory with all generated files
-- Generates `GeoRace_documents_bundle.zip` containing the complete bundle
+- Generates all markdown files in the repository root directory
+- Creates `assets/` directory with diagrams and wireframes
+- Backs up existing files with timestamp (e.g., `GeoRace.md.bak.20240210120000`)
+- If pandoc is available, also generates DOCX and PPTX files
 
-### Windows: `build_zip.bat`
+**Key Changes:**
+- ✅ No longer creates `geo_race_export/` or ZIP files
+- ✅ Files are written directly to repository root
+- ✅ Automatic backup of existing files before overwriting
+- ✅ Non-destructive (preserves previous versions)
 
-Windows batch script with intelligent fallback behavior.
+### Windows: `build_files.bat` and `build_files.ps1`
 
-**Usage:**
+Windows scripts that provide equivalent functionality to `build_zip.sh`.
+
+**Usage (Option 1 - Batch file):**
 ```batch
-build_zip.bat
+build_files.bat
 ```
 
-**Behavior:**
-1. **Priority 1:** If Git Bash is available, delegates to `build_zip.sh` (generates full 22-slide presentation)
-2. **Priority 2:** If WSL (Windows Subsystem for Linux) is available, delegates to `build_zip.sh` via WSL (generates full 22-slide presentation)
-3. **Fallback:** Uses embedded PowerShell to generate essential files and create ZIP (generates minimal 3-slide presentation)
-
-**⚠️ Important:** For the complete 22-slide presentation with all new content (including the pitch slide, conversion tactics, and differentiation slides), you must install Git Bash or WSL. The PowerShell fallback generates only 3 slides and is intended for basic testing purposes.
-
-**We recommend installing Git Bash** (free, 1-minute download from https://git-scm.com/downloads) to get the full presentation with all strategic content.
-
-**Requirements:**
-- Windows 7 or later (for PowerShell)
-- `pandoc` (optional, for PPTX generation)
-- Git Bash or WSL (optional, for full build)
-
-**Output:**
-- Creates `geo_race_export/` directory
-- Generates `GeoRace_documents_bundle.zip`
-
-### Windows ZIP-only: `make_zip.bat`
-
-Creates only the ZIP archive from an existing `geo_race_export/` folder.
-
-**Usage:**
-```batch
-make_zip.bat
+**Usage (Option 2 - PowerShell directly):**
+```powershell
+pwsh -ExecutionPolicy Bypass -File build_files.ps1
 ```
 
 **Requirements:**
-- Existing `geo_race_export/` directory (created by running `build_zip.bat` or `build_zip.sh`)
+- Windows PowerShell or PowerShell Core
+- `pandoc` (optional, for DOCX/PPTX generation)
 
 **Output:**
-- Generates `GeoRace_documents_bundle.zip`
-- Returns error code 1 if `geo_race_export/` doesn't exist
+- Generates all markdown files in the repository root directory
+- Creates `assets/` directory with diagrams and wireframes
+- Backs up existing files with timestamp
+- Same functionality as `build_zip.sh`
+
+**Note:** The batch file (`build_files.bat`) will automatically detect and use the available PowerShell version (PowerShell Core preferred, Windows PowerShell as fallback).
+
+### Legacy Windows Scripts
+
+**⚠️ Note:** The following scripts are deprecated and will be removed in a future version:
+
+- `build_zip.bat` - Old Windows build script (creates geo_race_export folder)
+- `make_zip.bat` - Creates ZIP from geo_race_export folder
+
+Please use `build_files.bat` or `build_files.ps1` instead.
 
 ## What's Generated
 
-The build scripts generate:
+The build scripts generate the following files directly in the repository root:
 
 ### Markdown Files
 - `GeoRace.md` - Main project description
-- `GeoRace_ppt.md` - Presentation content (22 slides)
+- `GeoRace_ppt.md` - Presentation content (15 slides)
 - `GeoRace_Personas.md` - User personas
 - `GeoRace_PBS.md` - Functional scope
 - `GeoRace_Benchmark_Matrix.md` - Competitor comparison
@@ -85,24 +84,27 @@ The build scripts generate:
 - `GeoRace_Risques_Mitigation.md` - Risk matrix
 - `GeoRace_EcoScore.md` - Eco-score analysis
 
-### Assets
-- `assets/architecture.mmd` - Mermaid diagram source
-- `assets/architecture.png` - Rendered architecture diagram (if mmdc available)
-- `assets/wireframe_*.svg` - UI wireframe diagrams
+### Assets (in `assets/` directory)
+- `architecture.mmd` - Mermaid diagram source
+- `architecture.png` - Rendered architecture diagram (if mmdc available)
+- `wireframe_home.svg` - Home screen wireframe
+- `wireframe_duel_modal.svg` - Duel modal wireframe
+- `wireframe_live.svg` - Live race wireframe
+- `wireframe_result.svg` - Result screen wireframe
 
 ### Generated Documents (if pandoc available)
 - `*.docx` - Word documents for each markdown file
 - `GeoRace_presentation.pptx` - PowerPoint presentation
 
+### Backup Files
+When a file is regenerated, the existing version is automatically backed up with a timestamp:
+- Format: `filename.bak.YYYYMMDDHHMMSS`
+- Example: `GeoRace.md.bak.20240210120000`
+- These backups are excluded from git (via `.gitignore`)
+
 ## Key Features of the Presentation
 
-The generated `GeoRace_ppt.md` includes **22 slides** (when using bash/WSL or build_zip.sh) with:
-
-1. **Slide 2 - Pitch 30-45s pour mercredi**: Ready-to-present 30-45 second pitch
-2. **Slide 10 - Pourquoi nous nous démarquons**: Barriers to entry and competitive advantages
-3. **Slide 12 - Comment convertir les utilisateurs existants**: Concrete tactics for converting users from Strava/Nike Run Club
-
-**Note:** The PowerShell fallback in `build_zip.bat` (when bash/WSL is not available) generates only the first 3 slides. For the complete 22-slide presentation, use bash/WSL or run `build_zip.sh` directly.
+The generated `GeoRace_ppt.md` includes **15 slides** with:
 
 Enhanced emphasis on:
 - **DUEL mode** as the core differentiator
@@ -130,14 +132,22 @@ Install pandoc (see above) or proceed without it. The build will generate markdo
 ### "mmdc not found"
 Install mermaid-cli (see above) or proceed without it. The build will skip diagram rendering but include the source `.mmd` file.
 
-### Windows: "bash not found"
-The script will automatically fall back to PowerShell mode. For full functionality, install Git for Windows (includes Git Bash) or WSL.
+### Windows: "PowerShell not found"
+Install Windows PowerShell (included in Windows 7+) or PowerShell Core. The batch file will detect the available version automatically.
+
+### Permission errors on Linux/macOS
+Make the script executable:
+```bash
+chmod +x build_zip.sh
+```
 
 ## .gitignore
 
-Build artifacts are excluded from version control:
-- `geo_race_export/` - Generated documentation folder
-- `GeoRace_documents_bundle.zip` - Final ZIP bundle
+Build artifacts and backups are excluded from version control:
+- `geo_race_export/` - Old output directory (deprecated)
+- `build_output/` - Old output directory (deprecated)
+- `GeoRace_documents_bundle.zip` - Old ZIP bundle (deprecated)
+- `*.bak.*` - Backup files created by build scripts
 
 ## License
 
