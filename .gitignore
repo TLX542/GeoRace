@@ -1,0 +1,14 @@
+# Build artifacts
+geo_race_export/
+GeoRace_documents_bundle.zip
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

@@ -1,9 +1,0 @@
-flowchart LR
-  A[App Mobile] -->|WebSocket| GW[Gateway]
-  A -->|REST| API[API]
-  GW --> Broker[Broker]
-  API --> Broker
-  Broker --> Match[Matchmaking]
-  Broker --> ELO[ELO]
-  Broker --> Race[Orchestrator]
-  Race --> DB[(PostGIS)]

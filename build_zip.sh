@@ -399,7 +399,21 @@ Le premier vrai duel de course instantané et équitable.
 
 ---
 
-### 🟦 Slide 2 - Le problème des apps actuelles
+### 🟦 Slide 2 - Pitch 30-45s pour mercredi
+
+**Notre pitch en 30-45 secondes**
+
+> *« Les applications de running comme Strava se contentent de tracker vos courses. Vous courez seul, vous comparez vos stats à celles des autres, et au bout de 3 mois, vous abandonnez par manque de motivation.*
+>
+> *GeoRace transforme chaque sortie en véritable compétition en temps réel. Notre application détecte les coureurs actifs près de vous et propose un duel instantané vers un point d'arrivée calculé à distance égale pour tous. Plus besoin d'attendre : vous acceptez, le compte à rebours démarre, et vous courez en direct contre un vrai adversaire.*
+>
+> *Avec notre système ELO, chaque victoire compte, chaque duel vous fait progresser, et la communauté grandit naturellement. Ce n'est plus du tracking passif : c'est de la compétition active.*
+>
+> *GeoRace, c'est le seul moyen de transformer le running en sport compétitif accessible à tous. Êtes-vous prêt à courir pour gagner ? »*
+
+---
+
+### 🟦 Slide 3 - Le problème des apps actuelles
 
 **Pourquoi les coureurs s'ennuient sur Strava, Nike Run Club et Runkeeper**
 
@@ -412,40 +426,52 @@ Le premier vrai duel de course instantané et équitable.
 
 ---
 
-### 🟦 Slide 3 - Notre réponse : LE DUEL EN TEMPS RÉEL
+### 🟦 Slide 4 - Notre réponse : LE DUEL EN TEMPS RÉEL
 
 **GeoRace = La seule app qui crée de vraies courses spontanées**
 
-🎯 **Détection instantanée** : l'app repère les coureurs actifs près de vous
-⚡ **Défi immédiat** : "Paul (ELO 1420) vous défie - Accepter?"
-📍 **Point équidistant** : algorithme calcule un finish accessible à la même distance pour tous
+🎯 **Détection instantanée** : l'app repère les coureurs actifs près de vous  
+⚡ **Défi immédiat** : "Paul (ELO 1420) vous défie - Accepter?"  
+📍 **Point équidistant** : algorithme calcule un finish accessible à la même distance pour tous  
 🏁 **Course en direct** : départ synchronisé, positions live, arrivée simultanée
 
 **LA DIFFÉRENCE :** Ce n'est plus du tracking, c'est une vraie compétition !
 
+**LE MODE DUEL = NOTRE ADN**
+- Chaque course devient un événement unique et excitant
+- L'adrénaline de la compétition remplace la solitude du jogging
+- Gratification immédiate : vous savez si vous avez GAGNÉ ou PERDU
+
 ---
 
-### 🟦 Slide 4 - Pourquoi le duel change tout
+### 🟦 Slide 5 - Pourquoi le duel change tout
 
 **L'adrénaline d'une vraie course, à chaque sortie**
 
-**Ce que ressent l'utilisateur :**
+**Ce que ressent l'utilisateur dans un DUEL :**
 
-1. **AVANT** : "Je vais courir 30 minutes..."
+1. **AVANT** : "Je vais courir 30 minutes..."  
    **AVEC GEORACE** : "Je vais AFFRONTER ce coureur que je vois au parc !"
 
-2. **PENDANT** : "Je suis à 500m du but, je le dépasse ou pas ?"
-   → GPS live, distance restante, position de l'adversaire
+2. **PENDANT** : "Je suis à 500m du but, je le dépasse ou pas ?"  
+   → GPS live, distance restante, position de l'adversaire en temps réel  
+   → **Tension maximale** : chaque seconde compte, chaque mètre compte
 
-3. **APRÈS** : "+25 ELO, 1er sur 3 dans ma ville cette semaine !"
-   → Gratification immédiate, envie de recommencer
+3. **APRÈS** : "+25 ELO, 1er sur 3 dans ma ville cette semaine !"  
+   → Gratification immédiate, envie de recommencer  
+   → **Sentiment de victoire** ou leçon pour s'améliorer
+
+**PSYCHOLOGIE DU DUEL :**
+- Engagement émotionnel 10x supérieur au tracking solo
+- Libération de dopamine à chaque victoire
+- Création d'une habitude addictive (le "encore un duel")
 
 **Strava vous dit combien vous avez couru.**  
 **GeoRace vous dit si vous avez GAGNÉ.**
 
 ---
 
-### 🟦 Slide 5 - Le point équidistant : notre innovation technique
+### 🟦 Slide 6 - Le point équidistant : notre innovation technique
 
 **Pourquoi personne d'autre ne le fait**
 
@@ -465,7 +491,7 @@ Le premier vrai duel de course instantané et équitable.
 
 ---
 
-### 🟦 Slide 6 - Scénario utilisateur : Emma vs Strava
+### 🟦 Slide 7 - Scénario utilisateur : Emma vs Strava
 
 **Pourquoi Emma (29 ans, 4 courses/semaine) quitte Strava pour GeoRace**
 
@@ -485,7 +511,7 @@ Le premier vrai duel de course instantané et équitable.
 
 ---
 
-### 🟦 Slide 7 - Pourquoi les utilisateurs vont switcher
+### 🟦 Slide 8 - Pourquoi les utilisateurs vont switcher
 
 **3 raisons concrètes de quitter Strava/Nike Run Club**
 
@@ -506,7 +532,7 @@ Le premier vrai duel de course instantané et équitable.
 
 ---
 
-### 🟦 Slide 8 - Tableau comparatif : GeoRace vs Concurrents
+### 🟦 Slide 9 - Tableau comparatif : GeoRace vs Concurrents
 
 | Fonctionnalité | Strava | Nike Run Club | Runkeeper | **GeoRace** |
 |----------------|:------:|:-------------:|:---------:|:-----------:|
@@ -522,28 +548,35 @@ Le premier vrai duel de course instantané et équitable.
 
 ---
 
-### 🟦 Slide 9 - Ce que Strava ne peut PAS copier
+### 🟦 Slide 10 - Pourquoi nous nous démarquons
 
-**Nos barrières à l'entrée**
+**Nos barrières à l'entrée : ce que Strava ne peut PAS copier**
 
 **1. ALGORITHME DE POINT ÉQUIDISTANT**
 - Complexité technique : calcul géospatial en temps réel
-- Brevet déposable : méthode unique de matching géographique équitable
+- **Brevet déposable** : méthode unique de matching géographique équitable
+- Années de R&D pour atteindre notre niveau de précision
 
 **2. INFRASTRUCTURE TEMPS RÉEL**
-- WebSocket à faible latence pour positions live
-- Serveurs optimisés pour synchronisation GPS (<500ms)
+- WebSocket à faible latence pour positions live (<500ms)
+- Architecture distribuée optimisée pour la synchronisation GPS
+- **Expertise technique rare** : peu d'équipes maîtrisent le temps réel géolocalisé
 
 **3. COMMUNAUTÉ DE COMPÉTITEURS**
-- Effet réseau : plus il y a de coureurs, plus de duels disponibles
-- Base ELO : impossible à transférer vers un concurrent
+- **Effet réseau puissant** : plus il y a de coureurs, plus de duels disponibles
+- Base ELO impossible à transférer vers un concurrent
+- Culture de compétition loyale vs culture de tracking passif
 
-**Strava excelle dans le tracking passif.**  
-**Nous excellons dans la compétition active.**
+**4. POSITIONNEMENT UNIQUE**
+- Nous sommes LA plateforme de compétition, pas de tracking
+- Strava excelle dans le tracking passif, nous excellons dans la compétition active
+- **Impossible pour eux de pivoter** sans cannibaliser leur base existante
+
+**Notre moat : technologie + communauté + positionnement clair**
 
 ---
 
-### 🟦 Slide 10 - Stratégie d'acquisition : convertir les utilisateurs de Strava
+### 🟦 Slide 11 - Stratégie d'acquisition : convertir les utilisateurs de Strava
 
 **Comment faire venir 10 000 utilisateurs Strava en 6 mois**
 
@@ -566,7 +599,39 @@ Le premier vrai duel de course instantané et équitable.
 
 ---
 
-### 🟦 Slide 11 - Le système ELO : matchmaking intelligent
+### 🟦 Slide 12 - Comment convertir les utilisateurs existants (Strava/NRC)
+
+**Tactiques concrètes pour faire switcher les coureurs des apps concurrentes**
+
+**1️⃣ ONBOARDING CIBLÉ**
+- Détection automatique de l'utilisation de Strava/NRC (permissions)
+- Message personnalisé : "Vous utilisez Strava ? Continuez à tracker vos courses là-bas, mais venez COMPÉTITIONNER ici !"
+- Import optionnel de l'historique pour calculer ELO initial
+
+**2️⃣ INVITATIONS IN-APP**
+- Feature "Défier un coureur Strava" : envoi de lien d'invitation personnalisé
+- Bonus ELO pour parrainage : +50 points si votre filleul gagne son 1er duel
+- Partage automatique des victoires sur Strava/réseaux sociaux avec CTA "Défie-moi sur GeoRace"
+
+**3️⃣ PARTENARIATS RUNNING CLUBS**
+- Sponsoring de clubs locaux : app gratuite Premium pour tous les membres
+- Organisation d'événements GeoRace Challenge (tournois locaux)
+- Ambassadeurs communautaires : coureurs influents dans chaque ville
+
+**4️⃣ ÉVÉNEMENTS LOCAUX**
+- "GeoRace Challenge" hebdomadaires dans les zones de running populaires
+- Prix pour les podiums (équipement sportif, abonnements Premium)
+- Médiatisation locale (presse, réseaux sociaux)
+
+**5️⃣ CTA VERS LE DUEL**
+- Push notifications intelligentes : "3 coureurs actifs à 500m, lancez un défi !"
+- Gamification de l'onboarding : "Gagnez votre 1er duel pour débloquer le classement"
+
+**L'objectif : faire coexister les deux apps (Strava = tracking, GeoRace = compétition) puis prendre la place**
+
+---
+
+### 🟦 Slide 13 - Le système ELO : matchmaking intelligent
 
 **Pourquoi le duel reste motivant même après 100 courses**
 
@@ -587,7 +652,7 @@ Le premier vrai duel de course instantané et équitable.
 
 ---
 
-### 🟦 Slide 12 - Aspect social : plus fort que Nike Run Club
+### 🟦 Slide 14 - Aspect social : plus fort que Nike Run Club
 
 **Créer une vraie communauté de compétiteurs**
 
@@ -610,7 +675,7 @@ Le premier vrai duel de course instantané et équitable.
 
 ---
 
-### 🟦 Slide 13 - Sécurité et anti-triche
+### 🟦 Slide 15 - Sécurité et anti-triche
 
 **Réponses aux objections principales**
 
@@ -632,7 +697,7 @@ Le premier vrai duel de course instantané et équitable.
 
 ---
 
-### 🟦 Slide 14 - Modèle économique : freemium optimisé
+### 🟦 Slide 16 - Modèle économique : freemium optimisé
 
 **Convertir la motivation en revenus**
 
@@ -657,7 +722,7 @@ Le premier vrai duel de course instantané et équitable.
 
 ---
 
-### 🟦 Slide 15 - Métriques de succès (objectifs 6 mois)
+### 🟦 Slide 17 - Métriques de succès (objectifs 6 mois)
 
 **Comment mesurer la traction**
 
@@ -677,7 +742,7 @@ Le premier vrai duel de course instantané et équitable.
 
 ---
 
-### 🟦 Slide 16 - Roadmap : lancement en 3 phases
+### 🟦 Slide 18 - Roadmap : lancement en 3 phases
 
 **Phase 1 (Mois 1-6) : MVP + Proof of Concept**
 - App iOS/Android (React Native)
@@ -699,7 +764,7 @@ Le premier vrai duel de course instantané et équitable.
 
 ---
 
-### 🟦 Slide 17 - Pourquoi maintenant ?
+### 🟦 Slide 19 - Pourquoi maintenant ?
 
 **Le timing parfait pour GeoRace**
 
@@ -723,7 +788,7 @@ Le premier vrai duel de course instantané et équitable.
 
 ---
 
-### 🟦 Slide 18 - Vision finale
+### 🟦 Slide 20 - Vision finale
 
 > **GeoRace ne remplace pas Strava.**  
 > **GeoRace transforme la course en sport compétitif accessible.**
@@ -741,7 +806,7 @@ Le premier vrai duel de course instantané et équitable.
 
 ---
 
-### 🟦 Slide 19 - Appel à l'action
+### 🟦 Slide 21 - Appel à l'action
 
 **Pourquoi investir/soutenir GeoRace ?**
 
@@ -760,7 +825,7 @@ Le premier vrai duel de course instantané et équitable.
 
 ---
 
-### 🟦 Slide 20 - Phrase finale
+### 🟦 Slide 22 - Phrase finale
 
 **GeoRace**
 
