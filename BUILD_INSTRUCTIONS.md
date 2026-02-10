@@ -37,7 +37,9 @@ build_zip.bat
 2. **Priority 2:** If WSL (Windows Subsystem for Linux) is available, delegates to `build_zip.sh` via WSL (generates full 22-slide presentation)
 3. **Fallback:** Uses embedded PowerShell to generate essential files and create ZIP (generates minimal 3-slide presentation)
 
-**Note:** For the complete 22-slide presentation with all new content, install Git Bash or WSL. The PowerShell fallback generates a minimal version with only the first 3 slides to avoid content duplication.
+**⚠️ Important:** For the complete 22-slide presentation with all new content (including the pitch slide, conversion tactics, and differentiation slides), you must install Git Bash or WSL. The PowerShell fallback generates only 3 slides and is intended for basic testing purposes.
+
+**We recommend installing Git Bash** (free, 1-minute download from https://git-scm.com/downloads) to get the full presentation with all strategic content.
 
 **Requirements:**
 - Windows 7 or later (for PowerShell)

@@ -405,7 +405,7 @@ Le premier vrai duel de course instantané et équitable.
 
 > *« Les applications de running comme Strava se contentent de tracker vos courses. Vous courez seul, vous comparez vos stats à celles des autres, et au bout de 3 mois, vous abandonnez par manque de motivation.*
 >
-> *GeoRace transforme chaque sortie en véritable compétition en temps réel. Notre application détecte les coureurs actifs près de vous et propose un duel instantané vers un point d'arrivée calculé à distance égale pour tous. Plus besoin d'attendre : vous acceptez, le compte à rebours démarre, et vous courrez en direct contre un vrai adversaire.*
+> *GeoRace transforme chaque sortie en véritable compétition en temps réel. Notre application détecte les coureurs actifs près de vous et propose un duel instantané vers un point d'arrivée calculé à distance égale pour tous. Plus besoin d'attendre : vous acceptez, le compte à rebours démarre, et vous courez en direct contre un vrai adversaire.*
 >
 > *Avec notre système ELO, chaque victoire compte, chaque duel vous fait progresser, et la communauté grandit naturellement. Ce n'est plus du tracking passif : c'est de la compétition active.*
 >
