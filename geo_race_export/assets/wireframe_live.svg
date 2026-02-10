@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500">
+  <rect width="100%" height="100%" fill="#fff"/>
+  <rect x="20" y="20" width="860" height="360" fill="#eef6ff" stroke="#cfe2ff"/>
+  <text x="40" y="60" font-family="Arial" font-size="18">Live Race</text>
+  <rect x="720" y="420" width="140" height="50" rx="8" fill="#ff4136"/>
+  <text x="755" y="450" font-family="Arial" font-size="16" fill="#fff">Sécurité</text>
+</svg>
