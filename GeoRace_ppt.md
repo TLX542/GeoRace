@@ -1,234 +1,286 @@
-### 🟦 Slide 1 – Titre
+### 🟦 Slide 1 – Title
 
 **GeoRace**
 
-> L'application de course compétitive en temps réel
+> The real-time competitive running app
 
-**Sous‑titre :**
-Transformez chaque sortie running en duel excitant.
-
----
-
-### 🟦 Slide 2 – Problème
-
-**Courir seul, une motivation en berne**
-
-* De nombreux coureurs se sentent démotivés seuls
-* Manque de défi et d'interaction
-* Difficulté à mesurer ses progrès face à d'autres
-* Risque d'abandon des objectifs sportifs
-
-➡ Résultat : monotonie, perte de motivation, arrêt de la pratique
+**Subtitle:**
+Turn every run into an exciting duel.
 
 ---
 
-### 🟦 Slide 3 – Concept innovant
+### 🟦 Slide 2 – Problem
 
-**Duels en temps réel pour tous**
+**Running alone, declining motivation**
 
-🏃 **DUELS EN TEMPS RÉEL**
-Affrontez d'autres coureurs à proximité dans des courses spontanées
+* Many runners feel demotivated when running alone
+* Lack of challenge and interaction
+* Difficulty measuring progress against others
+* Risk of abandoning fitness goals
 
-📍 **POINT D'ARRIVÉE ÉQUITABLE**
-Chaque duel se termine à un point équidistant pour tous les participants
-
-⚖️ **COMPÉTITION JUSTE**
-Système ELO garantit des matchs équilibrés quel que soit votre niveau
+➡ Result: monotony, loss of motivation, practice abandonment
 
 ---
 
-### 🟦 Slide 4 – Fonctionnement d'un duel
+### 🟦 Slide 3 – Our differentiators
 
-**3 étapes simples**
+**What makes GeoRace unique**
 
-**01 - DÉTECTION DES COUREURS**
-Identification automatique des coureurs actifs à proximité
-
-**02 - POINT D'ARRIVÉE ÉQUITABLE**
-Calcul algorithmique d'un point accessible à distance ��gale pour tous
-
-**03 - DÉPART SIMULTANÉ**
-Compte à rebours synchronisé après acceptation mutuelle
+* **Real-time duel to an equidistant finish point** → guaranteed fairness between runners
+* **ELO Matchmaking** → opponents of comparable level, visible progression
+* **Live GPS & synchronized tracking** → immediate competitive experience
+* **Privacy and security** → position sharing limited to active duels
+* **Integrated anti-cheat** (GPS anomaly detection, route verification)
+* **Social features** → profiles, chat, badges, local leaderboards
 
 ---
 
-### 🟦 Slide 5 – Un duel GeoRace
+### 🟦 Slide 4 – Why users will join us
 
-**Scénario typique :**
+**Reasons to switch to GeoRace**
 
-1. **Vous commencez votre course** → l'app détecte 3 coureurs dans un rayon de 800m
-2. **Proposition de duel** → notification "Paul (ELO 1420) vous défie"
-3. **Vous acceptez** → le système calcule un point d'arrivée à 1,2km pour chacun
-4. **Départ dans 10 secondes** → compte à rebours
-5. **Course en direct** → GPS vous guide, position de l'adversaire visible
-6. **Arrivée** → +25 ELO, badge "5 victoires consécutives" débloqué
+* **Unique and fair duel experience** = more fun and challenge
+* **Visible progression (ELO)** = motivation to return
+* **Local events & tournaments** = social opportunities and rewards
+* **Easy friend transfer** via invitations and immediate duels
 
 ---
 
-### 🟦 Slide 6 – Aspect social
+### 🟦 Slide 5 – Acquisition strategy (how to steal users from competitors)
 
-**Construisez une communauté de coureurs**
+**Concrete tactics to attract users**
 
-**01 - MATCHMAKING ÉQUILIBRÉ**
-Connexion automatique entre coureurs de niveaux similaires grâce à l'ELO
-
-**02 - DISCUSSION ET PARTAGE**
-Chat en direct, ajout d'amis, profils détaillés avec statistiques
-
-**03 - ÉVÉNEMENTS COMMUNAUTAIRES**
-Courses organisées, défis collectifs, ligues locales par ville/quartier
+* **Local targeting**: organize micro-events and challenges in parks and campuses
+* **Partnerships** with running clubs, coaches, local influencers
+* **Integrations & entry point**: simplified import from Strava/Runkeeper + friend import
+* **Incentive programs**: free duels/initial ELO bonus, rewards, exclusive badges
+* **Social media campaigns** showing live duels + user stories
+* **Differentiating features in onboarding** (30s duel demonstration)
 
 ---
 
-### 🟦 Slide 7 – Système de classement ELO
+### 🟦 Slide 6 – Innovative concept: Duel mode
 
-**Compétition équitable et progression motivante**
+**Real-time duels for everyone**
 
-**01 - MATCHS ÉQUILIBRÉS**
-Algorithme ELO vous oppose à des coureurs de niveau proche
+🏃 **REAL-TIME DUELS**
+Face other nearby runners in spontaneous races
 
-**02 - PROGRESSION VISIBLE**
-Suivez votre montée dans les classements (Bronze → Argent → Or → Platine)
+📍 **FAIR FINISH POINT**
+Each duel ends at an equidistant point for all participants
 
-**03 - RÉCOMPENSES ET BADGES**
-Débloquez des achievements à chaque niveau atteint
-
----
-
-### 🟦 Slide 8 – Bénéfices de GeoRace
-
-**Plus qu'une app de running**
-
-**01 - MOTIVATION ACCRUE**
-Chaque sortie devient un défi concret et excitant
-
-**02 - AMÉLIORATION DES PERFORMANCES**
-La compétition pousse naturellement au dépassement de soi
-
-**03 - BIEN-ÊTRE SOCIAL**
-Rencontrez et interagissez avec d'autres coureurs passionnés
+⚖️ **FAIR COMPETITION**
+ELO system ensures balanced matches regardless of your level
 
 ---
 
-### 🟦 Slide 9 – Fonctionnalités clés
+### 🟦 Slide 7 – How a duel works
 
-**Technologie au service de la performance**
+**3 simple steps**
 
-* **GPS haute précision** : tracking en temps réel pendant les duels
-* **Algorithme intelligent** : calcul de points équidistants accessibles
-* **Sécurité** : position visible uniquement en duel actif
-* **Anti-triche** : détection de vitesse anormale et validation communautaire
-* **Optimisation batterie** : mode économie d'énergie
+**01 - RUNNER DETECTION**
+Automatic identification of active runners nearby
 
----
+**02 - FAIR FINISH POINT**
+Algorithmic calculation of a point accessible at equal distance for all
 
-### 🟦 Slide 10 – Cible
-
-**Qui utilise GeoRace ?**
-
-* 🏃‍♂️ **Coureurs réguliers** : cherchent à améliorer leurs performances
-* 👟 **Coureurs occasionnels** : ont besoin de motivation pour rester réguliers
-* 🏅 **Coureurs compétitifs** : veulent tester leur niveau entre les courses officielles
-* 👥 **Nouveaux coureurs** : cherchent une communauté motivante
+**03 - SIMULTANEOUS START**
+Synchronized countdown after mutual acceptance
 
 ---
 
-### 🟦 Slide 11 – Différenciation
+### 🟦 Slide 8 – A GeoRace duel
 
-**Ce que les autres apps ne font pas :**
+**Typical scenario:**
 
-* **Strava** → réseau social, pas de compétition temps réel
-* **Nike Run Club** → tracking + défis asynchrones
-* **Runkeeper** → GPS basique sans interaction
-
-**GeoRace combine :**
-
-> Duels spontanés en temps réel + Point d'arrivée équitable + Matchmaking ELO
-
-**= Concept unique sur le marché**
+1. **You start your run** → the app detects 3 runners within 800m
+2. **Duel proposal** → notification "Paul (ELO 1420) challenges you"
+3. **You accept** → the system calculates a finish point at 1.2km for each
+4. **Start in 10 seconds** → countdown
+5. **Live race** → GPS guides you, opponent's position visible
+6. **Finish** → +25 ELO, badge "5 consecutive victories" unlocked
 
 ---
 
-### 🟦 Slide 12 – Modèle économique
+### 🟦 Slide 9 – Quick demo (key points for presentation)
 
-**Freemium avec valeur ajoutée**
+**Presentation script - Key points to emphasize**
 
-**Gratuit :**
-* 3 duels par jour
-* Classement ELO
-* Statistiques de base
-* Événements communautaires
+* **Equidistant finish point**: "Each runner covers exactly the same distance - total fairness"
+* **ELO Matchmaking**: "You always face someone at your level - neither too easy nor impossible"
+* **Real-time duel**: "No after-the-fact comparison - it's a real race, now"
+* **Security and privacy**: "Your position is only visible during active duels"
+* **Anti-cheat**: "Automatic GPS anomaly detection - no cheaters"
+* **Social engagement**: "Profiles, chat, badges, local tournaments - a real community"
 
-**Premium (4,99€/mois) :**
-* Duels illimités
-* Statistiques avancées
-* Personnalisation profil
-* Mode entraînement contre vos records
-* Pas de publicités
-
-**Revenus additionnels :**
-* Partenariats marques (Nike, Adidas)
-* Événements premium avec prix
+**Key message**: Fair real-time dueling changes everything - it's no longer tracking, it's competition!
 
 ---
 
-### 🟦 Slide 13 – Roadmap
+### 🟦 Slide 10 – Social aspect
 
-**Déploiement progressif**
+**Build a runner community**
 
-**Phase 1 (6 mois) - MVP**
-* Duels 1v1 en temps réel
-* Système ELO
-* Test dans 2-3 villes pilotes
-* **Objectif : 500 utilisateurs actifs**
+**01 - BALANCED MATCHMAKING**
+Automatic connection between runners of similar levels through ELO
 
-**Phase 2 (12 mois) - Gamification**
-* Badges, statistiques, profils
-* Événements communautaires
-* **Objectif : 5 000 utilisateurs**
+**02 - DISCUSSION AND SHARING**
+Live chat, friend adding, detailed profiles with statistics
 
-**Phase 3 (24 mois) - Scale**
-* Version Premium
-* Duels multi-joueurs
-* Expansion nationale
-* **Objectif : 50 000 utilisateurs**
+**03 - COMMUNITY EVENTS**
+Organized races, collective challenges, local leagues by city/neighborhood
 
 ---
 
-### 🟦 Slide 14 – Défis & Solutions
+### 🟦 Slide 11 – ELO ranking system
 
-**Anticiper les obstacles**
+**Fair competition and motivating progression**
 
-**Défi : Sécurité des coureurs**
-→ Alertes de sécurité, mode "course prudente"
+**01 - BALANCED MATCHES**
+ELO algorithm pairs you with runners of similar level
 
-**Défi : Zones rurales (peu d'utilisateurs)**
-→ Mode asynchrone contre "ghost runners"
+**02 - VISIBLE PROGRESSION**
+Track your rise in rankings (Bronze → Silver → Gold → Platinum)
 
-**Défi : Triche (vélo, voiture)**
-→ Détection vitesse anormale + validation communautaire
-
-**Défi : Vie privée**
-→ Position visible uniquement en duel, blocage d'utilisateurs
+**03 - REWARDS AND BADGES**
+Unlock achievements at each level reached
 
 ---
 
-### 🟦 Slide 15 – Vision
+### �� Slide 12 – GeoRace benefits
 
-> GeoRace ne se contente pas de tracker vos courses.
-> Nous transformons la course à pied en une **expérience sociale, compétitive et motivante** accessible à tous, partout, à tout moment.
+**More than a running app**
 
-**Notre ambition :**
-Devenir la référence de la course compétitive en temps réel et créer une communauté mondiale de coureurs passionnés par le défi.
+**01 - INCREASED MOTIVATION**
+Each outing becomes a concrete and exciting challenge
+
+**02 - PERFORMANCE IMPROVEMENT**
+Competition naturally pushes self-improvement
+
+**03 - SOCIAL WELL-BEING**
+Meet and interact with other passionate runners
 
 ---
 
-### 🟦 Slide 16 – Phrase finale
+### 🟦 Slide 13 – Key features
+
+**Technology serving performance**
+
+* **High-precision GPS**: real-time tracking during duels
+* **Intelligent algorithm**: calculation of accessible equidistant points
+* **Security**: position visible only during active duel
+* **Anti-cheat**: abnormal speed detection and community validation
+* **Battery optimization**: energy-saving mode
+
+---
+
+### 🟦 Slide 14 – Target audience
+
+**Who uses GeoRace?**
+
+* 🏃‍♂️ **Regular runners**: seeking to improve their performance
+* 👟 **Occasional runners**: need motivation to stay consistent
+* 🏅 **Competitive runners**: want to test their level between official races
+* 👥 **New runners**: looking for a motivating community
+
+---
+
+### 🟦 Slide 15 – Differentiation vs competitors
+
+**What other apps don't do:**
+
+* **Strava** → social network, no real-time competition
+* **Nike Run Club** → tracking + asynchronous challenges
+* **Runkeeper** → basic GPS without interaction
+
+**GeoRace combines:**
+
+> Spontaneous real-time duels + Fair finish point + ELO Matchmaking
+
+**= Unique concept in the market**
+
+---
+
+### 🟦 Slide 16 – Business model
+
+**Freemium with added value**
+
+**Free:**
+* 3 duels per day
+* ELO ranking
+* Basic statistics
+* Community events
+
+**Premium (€4.99/month):**
+* Unlimited duels
+* Advanced statistics
+* Profile customization
+* Training mode against your records
+* No ads
+
+**Additional revenues:**
+* Brand partnerships (Nike, Adidas)
+* Premium events with prizes
+
+---
+
+### 🟦 Slide 17 – Roadmap
+
+**Progressive deployment**
+
+**Phase 1 (6 months) - MVP**
+* 1v1 real-time duels
+* ELO system
+* Test in 2-3 pilot cities
+* **Goal: 500 active users**
+
+**Phase 2 (12 months) - Gamification**
+* Badges, statistics, profiles
+* Community events
+* **Goal: 5,000 users**
+
+**Phase 3 (24 months) - Scale**
+* Premium version
+* Multi-player duels
+* National expansion
+* **Goal: 50,000 users**
+
+---
+
+### 🟦 Slide 18 – Challenges & Solutions
+
+**Anticipating obstacles**
+
+**Challenge: Runner safety**
+→ Safety alerts, "cautious race" mode
+
+**Challenge: Rural areas (few users)**
+→ Asynchronous mode against "ghost runners"
+
+**Challenge: Cheating (bike, car)**
+→ Abnormal speed detection + community validation
+
+**Challenge: Privacy**
+→ Position visible only during duel, user blocking
+
+---
+
+### 🟦 Slide 19 – Vision
+
+> GeoRace doesn't just track your runs.
+> We transform running into a **social, competitive, and motivating experience** accessible to everyone, everywhere, anytime.
+
+**Our ambition:**
+Become the reference for real-time competitive running and create a global community of runners passionate about challenges.
+
+---
+
+### 🟦 Slide 20 – Final message
 
 **GeoRace**
 
-> Chaque course est un duel.
-> Chaque duel est une opportunité.
-> Transformez votre motivation.
+> Every run is a duel.
+> Every duel is an opportunity.
+> Transform your motivation.
 
-**Prêt à relever le défi ?**
+**Ready to take on the challenge?**
