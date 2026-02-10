@@ -18,6 +18,10 @@ fi
 
 # Output to build_output directory next to the script (not zipped)
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+if [ -z "$SCRIPT_DIR" ]; then
+  echo "Error: Failed to determine script directory"
+  exit 1
+fi
 OUTDIR="$SCRIPT_DIR/build_output"
 AUTHOR="TLX542"
 

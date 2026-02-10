@@ -26,8 +26,11 @@ echo Bash not found, using PowerShell fallback...
 echo.
 
 REM Use PowerShell to execute the embedded script
+REM Get the batch file's directory and pass it to PowerShell
+set SCRIPT_DIR=%~dp0
 powershell -NoProfile -ExecutionPolicy Bypass -Command "& { ^
-$OUTDIR = 'build_output'; ^
+$ScriptDir = '%SCRIPT_DIR%'.TrimEnd('\\'); ^
+$OUTDIR = Join-Path $ScriptDir 'build_output'; ^
 $AUTHOR = 'TLX542'; ^
 ^
 Write-Host \"Creating output directory: $OUTDIR\"; ^
