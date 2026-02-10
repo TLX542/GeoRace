@@ -1,13 +1,24 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-OUTDIR="geo_race_export"
-ZIPNAME="GeoRace_documents_bundle.zip"
+# MODIFICATION (PR révision) : Le script écrit maintenant les fichiers directement 
+# dans le répertoire courant au lieu de créer un bundle ZIP dans un sous-dossier.
+# Ceci facilite l'édition et la génération de la présentation pour les révisions rapides.
+# Si un argument est fourni, il sera utilisé comme répertoire de sortie, 
+# sinon le répertoire courant (.) est utilisé par défaut.
+
+OUTDIR="${1:-.}"
 AUTHOR="TLX542"
 
-echo "Creating output dir: $OUTDIR"
-rm -rf "$OUTDIR"
-mkdir -p "$OUTDIR/assets"
+# Si OUTDIR n'est pas le répertoire courant, on le crée
+if [ "$OUTDIR" != "." ]; then
+  echo "Creating output dir: $OUTDIR"
+  rm -rf "$OUTDIR"
+  mkdir -p "$OUTDIR/assets"
+else
+  echo "Writing files to current directory"
+  mkdir -p "assets"
+fi
 
 echo "Generating markdown and assets..."
 
@@ -447,7 +458,7 @@ Le premier vrai duel de course instantané et équitable.
 
 ### 🟦 Slide 5 - Le point équidistant : notre innovation technique
 
-**Pourquoi personne d'autre ne le fait**
+**Pourquoi le mode duel est unique et comment il assure l'équité**
 
 **Le problème des courses spontanées :**
 - Si on court vers le même point → celui qui est plus proche gagne toujours
@@ -459,9 +470,18 @@ Le premier vrai duel de course instantané et équitable.
 2. **Prise en compte du terrain** : routes, chemins, zones interdites
 3. **Validation en temps réel** : les coureurs voient le parcours avant d'accepter
 
+**Exemple d'usage concret :**
+Paul est à 800m au nord du parc, Emma à 800m au sud → l'algorithme trouve un point à 1,2km à l'est pour chacun → départ synchronisé → course équitable garantie
+
+**Bénéfices utilisateur :**
+✅ Pas de triche de position → course 100% équitable
+✅ Motivation instantanée → transforme sortie ordinaire en challenge excitant  
+✅ Progression mesurée → chaque victoire compte pour votre classement ELO
+
 **Résultat :** Compétition 100% équitable, quelle que soit votre position de départ
 
-**Aucun concurrent ne propose cela.**
+**Notes présentateur :**
+*C'est LE différenciateur majeur apprécié par le jury. Insister sur le calcul algorithmique qui garantit l'équité. Aucun concurrent (Strava segments fixes, Nike Run Club défis asynchrones) ne propose cela. Cette innovation technique + système ELO = expérience de duel unique et juste.*
 
 ---
 
@@ -522,47 +542,71 @@ Le premier vrai duel de course instantané et équitable.
 
 ---
 
-### 🟦 Slide 9 - Ce que Strava ne peut PAS copier
+### 🟦 Slide 9 - Nos différenciateurs
 
-**Nos barrières à l'entrée**
+**Fonctionnalités qui nous distinguent des concurrents**
 
-**1. ALGORITHME DE POINT ÉQUIDISTANT**
-- Complexité technique : calcul géospatial en temps réel
-- Brevet déposable : méthode unique de matching géographique équitable
+✅ **Duels équidistants en temps réel**
+Point d'arrivée calculé à distance égale pour tous → équité parfaite garantie
 
-**2. INFRASTRUCTURE TEMPS RÉEL**
-- WebSocket à faible latence pour positions live
-- Serveurs optimisés pour synchronisation GPS (<500ms)
+✅ **Matchmaking ELO intelligent**
+Vous affrontez des coureurs de votre niveau → compétition équilibrée et motivante
 
-**3. COMMUNAUTÉ DE COMPÉTITEURS**
-- Effet réseau : plus il y a de coureurs, plus de duels disponibles
-- Base ELO : impossible à transférer vers un concurrent
+✅ **Anti-triche GPS avancé**
+Détection de vitesse anormale + validation communautaire → intégrité des courses
 
-**Strava excelle dans le tracking passif.**  
-**Nous excellons dans la compétition active.**
+✅ **Confidentialité position limitée**
+Position visible uniquement pendant les duels actifs → sécurité et vie privée
+
+✅ **Progression visible & badges**
+Système de classement (Bronze → Platine) + achievements → motivation continue
+
+✅ **Communauté locale active**
+Événements de quartier, ligues locales, défis hebdomadaires → engagement social
+
+**CE QUE STRAVA NE PEUT PAS COPIER :**
+- Algorithme de point équidistant (brevet déposable)
+- Infrastructure temps réel WebSocket (<500ms de latence)
+- Communauté de compétiteurs avec historique ELO
+
+**Notes présentateur :**
+*Insister sur l'équité des duels (point équidistant) qui est notre innovation clé appréciée par le jury. Les concurrents n'offrent que du tracking ou des défis asynchrones. Notre combinaison matchmaking ELO + duels temps réel = unique sur le marché. La sécurité (anti-triche + confidentialité) répond aux préoccupations principales.*
 
 ---
 
-### 🟦 Slide 10 - Stratégie d'acquisition : convertir les utilisateurs de Strava
+### 🟦 Slide 10 - Pitch : Pourquoi les utilisateurs viendront chez GeoRace
 
-**Comment faire venir 10 000 utilisateurs Strava en 6 mois**
+**Stratégie d'acquisition des utilisateurs déjà sur d'autres apps**
 
-**Phase 1 : Ciblage hyper-local (Mois 1-3)**
-- Lancement dans 2-3 villes (Paris, Lyon, Marseille)
-- Partenariats avec running clubs locaux
-- Événements "GeoRace Challenge" dans les parcs populaires
+🎯 **Ciblage coureurs locaux via duels**
+Notifications "3 coureurs près de vous → défiez-les" → expérience immédiate
 
-**Phase 2 : Viralité par le défi (Mois 4-6)**
-- Feature "Inviter un ami Strava à un duel"
-- Bonus ELO si vous faites venir un nouveau coureur
-- Classements par ville → compétition entre communautés
+🤝 **Partenariats locaux**
+Clubs de running + événements sportifs → visibilité communautaire ciblée
 
-**Phase 3 : Proof of concept (Mois 6)**
-- 500 utilisateurs actifs
-- Taux de rétention J7 >40%
-- Moyenne 6 duels/semaine par utilisateur
+🏆 **Challenges hebdomadaires locaux**
+"Top 10 de votre quartier cette semaine" → compétition de proximité
 
-**Objectif final :** Devenir l'app #1 pour la compétition, Strava reste pour le tracking
+👥 **Parrainage via duels**
+"Invitez un ami → débloquez 10 duels bonus" → croissance virale naturelle
+
+📱 **Intégration réseaux sociaux**
+Partage automatique résultats (Instagram, Facebook) → preuve sociale
+
+⏰ **Notifications contextuelles**
+"Vous venez de courir 5km → proposer un duel proche ?" → timing parfait
+
+🎮 **Mise en avant duel dès l'onboarding**
+Premier duel guidé gratuit dans les 5 premières minutes → hook immédiat
+
+📊 **Preuve sociale locale**
+Classements par quartier + badges visibles → effet FOMO
+
+🎯 **Campagnes segments compétitifs**
+Ciblage sprinters, joggers réguliers, groupes d'amis → messages personnalisés
+
+**Notes présentateur :**
+*Notre avantage : les utilisateurs de Strava/Nike Run Club cherchent déjà la compétition mais n'ont que des défis asynchrones. Nous offrons l'excitation du temps réel. Tactique clé : notification post-course pour transformer l'habitude existante en duel GeoRace. Les partenariats clubs donnent crédibilité locale. Le parrainage via duels crée une boucle virale (inviter = jouer ensemble).*
 
 ---
 
@@ -1026,8 +1070,7 @@ fi
 
 cd "$ORIGDIR"
 
-# --- ZIP ---
-echo "Creating ZIP..."
-zip -q -r "$ZIPNAME" "$OUTDIR" || zip -r "$ZIPNAME" "$OUTDIR"
-echo "✅ ZIP: $ZIPNAME"
+# MODIFICATION (PR révision) : Le ZIP n'est plus créé.
+# Les fichiers .md, .docx, .pptx et assets sont générés directement dans $OUTDIR
+echo "✅ Files generated in: $OUTDIR"
 echo "Done!"

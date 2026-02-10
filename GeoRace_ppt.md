@@ -52,16 +52,29 @@ Compte à rebours synchronisé après acceptation mutuelle
 
 ---
 
-### 🟦 Slide 5 – Un duel GeoRace
+### 🟦 Slide 5 – Un duel GeoRace : L'équité au cœur de l'expérience
 
-**Scénario typique :**
+**Pourquoi notre mode duel est unique :**
+
+🎯 **Point d'arrivée équidistant** → Garantit l'équité parfaite
+Quel que soit votre point de départ, la distance à parcourir est identique pour tous les participants
+
+⚡ **Scénario typique d'un duel :**
 
 1. **Vous commencez votre course** → l'app détecte 3 coureurs dans un rayon de 800m
 2. **Proposition de duel** → notification "Paul (ELO 1420) vous défie"
 3. **Vous acceptez** → le système calcule un point d'arrivée à 1,2km pour chacun
-4. **Départ dans 10 secondes** → compte à rebours
-5. **Course en direct** → GPS vous guide, position de l'adversaire visible
+4. **Départ dans 10 secondes** → compte à rebours synchronisé
+5. **Course en direct** → GPS vous guide, position de l'adversaire visible en temps réel
 6. **Arrivée** → +25 ELO, badge "5 victoires consécutives" débloqué
+
+**Bénéfice utilisateur :**
+✅ Pas de triche de position → course 100% équitable
+✅ Motivation instantanée → transforme une sortie ordinaire en challenge excitant
+✅ Progression mesurée → chaque victoire compte pour votre classement ELO
+
+**Notes présentateur :**
+*C'est LE différenciateur majeur apprécié par le jury. Insister sur le calcul algorithmique du point équidistant qui assure que tous les participants courent exactement la même distance. Contrairement aux apps concurrentes qui ne proposent que des segments fixes (Strava) ou des courses asynchrones, nous garantissons l'équité en temps réel. Le système ELO ajoute une dimension compétitive intelligente : vous affrontez toujours des coureurs de votre niveau.*
 
 ---
 
@@ -133,23 +146,70 @@ Rencontrez et interagissez avec d'autres coureurs passionnés
 
 ---
 
-### 🟦 Slide 11 – Différenciation
+### 🟦 Slide 11 – Nos différenciateurs
 
-**Ce que les autres apps ne font pas :**
+**Fonctionnalités qui nous distinguent des concurrents :**
 
-* **Strava** → réseau social, pas de compétition temps réel
-* **Nike Run Club** → tracking + défis asynchrones
-* **Runkeeper** → GPS basique sans interaction
+✅ **Duels équidistants en temps réel**
+Point d'arrivée calculé à distance égale pour tous → équité parfaite
 
-**GeoRace combine :**
+✅ **Matchmaking ELO intelligent**
+Vous affrontez des coureurs de votre niveau → compétition équilibrée et motivante
 
-> Duels spontanés en temps réel + Point d'arrivée équitable + Matchmaking ELO
+✅ **Anti-triche GPS avancé**
+Détection de vitesse anormale + validation communautaire → intégrité des courses
 
-**= Concept unique sur le marché**
+✅ **Confidentialité position limitée**
+Position visible uniquement pendant les duels actifs → sécurité et vie privée
+
+✅ **Progression visible & badges**
+Système de classement (Bronze → Platine) + achievements débloquables → motivation continue
+
+✅ **Communauté locale active**
+Événements de quartier, ligues locales, défis hebdomadaires → engagement social fort
+
+**Notes présentateur :**
+*Insister sur l'équité des duels (point équidistant) qui est notre innovation clé. Les concurrents (Strava, Nike Run Club) n'offrent que du tracking ou des défis asynchrones. Notre matchmaking ELO + duels temps réel = combinaison unique sur le marché. La sécurité (anti-triche + confidentialité) répond aux préoccupations principales des coureurs.*
 
 ---
 
-### 🟦 Slide 12 – Modèle économique
+### 🟦 Slide 12 – Pitch : Pourquoi les utilisateurs viendront chez GeoRace
+
+**Stratégie d'acquisition des utilisateurs déjà sur d'autres apps**
+
+🎯 **Ciblage coureurs locaux via duels**
+Notifications "3 coureurs près de vous → défiez-les maintenant" → expérience immédiate
+
+🤝 **Partenariats locaux**
+Clubs de running + événements sportifs → visibilité communautaire ciblée
+
+🏆 **Challenges hebdomadaires locaux**
+"Top 10 de votre quartier cette semaine" → compétition de proximité engageante
+
+👥 **Parrainage via duels**
+"Invitez un ami → débloquez 10 duels bonus" → croissance virale naturelle
+
+📱 **Intégration réseaux sociaux**
+Partage automatique résultats duels (Instagram, Facebook) → preuve sociale
+
+⏰ **Notifications contextuelles**
+"Vous venez de courir 5km → proposer un duel à un coureur proche ?" → timing parfait
+
+🎮 **Mise en avant duel dès l'onboarding**
+Premier duel guidé gratuit dans les 5 premières minutes → hook immédiat
+
+📊 **Preuve sociale locale**
+Classements par quartier + badges visibles → effet FOMO (fear of missing out)
+
+🎯 **Campagnes segments compétitifs**
+Ciblage sprinters, joggers réguliers, groupes d'amis → messages personnalisés
+
+**Notes présentateur :**
+*Notre avantage : les utilisateurs de Strava/Nike Run Club cherchent déjà la compétition mais n'ont que des défis asynchrones. Nous offrons l'excitation du temps réel. Tactique clé : notification post-course pour transformer l'habitude existante en duel GeoRace. Les partenariats clubs donnent crédibilité locale. Le parrainage via duels crée une boucle virale naturelle (inviter = jouer ensemble).*
+
+---
+
+### 🟦 Slide 13 – Modèle économique
 
 **Freemium avec valeur ajoutée**
 
@@ -172,7 +232,7 @@ Rencontrez et interagissez avec d'autres coureurs passionnés
 
 ---
 
-### 🟦 Slide 13 – Roadmap
+### 🟦 Slide 14 – Roadmap
 
 **Déploiement progressif**
 
@@ -195,7 +255,7 @@ Rencontrez et interagissez avec d'autres coureurs passionnés
 
 ---
 
-### 🟦 Slide 14 – Défis & Solutions
+### 🟦 Slide 15 – Défis & Solutions
 
 **Anticiper les obstacles**
 
@@ -213,7 +273,7 @@ Rencontrez et interagissez avec d'autres coureurs passionnés
 
 ---
 
-### 🟦 Slide 15 – Vision
+### 🟦 Slide 16 – Vision
 
 > GeoRace ne se contente pas de tracker vos courses.
 > Nous transformons la course à pied en une **expérience sociale, compétitive et motivante** accessible à tous, partout, à tout moment.
@@ -223,7 +283,7 @@ Devenir la référence de la course compétitive en temps réel et créer une co
 
 ---
 
-### 🟦 Slide 16 – Phrase finale
+### 🟦 Slide 17 – Phrase finale
 
 **GeoRace**
 
