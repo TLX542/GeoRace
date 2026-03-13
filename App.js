@@ -16,7 +16,7 @@ export default function App() {
       <StatusBar style="dark" />
       <Tab.Navigator
         screenOptions={({ route }) => ({
-          headerShown: false,
+          headerShown: true,
           tabBarActiveTintColor: '#111',
           tabBarInactiveTintColor: '#777',
           tabBarIcon: ({ color, size }) => {

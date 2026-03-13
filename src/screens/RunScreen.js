@@ -171,7 +171,6 @@ export default function RunScreen() {
         lastLocation={lastLocation || userLocation}
       />
       {showGhost ? <GhostHUD deltaMs={deltaMs} /> : null}
-      <DebugHUD pointsCount={points.length} lastLocation={lastLocation} lastUpdateMs={lastUpdateMs} />
       {/* Checkpoint crossing toast */}
       <CheckpointToast checkpoint={lastCrossedCheckpoint} hasGhost={!!activeGhost} />
       <RunControls
@@ -182,7 +181,7 @@ export default function RunScreen() {
         onStop={handleStop}
         starting={starting}
         startCountdown={startCountdown}
-        bottomInset={bottomInset}
+        bottomInset={3}
       />
       {/* Race results modal – shown when all checkpoints are crossed */}
       <ResultsModal visible={raceFinished} results={raceResults} onDismiss={dismissResults} />
