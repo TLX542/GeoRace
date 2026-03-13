@@ -37,7 +37,7 @@ const PREFAB_GHOSTS = [
     // Cumulative ghost time (ms from race start) at each checkpoint,
     // computed from checkpoint distances at paceMsPerKm=390000 ms/km.
     // Values are in ms; approximate display: CP0=0:00, CP1≈0:28, CP2≈1:27, CP3≈2:04, CP4≈2:57, CP5≈3:56, CP6≈4:45
-    ghostCheckpointTimes: [0, 999999, 9999999, 999999999, 9999999999, 99999999999, 999999999999],
+    ghostCheckpointTimes: [0, 28152, 87288, 124171, 177530, 236590, 285261],
   },
 ];
 
