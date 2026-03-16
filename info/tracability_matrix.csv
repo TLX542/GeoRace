@@ -1,0 +1,5 @@
+id,requirement,source_doc,spec_file,user_story,acceptance_criteria,test_case,delivery_lot
+REQ-001,User signup & consent,info/Client_Needs_&_Functional_Scope.md,info/specs_fonctionnelles.md,US-001,"GIVEN new user WHEN signs up THEN account created and consent recorded",TC-001,Lot1
+REQ-002,Matchmaking local,info/Client_Needs_&_Functional_Scope.md,info/specs_fonctionnelles.md,US-010,"GIVEN users nearby WHEN seek match THEN matched within radius <2km",TC-010,Lot1
+REQ-003,Duel telemetry ingestion,info/Technical_&_Functional_Specifications.md,info/specs_techniques.md,US-020,"GIVEN duel active WHEN telemetry sent THEN server ingests <=500ms median latency",TC-020,Lot1
+REQ-004,Accessibility (WCAG AA),info/Context_Audit_&_Compliance.md,info/specs_fonctionnelles.md,US-A11Y-001,"All primary flows accessible on VoiceOver/TalkBack",TC-A11Y-001,Lot1
