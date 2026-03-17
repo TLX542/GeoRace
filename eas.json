@@ -1,0 +1,20 @@
+{
+  "cli": {
+    "version": ">= 7.0.0"
+  },
+  "build": {
+    "preview": {
+      "developmentClient": false,
+      "distribution": "internal"
+    },
+    "production": {
+      "developmentClient": false
+    }
+  },
+  "submit": {
+    "production": {}
+  },
+  "update": {
+    "url": "https://u.expo.dev/your-project-id"
+  }
+}
