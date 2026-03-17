@@ -26,6 +26,6 @@
   },
   "private": true,
   "devDependencies": {
-    "babel-preset-expo": "^55.0.10"
+    "babel-preset-expo": "^55.0.11"
   }
 }
