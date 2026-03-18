@@ -1,26 +1,26 @@
 # Documentation & checklist Accessibilité (A11Y) — GeoRace
 
-But : rules for writing accessible specs & product checks.
+Objectif : règles pour rédiger des spécifications accessibles et effectuer des contrôles produit.
 
-## Docs checklist (for specs, PRD, presentation)
-- [ ] Use semantic headings (H1, H2, H3)
-- [ ] Provide alt text for images / diagrams (in repository as alt in markdown)
-- [ ] Tables have captions and headers
-- [ ] Links have descriptive text (no "click here")
-- [ ] All color examples include contrast ratio values
-- [ ] PDFs exported must include document title and searchable text
+## Checklist documentation (spécifications, PRD, présentation)
+- [ ] Utiliser des titres sémantiques (H1, H2, H3)
+- [ ] Fournir un texte alternatif pour les images / schémas (dans le dépôt, via l’alt en Markdown)
+- [ ] Les tableaux ont des légendes et des en-têtes
+- [ ] Les liens ont un texte descriptif (pas de « cliquez ici »)
+- [ ] Tous les exemples de couleur incluent des valeurs de ratio de contraste
+- [ ] Les PDF exportés doivent inclure un titre de document et du texte sélectionnable/recherchable
 
-## Product checklist (per screen)
-- [ ] Screen reader labels (VoiceOver/TalkBack)
-- [ ] Focus order logical & visible focus indicator
-- [ ] Touch target >= 44x44dp
-- [ ] Contrast >= 4.5:1 (normal text)
-- [ ] Dynamic text / font scaling supported
-- [ ] Keyboard navigation for maps (fallback interactions)
+## Checklist produit (par écran)
+- [ ] Libellés pour lecteurs d’écran (VoiceOver/TalkBack)
+- [ ] Ordre de focus logique & indicateur de focus visible
+- [ ] Cibles tactiles >= 44x44dp
+- [ ] Contraste >= 4,5:1 (texte normal)
+- [ ] Texte dynamique / mise à l’échelle des polices pris en charge
+- [ ] Navigation clavier pour les cartes (interactions de repli)
 
-## Test plan & evidence
-- Manual tests with VoiceOver / TalkBack (record in `info/research/a11y_tests/`)
-- Automated checks: axe (for web parts), color contrast tools
-- Evidence expected: screenshots with VoiceOver spoken labels, logs of test cases (TC-A11Y-001..)
+## Plan de test & preuves
+- Tests manuels avec VoiceOver / TalkBack (à enregistrer dans `info/research/a11y_tests/`)
+- Vérifications automatisées : axe (pour les parties web), outils de contraste des couleurs
+- Preuves attendues : captures avec libellés lus par VoiceOver, journaux des cas de test (TC-A11Y-001..)
 
 -- Fin.

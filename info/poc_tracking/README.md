@@ -1,28 +1,28 @@
-# POC: Tracking & Latency tests
+# POC : Tracking & tests de latence
 
-But : guide to run PoC for telemetry latency, update frequency, battery impact.
+Objectif : guide pour exécuter le PoC sur la latence de télémétrie, la fréquence de mise à jour et l’impact batterie.
 
-## Tests to run
-1. Telemetry latency test (WebSocket): measure end-to-end time from device telemetry send to server ack.
-2. Update frequency test: test 1/s, 0.5/s, 2/s; measure ingestion and CPU/battery.
-3. Battery impact: run 30 minute tracked session on a representative device and measure battery delta.
+## Tests à exécuter
+1. Test de latence télémétrie (WebSocket) : mesurer le temps bout en bout entre l’envoi télémétrie device et l’ack serveur.
+2. Test de fréquence de mise à jour : tester 1/s, 0,5/s, 2/s ; mesurer ingestion et CPU/batterie.
+3. Impact batterie : session trackée 30 minutes sur un appareil représentatif et mesurer le delta batterie.
 
-## Test environment
-- Devices: Android 10+, iOS 14+
-- Network: 4G cellular, Wi‑Fi (common conditions)
-- Server: staging WebSocket endpoint (provide URL)
+## Environnement de test
+- Devices : Android 10+, iOS 14+
+- Réseau : 4G cellulaire, Wi‑Fi (conditions courantes)
+- Serveur : endpoint WebSocket staging (fournir l’URL)
 
-## Measurement format (store results)
-- File: `info/poc_tracking/latency_results_{date}.md`
-- Fields: test_id, device, network_type, update_rate, measured_median_latency_ms, p95_latency_ms, battery_start, battery_end, notes
+## Format de mesure (stocker les résultats)
+- Fichier : `info/poc_tracking/latency_results_{date}.md`
+- Champs : test_id, device, network_type, update_rate, measured_median_latency_ms, p95_latency_ms, battery_start, battery_end, notes
 
-## Example commands (pseudo)
-- Run client emitter with timestamp; server returns ack with server timestamp; measure delta.
-- Use adb / iOS instruments for battery.
+## Commandes exemple (pseudo)
+- Lancer un émetteur client avec timestamp ; le serveur renvoie un ack avec timestamp serveur ; mesurer le delta.
+- Utiliser adb / iOS instruments pour la batterie.
 
-## Expected thresholds
-- Target median latency < 500 ms
+## Seuils attendus
+- Cible latence médiane < 500 ms
 - p95 < 1 s
-- Battery: additional drain < 5% per 30 min (baseline)
+- Batterie : drain additionnel < 5% sur 30 min (baseline)
 
 -- Fin.
