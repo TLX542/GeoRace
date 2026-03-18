@@ -1,4 +1,4 @@
-# Mise en place CI/CD + GitHub Project — GeoRace
+# Mise en place CI/CD + GitHub Project - GeoRace
 **Date :** 2026-03-16  
 **Repo :** TLX542/GeoRace  
 **Stack actuelle repo (mobile) :** React Native + Expo (JS)  
@@ -110,7 +110,7 @@ Créer des templates :
 
 ---
 
-## 5) Timeline intégrée (12 semaines — exemple opérationnel)
+## 5) Timeline intégrée (12 semaines - exemple opérationnel)
 
 ### Semaines 1–2
 - Project setup + labels + templates

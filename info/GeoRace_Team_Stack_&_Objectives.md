@@ -103,7 +103,7 @@
 
 **Colonnes du board :**
 ```
-  📋 Backlog  →  🎯 Sprint actuel  →  🔧 En cours  →  👀 En review  →  ✅ Done
+  Backlog  →  Sprint actuel  →  En cours  →  En review  →  Done
 ```
 
 > Jira est écarté : surdimensionné pour une équipe de 4 personnes.
@@ -132,12 +132,12 @@
 
 | Page | Contenu |
 |------|---------|
-| 📌 **Roadmap** | Vision globale, phases, jalons |
-| 📋 **Backlog produit** | MoSCoW détaillé, user stories |
-| 🏗️ **Architecture** | Schémas C4, décisions techniques (ADR) |
-| 🔒 **RGPD & Legal** | CGU draft, politique de confidentialité, checklist CNIL |
-| 🧪 **Tests utilisateurs** | Résultats questionnaires PoC, feedback terrain |
-| 📊 **Métriques** | Dashboard KPIs (rétention J7, ELO distribution, conversion) |
+| **Roadmap** | Vision globale, phases, jalons |
+| **Backlog produit** | MoSCoW détaillé, user stories |
+| **Architecture** | Schémas C4, décisions techniques (ADR) |
+| **RGPD & Legal** | CGU draft, politique de confidentialité, checklist CNIL |
+| **Tests utilisateurs** | Résultats questionnaires PoC, feedback terrain |
+| **Métriques** | Dashboard KPIs (rétention J7, ELO distribution, conversion) |
 
 ---
 
@@ -181,7 +181,7 @@
 
 ## 3. Rôles de l'Équipe
 
-### 👤 Rôle 1 - Product Owner & Conformité
+### Rôle 1 - Product Owner & Conformité
 
 **Responsabilités produit :**
 - Maintenir et prioriser le **backlog produit** (MoSCoW)
@@ -200,7 +200,7 @@
 
 ---
 
-### 👤 Rôle 2 - Développeur Mobile (React Native)
+### Rôle 2 - Développeur Mobile (React Native)
 
 **Responsabilités :**
 - Développer l'**application mobile** iOS & Android (React Native + Expo)
@@ -215,7 +215,7 @@
 
 ---
 
-### 👤 Rôle 3 - Développeur Backend & DevOps
+### Rôle 3 - Développeur Backend & DevOps
 
 **Responsabilités :**
 - Construire et maintenir le **backend NestJS** (API REST + WebSocket) en Phase 2
@@ -230,7 +230,7 @@
 
 ---
 
-### 👤 Rôle 4 - Développeur Algorithmes & Sécurité
+### Rôle 4 - Développeur Algorithmes & Sécurité
 
 **Responsabilités :**
 - Concevoir et implémenter le **Ghost Matching Engine** (sélection du ghost optimal : ELO + distance + type de parcours)
@@ -247,7 +247,7 @@
 
 ## 4. Objectifs par Phase
 
-### 🧪 Phase 0 - PoC (2 semaines)
+### Phase 0 - PoC (2 semaines)
 
 **Objectif central :** Valider que la mécanique de Ghost Race est engageante avant tout investissement backend.
 
@@ -265,7 +265,7 @@
 
 ---
 
-### 🚀 Phase 1 - MVP (Mois 1 à 6)
+### Phase 1 - MVP (Mois 1 à 6)
 
 **Objectif central :** Lancer un produit fonctionnel avec de vrais utilisateurs dans 1-2 villes pilotes.
 
@@ -283,7 +283,7 @@
 
 ---
 
-### 🎮 Phase 2 - Gamification & Social (Mois 7 à 12)
+### Phase 2 - Gamification & Social (Mois 7 à 12)
 
 **Objectif central :** Fidéliser la base existante et activer la croissance virale.
 
@@ -300,7 +300,7 @@
 
 ---
 
-### 🌍 Phase 3 - Scale & Monétisation (An 2)
+### Phase 3 - Scale & Monétisation (An 2)
 
 **Objectif central :** Atteindre la rentabilité et préparer l'expansion nationale.
 

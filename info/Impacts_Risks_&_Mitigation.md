@@ -1,7 +1,7 @@
 # GeoRace - Workshop : Impacts, Risques & Mitigation
 
 > **Epitech Innovation Track** | Basé sur l'architecture VPS & le système Ghost Race
-> ⚠️ **Note de scope :** La matrice distingue les risques du **PoC 2 semaines** (scope actuel) et ceux du **MVP Phase 2** (backend, ELO, matchmaking). Les risques hors scope PoC sont signalés et différés.
+> **Note de scope :** La matrice distingue les risques du **PoC 2 semaines** (scope actuel) et ceux du **MVP Phase 2** (backend, ELO, matchmaking). Les risques hors scope PoC sont signalés et différés.
 
 ---
 
@@ -46,7 +46,7 @@
 
 ---
 
-### 🧪 RISQUES PoC - 2 SEMAINES
+### RISQUES PoC - 2 SEMAINES
 
 ---
 
@@ -56,11 +56,11 @@
 
 **Stratégie : Réduire**
 
-- 📱 Tester sur **minimum 3 appareils différents** (au moins 1 iOS + 1 Android) en conditions réelles extérieures avant toute démo.
-- 🎯 Utiliser `expo-location` avec le mode de précision **`BestForNavigation`** pour maximiser la qualité GPS.
-- 🚫 Ignorer automatiquement tout point GPS avec une précision déclarée **> 30 mètres**.
-- 🗺️ Définir un **parcours de test connu à l'avance** (ex. : tour d'un parc de ~1 km) pour valider visuellement la cohérence de la trace.
-- 🔄 En cas de signal GPS faible, afficher un **indicateur de qualité GPS** à l'écran et bloquer le démarrage de la course si la précision est insuffisante.
+- Tester sur **minimum 3 appareils différents** (au moins 1 iOS + 1 Android) en conditions réelles extérieures avant toute démo.
+- Utiliser `expo-location` avec le mode de précision **`BestForNavigation`** pour maximiser la qualité GPS.
+- Ignorer automatiquement tout point GPS avec une précision déclarée **> 30 mètres**.
+- Définir un **parcours de test connu à l'avance** (ex. : tour d'un parc de ~1 km) pour valider visuellement la cohérence de la trace.
+- En cas de signal GPS faible, afficher un **indicateur de qualité GPS** à l'écran et bloquer le démarrage de la course si la précision est insuffisante.
 
 ---
 
@@ -70,13 +70,13 @@
 
 **Stratégie : Réduire**
 
-- 🏃 Calibrer le ghost dummy sur une **allure de 5:30/km** comme valeur par défaut.
-- 🎚️ Prévoir **3 niveaux de ghost** sélectionnables dans les paramètres :
-  - 🟢 Débutant : 6:30/km
-  - 🟡 Intermédiaire : 5:30/km (défaut)
-  - 🔴 Avancé : 4:30/km
-- 📏 Baser le ghost dummy sur un **parcours réel de ~1 km** testé par l'équipe.
-- 🧪 Faire tester le ghost par **5 personnes externes** à l'équipe avant la démo finale.
+- Calibrer le ghost dummy sur une **allure de 5:30/km** comme valeur par défaut.
+- Prévoir **3 niveaux de ghost** sélectionnables dans les paramètres :
+  - Débutant : 6:30/km
+  - Intermédiaire : 5:30/km (défaut)
+  - Avancé : 4:30/km
+- Baser le ghost dummy sur un **parcours réel de ~1 km** testé par l'équipe.
+- Faire tester le ghost par **5 personnes externes** à l'équipe avant la démo finale.
 
 ---
 
@@ -86,15 +86,15 @@
 
 **Stratégie : Accepter**
 
-- ✅ C'est précisément **l'hypothèse que le PoC doit tester** - c'est son seul objectif réel.
-- 📋 Préparer un **questionnaire de 5 questions** à faire remplir immédiatement après chaque test :
+- C'est précisément **l'hypothèse que le PoC doit tester** - c'est son seul objectif réel.
+- Préparer un **questionnaire de 5 questions** à faire remplir immédiatement après chaque test :
   1. As-tu ressenti de la compétition pendant la course ? (1-5)
   2. As-tu eu envie de recommencer pour battre le ghost ? (1-5)
   3. L'indicateur avance/retard était-il clair ? (1-5)
   4. Qu'est-ce qui t'a le plus motivé / démotivé ?
   5. Utiliserais-tu cette app régulièrement ?
-- 📊 Seuil de validation : score moyen **≥ 3,5/5** sur les 3 premières questions = hypothèse validée.
-- 🔄 Si score < 3,5/5 → session de débrief équipe pour identifier le problème avant de conclure à un pivot.
+- Seuil de validation : score moyen **≥ 3,5/5** sur les 3 premières questions = hypothèse validée.
+- Si score < 3,5/5 → session de débrief équipe pour identifier le problème avant de conclure à un pivot.
 
 ---
 
@@ -109,9 +109,9 @@
 | **Semaine 1** | GPS tracking + sauvegarde locale + replay de sa propre course | On peut enregistrer un run et le revoir sur la carte |
 | **Semaine 2** | Ghost dummy intégré + indicateur avance/retard + tests terrain | On peut courir contre le ghost et voir si on est en avance ou en retard |
 
-- ✂️ **Règle de coupe** : si Semaine 2 dépasse → supprimer l'indicateur avance/retard et livrer uniquement le ghost visuel.
-- 🚫 Aucune feature hors scope pendant ces 2 semaines.
-- 🔧 Utiliser **Expo Go** pour éviter toute configuration native complexe.
+- **Règle de coupe** : si Semaine 2 dépasse → supprimer l'indicateur avance/retard et livrer uniquement le ghost visuel.
+- Aucune feature hors scope pendant ces 2 semaines.
+- Utiliser **Expo Go** pour éviter toute configuration native complexe.
 
 ---
 
@@ -205,10 +205,10 @@
 | Email | Haché dans les logs · Jamais exposé via l'API |
 | Droit à l'effacement | `DELETE /users/me` → suppression totale garantie dès le MVP |
 
-- 📄 **CGU + Politique de Confidentialité** conformes au droit français avant tout lancement public.
-- 🔒 Consultation **CNIL** avant le lancement MVP Phase 2.
+- **CGU + Politique de Confidentialité** conformes au droit français avant tout lancement public.
+- Consultation **CNIL** avant le lancement MVP Phase 2.
 
-> ⚠️ Le certificat médical sportif a été **définitivement retiré du scope** à toutes les phases.
+> Le certificat médical sportif a été **définitivement retiré du scope** à toutes les phases.
 
 ---
 
@@ -216,9 +216,9 @@
 
 **Stratégie : Accepter + Réduire**
 
-- 📌 Figer React Native sur une **version stable** au démarrage. Ne pas mettre à jour en cours de MVP.
-- 🧪 **Branche de test dédiée** aux mises à jour du framework.
-- 🗓️ **1 sprint par mise à jour majeure** budgété dans la roadmap (Phase 2+).
+- Figer React Native sur une **version stable** au démarrage. Ne pas mettre à jour en cours de MVP.
+- **Branche de test dédiée** aux mises à jour du framework.
+- **1 sprint par mise à jour majeure** budgété dans la roadmap (Phase 2+).
 
 ---
 
@@ -250,11 +250,11 @@
 
 **Stratégie : Réduire**
 
-- 🕐 **Sauvegarde quotidienne** PostgreSQL → Backblaze B2 (pg_dump + cron, 3h00 CET).
-- 🗓️ **Rétention** : 7 quotidiennes + 4 hebdomadaires.
-- 🧪 **Test de restauration trimestriel**.
-- 🔒 **Permissions restreintes** : pas de DROP ni TRUNCATE pour l'utilisateur API.
-- 📸 **Snapshot VPS** avant chaque déploiement majeur.
+- **Sauvegarde quotidienne** PostgreSQL → Backblaze B2 (pg_dump + cron, 3h00 CET).
+- **Rétention** : 7 quotidiennes + 4 hebdomadaires.
+- **Test de restauration trimestriel**.
+- **Permissions restreintes** : pas de DROP ni TRUNCATE pour l'utilisateur API.
+- **Snapshot VPS** avant chaque déploiement majeur.
 
 ---
 
@@ -262,10 +262,10 @@
 
 **Stratégie : Réduire + Transférer**
 
-- ⚠️ **Alerte d'allure** si l'utilisateur court > 20% au-dessus de sa moyenne historique.
-- 🛑 **Mode « Course Prudente »** pour les débutants (ghost 10% en dessous du niveau).
-- 📋 **CGU de sécurité** acceptées au premier lancement.
-- 📝 CGU limitant clairement la responsabilité de GeoRace en cas d'accident physique.
+- **Alerte d'allure** si l'utilisateur court > 20% au-dessus de sa moyenne historique.
+- **Mode « Course Prudente »** pour les débutants (ghost 10% en dessous du niveau).
+- **CGU de sécurité** acceptées au premier lancement.
+- CGU limitant clairement la responsabilité de GeoRace en cas d'accident physique.
 
 ---
 
@@ -273,10 +273,10 @@
 
 **Stratégie : Réduire + Accepter**
 
-- 🔐 **Double authentification** dès le MVP : OAuth (Google/Apple) + email/bcrypt en fallback.
-- 📲 Inciter l'utilisateur OAuth à définir un **mot de passe de secours** lors de l'onboarding.
-- 🖥️ Message automatique si OAuth échoue : *« Connexion Google indisponible. Connectez-vous avec votre email. »*
-- ⚠️ Accepter le risque résiduel : pannes OAuth rares (SLA > 99,9%) et de courte durée.
+- **Double authentification** dès le MVP : OAuth (Google/Apple) + email/bcrypt en fallback.
+- Inciter l'utilisateur OAuth à définir un **mot de passe de secours** lors de l'onboarding.
+- Message automatique si OAuth échoue : *« Connexion Google indisponible. Connectez-vous avec votre email. »*
+- Accepter le risque résiduel : pannes OAuth rares (SLA > 99,9%) et de courte durée.
 
 ---
 
@@ -338,8 +338,8 @@
 | Traitement asynchrone (workers inactifs) | ✅ Planifié Phase 2 |
 | Cache tuiles cartographiques client | ✅ Planifié Phase 2 |
 | Pas de médias lourds (par conception) | ✅ Permanent |
-| Migration OSM self-hosted (scale) | 🔄 Planifié Scale |
-| Monitoring CO2 (Cloud Carbon Footprint) | 📋 À implémenter Phase 3 |
+| Migration OSM self-hosted (scale) | Planifié Scale |
+| Monitoring CO2 (Cloud Carbon Footprint) | À implémenter Phase 3 |
 
 ---
 
@@ -368,12 +368,12 @@
 ```
   ◀── Push feature branch ──▶     ◀────── Merge sur main ──────▶
 
-  ✅ Lint (ESLint + Prettier)  →   🐳 Build image Docker
-  ✅ Tests unitaires (Jest)        📤 Push vers registry
-  ✅ Tests intégration PostGIS     🔐 SSH → VPS Hetzner
-  ✅ Build Docker                  🔄 docker-compose up -d
-                                   🗄️  Migration DB (TypeORM)
-                                   ❌  Échec ? → Rollback auto
+  ✅ Lint (ESLint + Prettier)  →   Build image Docker
+  ✅ Tests unitaires (Jest)        Push vers registry
+  ✅ Tests intégration PostGIS     SSH → VPS Hetzner
+  ✅ Build Docker                  docker-compose up -d
+                                    Migration DB (TypeORM)
+                                    Échec ? → Rollback auto
 ```
 
 | Décision | Justification |

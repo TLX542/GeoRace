@@ -1,4 +1,4 @@
-# Chiffrage & Budget — GeoRace
+# Chiffrage & Budget - GeoRace
 
 But : table de chiffrage par lot + scénarios Lean / Standard / Robuste.
 
@@ -32,11 +32,11 @@ But : table de chiffrage par lot + scénarios Lean / Standard / Robuste.
 ---
 
 ## Template chiffrage par lot (à remplir)
-- Lot: Mobile iOS/Android — JH: , roles: , deliverables:
-- Lot: Backend real-time — JH: , deliverables:
-- Lot: Geospatial (PostGIS) — JH:
-- Lot: Security/RGPD — JH:
-- Lot: QA & tests — JH:
+- Lot: Mobile iOS/Android - JH: , roles: , deliverables:
+- Lot: Backend real-time - JH: , deliverables:
+- Lot: Geospatial (PostGIS) - JH:
+- Lot: Security/RGPD - JH:
+- Lot: QA & tests - JH:
 - Run (recurring) per month: Cloud infra: €, DB: €, Maps: €, Notifications: €, Monitoring: €
 
 ---

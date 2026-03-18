@@ -14,10 +14,10 @@ GeoRace est une application mobile de course à pied compétitive qui transforme
 
 La course à pied en solo souffre de plusieurs problèmes fondamentaux :
 
-- 😔 Démotivation lorsqu'on court seul
-- 🎯 Manque de défi et d'objectifs concrets
-- 📊 Difficulté à mesurer ses progrès face à d'autres coureurs
-- ❌ Absence d'interaction compétitive pendant l'entraînement
+- Démotivation lorsqu'on court seul
+- Manque de défi et d'objectifs concrets
+- Difficulté à mesurer ses progrès face à d'autres coureurs
+- Absence d'interaction compétitive pendant l'entraînement
 
 Ces facteurs conduisent de nombreux coureurs à abandonner leurs objectifs sportifs. GeoRace répond à ce besoin avec une approche novatrice : la **Ghost Race asynchrone**, complétée d'un module de duel live secondaire.
 
@@ -199,7 +199,7 @@ Contrairement au duel live, le Ghost Mode ne nécessite pas d'utilisateurs simul
 
 ## Roadmap de développement
 
-### ⚠️ Phase 0 - PoC (2 semaines)
+### Phase 0 - PoC (2 semaines)
 
 - Application mobile (iOS ou Android, une seule plateforme)
 - GPS Tracking : enregistrement d'un run en temps réel
@@ -207,7 +207,7 @@ Contrairement au duel live, le Ghost Mode ne nécessite pas d'utilisateurs simul
 - Ghost factice pré-intégré : un run dummy codé en dur dans l'app
 - Course contre le ghost dummy : indicateur d'avance/retard en temps réel
 - **Pas d'authentification, pas d'ELO, pas de backend, pas d'anti-triche**
-- 🎯 Objectif : valider que la mécanique de Ghost Race est fun et engageante
+- Objectif : valider que la mécanique de Ghost Race est fun et engageante
 
 ### Phase 1 - MVP (Mois 1-6)
 
@@ -218,7 +218,7 @@ Contrairement au duel live, le Ghost Mode ne nécessite pas d'utilisateurs simul
 - Système ELO fonctionnel
 - Anti-triche simple
 - Test dans 1-2 villes pilotes
-- 🎯 Objectif : 500 utilisateurs actifs
+- Objectif : 500 utilisateurs actifs
 
 ### Phase 2 - Gamification et social (Mois 7-12)
 
@@ -226,7 +226,7 @@ Contrairement au duel live, le Ghost Mode ne nécessite pas d'utilisateurs simul
 - Profils détaillés et statistiques avancées
 - Module duel live activé
 - Événements communautaires hebdomadaires
-- 🎯 Objectif : 5 000 utilisateurs actifs
+- Objectif : 5 000 utilisateurs actifs
 
 ### Phase 3 - Scale et monétisation (An 2)
 
@@ -234,7 +234,7 @@ Contrairement au duel live, le Ghost Mode ne nécessite pas d'utilisateurs simul
 - Ghost races multi-coureurs (replay de peloton)
 - Ligues et tournois ghosts saisonniers
 - Partenariats marques de sport
-- 🎯 Objectif : 50 000 utilisateurs actifs
+- Objectif : 50 000 utilisateurs actifs
 
 ---
 
@@ -272,12 +272,12 @@ Responsabilité en cas d'accident.
 
 ## Points clés à retenir
 
-- 👻 **Concept unique** : Ghost Race asynchrone avec matchmaking ELO intelligent
-- 🕐 **Accessible partout, tout le temps** : pas besoin d'un adversaire simultané
-- 🔥 **Motivation** : transforme chaque sortie solo en compétition engageante
-- ⚖️ **Équité** : le système ELO garantit des matchs équilibrés
-- 🏆 **Marché** : aucune app ne propose cette mécanique de ghost dynamique
-- ➕ Le duel live reste disponible comme extension, pas comme dépendance
+- **Concept unique** : Ghost Race asynchrone avec matchmaking ELO intelligent
+- **Accessible partout, tout le temps** : pas besoin d'un adversaire simultané
+- **Motivation** : transforme chaque sortie solo en compétition engageante
+- **Équité** : le système ELO garantit des matchs équilibrés
+- **Marché** : aucune app ne propose cette mécanique de ghost dynamique
+- Le duel live reste disponible comme extension, pas comme dépendance
 
 ---
 

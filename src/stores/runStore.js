@@ -27,7 +27,7 @@ export function buildCheckpoints(ghostRun, count = 4) {
   const points = ghostRun?.points;
   if (!points?.length) return [];
 
-  // Not enough interior points — fall back to evenly spaced
+  // Not enough interior points - fall back to evenly spaced
   if (points.length <= count + 2) {
     const step = Math.max(1, Math.floor(points.length / (count + 1)));
     const result = [];

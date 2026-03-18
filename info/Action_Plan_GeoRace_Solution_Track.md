@@ -1,4 +1,4 @@
-# ACTION PLAN — GeoRace (Solution Track)
+# ACTION PLAN - GeoRace (Solution Track)
 **Date :** 2026-03-16  
 **Repo :** TLX542/GeoRace  
 **Track :** Solution Track (EIP)  
@@ -52,22 +52,22 @@ Roadmap indicative (à adapter à ton calendrier EIP) :
 > Format volontairement “user stories + exigences”, orienté livrables démontrables.
 
 ### 2.1 Personas (résumé)
-**P1 — Runner régulier (2–4 runs/sem)**  
+**P1 - Runner régulier (2–4 runs/sem)**  
 Motivation : progresser, objectifs concrets.  
 Freins : s’ennuie seul, veut un défi simple.  
 Canaux : Strava, Instagram, Discord running, clubs locaux.
 
-**P2 — Runner compétiteur (5+ runs/sem)**  
+**P2 - Runner compétiteur (5+ runs/sem)**  
 Motivation : se comparer, classement, performance.  
 Freins : “fairness” (triche), fiabilité GPS.  
 Canaux : communautés running, clubs, événements, forums.
 
-**P3 — Runner débutant (0–2 runs/sem)**  
+**P3 - Runner débutant (0–2 runs/sem)**  
 Motivation : se motiver, gamification, guidance.  
 Freins : peur du jugement, complexité, sur‑compétition.  
 Canaux : TikTok, Instagram, apps bien‑être.
 
-### 2.2 Parcours utilisateur cible (MVP — Ghost Race)
+### 2.2 Parcours utilisateur cible (MVP - Ghost Race)
 1) Onboarding + consentement localisation  
 2) Choix d’un mode : Ghost Race  
 3) Démarrer la session : tracking GPS + UI claire  
@@ -97,7 +97,7 @@ Canaux : TikTok, Instagram, apps bien‑être.
 
 ## 3) Spécifications non techniques (Solution Track)
 
-### 3.1 Obligatoire #1 — Développer & retenir une communauté utilisateur
+### 3.1 Obligatoire #1 - Développer & retenir une communauté utilisateur
 
 #### a) Personas & proposition de valeur communauté
 **Proposition de valeur** : “Chaque sortie devient un duel, même seul : viens tester, influencer le produit, et accéder à des défis exclusifs.”
@@ -111,7 +111,7 @@ Segments ciblés (pour la beta) :
 Canaux recommandés (choisir 2 minimum, idéalement 3) :
 1. **Discord** (cœur beta + feedback + événements)
 2. **Instagram** ou **TikTok** (acquisition + démonstrations courtes)
-3. **LinkedIn** (crédibilité projet, partenariats, suivi EIP) — optionnel
+3. **LinkedIn** (crédibilité projet, partenariats, suivi EIP) - optionnel
 
 Identité :
 - Nom : GeoRace
@@ -166,7 +166,7 @@ Boucle : insight → décision → roadmap → retour public (“dit & fait”)
 
 ---
 
-### 3.2 Obligatoire #2 — Améliorer l’expérience utilisateur (UX/UI)
+### 3.2 Obligatoire #2 - Améliorer l’expérience utilisateur (UX/UI)
 
 Process UX (cadre simple mais démontrable) :
 1) Hypothèses (où l’utilisateur décroche)
@@ -191,16 +191,16 @@ Cibles UX (MVP) :
 
 ---
 
-### 3.3 Optionnels (Solution Track) — choix recommandé : 2 objectifs
+### 3.3 Optionnels (Solution Track) - choix recommandé : 2 objectifs
 
-#### Optionnel A — Optimiser la relation avec l’audience (feedback system)
+#### Optionnel A - Optimiser la relation avec l’audience (feedback system)
 Pourquoi : c’est directement aligné avec la beta + le jury.
 - Mettre en place un rituel mensuel : “Bêta Review”
 - Table de synthèse : verbatims, thèmes, fréquence, décision
 - 2 évolutions produit justifiées par feedback récurrent
 - Publication “dit & fait” sur Discord / réseaux
 
-#### Optionnel B — Partenariats stratégiques
+#### Optionnel B - Partenariats stratégiques
 Pourquoi : accélère acquisition + crédibilité + test terrain.
 Cibles (2–3) :
 - Club running local / association sportive (accès testeurs)
@@ -216,26 +216,26 @@ Livrables :
 
 > À adapter à ton calendrier EIP exact. Ici je propose une timeline “12 semaines” pour structurer **Action Plan + BTP + communauté + UX**.
 
-### Semaine 1–2 — Cadrage & setup
+### Semaine 1–2 - Cadrage & setup
 - Finaliser personas + proposition de valeur
 - Ouvrir canaux (Discord + 1 réseau) + identité
 - Mettre en place GitHub Project + templates issues
 - Préparer BTP v1 (scope beta)
 - Figma : v0 des écrans clés
 
-### Semaine 3–4 — Acquisition beta + prototype
+### Semaine 3–4 - Acquisition beta + prototype
 - Recruter 20 beta testeurs (inscrits) + onboarding
 - Prototype hi-fi Figma + 5 tests utilisateurs
 - Itération UX #1
 - Définir métriques & dashboard
 
-### Semaine 5–8 — Beta V1 (fonctionnel)
+### Semaine 5–8 - Beta V1 (fonctionnel)
 - Implémenter scope beta (features démontrables)
 - Exécuter tests BTP + renseigner résultats
 - Anti‑triche MVP (heuristiques)
 - Animation communauté (challenge hebdo + feedback)
 
-### Semaine 9–12 — Stabilisation + itérations
+### Semaine 9–12 - Stabilisation + itérations
 - Itération UX #2 (fondée sur feedback)
 - “Dit & fait” + release notes
 - Synthèse beta + backlog final
@@ -243,7 +243,7 @@ Livrables :
 
 ---
 
-## 5) Annexes — “Definition of Done” (DoD) beta
+## 5) Annexes - “Definition of Done” (DoD) beta
 Une feature “beta-ready” est :
 - démontrable en défense,
 - testée (critères de succès remplis),

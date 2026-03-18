@@ -1,4 +1,4 @@
-// routing.openstreetmap.de/routed-foot runs a pedestrian OSRM extract —
+// routing.openstreetmap.de/routed-foot runs a pedestrian OSRM extract -
 // unlike the router.project-osrm.org demo which only supports car routing.
 const OSRM_FOOT_BASE = 'https://routing.openstreetmap.de/routed-foot';
 const REQUEST_TIMEOUT_MS = 8000;
@@ -30,7 +30,7 @@ export async function fetchRoutePoints(waypoints) {
     const data = await res.json();
     if (data.code !== 'Ok' || !data.routes?.[0]?.geometry?.coordinates) return null;
 
-    // GeoJSON coordinates are [lng, lat] — convert to {lat, lng}
+    // GeoJSON coordinates are [lng, lat] - convert to {lat, lng}
     return data.routes[0].geometry.coordinates.map(([lng, lat]) => ({ lat, lng }));
   } catch {
     return null;

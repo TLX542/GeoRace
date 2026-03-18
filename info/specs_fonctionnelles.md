@@ -1,4 +1,4 @@
-# Spécifications fonctionnelles — GeoRace
+# Spécifications fonctionnelles - GeoRace
 
 Objectif : découper en fonctionnalités testables, règles métier et critères d’acceptation.
 

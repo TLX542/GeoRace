@@ -83,13 +83,13 @@ Pas d'IoT ni de matériel spécifique pour GeoRace. Pour les tests GPS réels :
 
 Critères d'évaluation : prix/Go RAM, bande passante incluse, localisation datacenter (RGPD Europe), scalabilité, support.
 
-| Fournisseur | Offre | vCPU | RAM | Stockage | Bande passante | Prix/mois | Datacenter EU | RGPD |
-|-------------|-------|------|-----|----------|----------------|-----------|---------------|------|
-| DigitalOcean | Basic Droplet | 1 | 2 GB | 50 GB SSD | 2 TB | ~12 USD | Amsterdam, Frankfurt | ✅ |
-| OVHcloud | VPS Starter | 1 | 2 GB | 40 GB SSD | Illimitée | ~6 EUR | Gravelines (FR) | ✅✅ |
-| **Hetzner** | **CX21** | **2** | **4 GB** | **40 GB SSD** | **20 TB** | **~4,5 EUR** | **Nuremberg (DE)** | **✅✅** |
-| AWS EC2 | t3.small | 2 | 2 GB | EBS 20 GB | 1 TB | ~20 USD | Paris eu-west-3 | ✅ |
-| Scaleway | DEV1-S | 2 | 2 GB | 20 GB SSD | 200 Mbps illimité | ~4 EUR | Paris / Amsterdam | ✅✅ |
+| Fournisseur | Offre | vCPU | RAM | Stockage | Bande passante | Prix/mois | Datacenter EU |
+|-------------|-------|------|-----|----------|----------------|-----------|---------------|
+| DigitalOcean | Basic Droplet | 1 | 2 GB | 50 GB SSD | 2 TB | ~12 USD | Amsterdam, Frankfurt |
+| OVHcloud | VPS Starter | 1 | 2 GB | 40 GB SSD | Illimitée | ~6 EUR | Gravelines (FR) |
+| **Hetzner** | **CX21** | **2** | **4 GB** | **40 GB SSD** | **20 TB** | **~4,5 EUR** | **Nuremberg (DE)** |
+| AWS EC2 | t3.small | 2 | 2 GB | EBS 20 GB | 1 TB | ~20 USD | Paris eu-west-3 |
+| Scaleway | DEV1-S | 2 | 2 GB | 20 GB SSD | 200 Mbps illimité | ~4 EUR | Paris / Amsterdam |
 
 > **Verdict :** Pour le MVP, **Hetzner CX21 (~4,5 EUR/mois)** offre le meilleur rapport performance/prix. Datacenter allemand = conformité RGPD native. 20 TB de bande passante largement suffisants.
 >
@@ -248,7 +248,7 @@ Critères d'évaluation : prix/Go RAM, bande passante incluse, localisation data
 | Sentry (si dépassement Free) | Plan Team | 26 USD |
 | **Total** | | **~40-45 EUR/mois** |
 
-> Coût par utilisateur actif : **~0,04 EUR/mois** ✅ très viable
+> Coût par utilisateur actif : **~0,04 EUR/mois** - très viable
 
 ---
 
@@ -269,7 +269,7 @@ Critères d'évaluation : prix/Go RAM, bande passante incluse, localisation data
 | **Total (avec Mapbox)** | | **~130 EUR/mois** |
 | **Total (avec OSM self-hosted)** | | **~100 EUR/mois** |
 
-> Coût par utilisateur actif : **~0,02 EUR/mois** ✅ excellent ratio
+> Coût par utilisateur actif : **~0,02 EUR/mois** - excellent ratio
 
 ---
 
@@ -337,11 +337,11 @@ Critères d'évaluation : prix/Go RAM, bande passante incluse, localisation data
 
 | Décision architecturale | Impact maintenabilité |
 |------------------------|-----------------------|
-| NestJS (modules découplés) | ✅ Facilite l'ajout de features sans casser le core |
-| PostgreSQL + PostGIS | ✅ Technologie stable, nombreuses ressources disponibles |
-| React Native | ⚠️ Breaking changes fréquents entre versions majeures |
-| VPS unique (MVP) | ⚠️ Pas de haute disponibilité, downtime possible en maintenance |
-| Self-hosted sans orchestration | ⚠️ Pas de rolling update automatique (Docker Compose recommandé dès le début) |
+| NestJS (modules découplés) | Facilite l'ajout de features sans casser le core |
+| PostgreSQL + PostGIS | Technologie stable, nombreuses ressources disponibles |
+| React Native | Breaking changes fréquents entre versions majeures |
+| VPS unique (MVP) | Pas de haute disponibilité, downtime possible en maintenance |
+| Self-hosted sans orchestration | Pas de rolling update automatique (Docker Compose recommandé dès le début) |
 
 ---
 

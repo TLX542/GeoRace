@@ -16,7 +16,7 @@ GeoRace apporte cette dimension manquante : une compétition géolocalisée imme
 
 ### Objectivité - Critères d'analyse
 
-#### 🟢 Axe Business
+#### Axe Business
 
 1. Modèle économique (Freemium, abonnement, sponsoring)
 2. Engagement & Rétention (interaction active vs passive)
@@ -24,7 +24,7 @@ GeoRace apporte cette dimension manquante : une compétition géolocalisée imme
 4. Proposition de valeur différenciante
 5. Facilité d'adoption / friction onboarding
 
-#### 🔵 Axe Technique
+#### Axe Technique
 
 1. Latence temps réel → duel live secondaire sur VPS unique
 2. Précision GPS & équité
@@ -117,7 +117,7 @@ GeoRace introduit une complexité technique centrée sur le **Ghost Engine VPS**
 - Aucun diagnostic, pas de stockage prolongé
 - Si évolution vers données santé → obligation HDS
 
-> ⚠️ Le certificat médical sportif a été **définitivement retiré du scope** à toutes les phases du projet.
+> Le certificat médical sportif a été **définitivement retiré du scope** à toutes les phases du projet.
 
 #### Authentification
 
@@ -142,7 +142,7 @@ GeoRace introduit une complexité technique centrée sur le **Ghost Engine VPS**
 
 ---
 
-### 3. Accessibilité (A11y) ♿
+### 3. Accessibilité (A11y)
 
 - Standard **WCAG 2.1 niveau AA**, RGAA FR
 - Compatible screen readers

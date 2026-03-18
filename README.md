@@ -2,7 +2,7 @@
 
 > **Transformez chaque course en compétition.**
 
-GeoRace est une application mobile de course à pied compétitive qui transforme chaque sortie running en véritable compétition immersive. En courant contre le **fantôme enregistré** d'un autre coureur de votre niveau — votre **Ghost Race** — vous vivez l'adrénaline d'un duel réel, seul, à votre rythme, n'importe où et n'importe quand.
+GeoRace est une application mobile de course à pied compétitive qui transforme chaque sortie running en véritable compétition immersive. En courant contre le **fantôme enregistré** d'un autre coureur de votre niveau - votre **Ghost Race** - vous vivez l'adrénaline d'un duel réel, seul, à votre rythme, n'importe où et n'importe quand.
 
 > 🏫 *Epitech Innovation Track*
 
@@ -48,7 +48,7 @@ La course à pied solo souffre de plusieurs problèmes fondamentaux :
 
 ## 🚀 Fonctionnalités
 
-### 👻 Ghost Race — Le cœur du produit (CORE)
+### 👻 Ghost Race - Le cœur du produit (CORE)
 
 - Upload de votre run après chaque sortie
 - **Matching automatique** avec un ghost de niveau ELO similaire et distance comparable
@@ -128,7 +128,7 @@ La course à pied solo souffre de plusieurs problèmes fondamentaux :
 
 ## 🏗 Architecture
 
-### PoC (2 semaines) — 100% local, 0 backend
+### PoC (2 semaines) - 100% local, 0 backend
 
 ```
   📱 React Native + Expo
@@ -138,7 +138,7 @@ La course à pied solo souffre de plusieurs problèmes fondamentaux :
   └── Ghost dummy JSON     → Run hardcodé dans l'app
 ```
 
-### MVP Phase 2 — VPS Hetzner (~10-18 €/mois)
+### MVP Phase 2 - VPS Hetzner (~10-18 €/mois)
 
 ```
   📱 Mobile          🖥️ VPS (Hetzner DE)              ☁️ Externe
@@ -159,7 +159,7 @@ La course à pied solo souffre de plusieurs problèmes fondamentaux :
 | 🎮 **V2** | Mois 7–12 | Duel live + Badges + Gamification | 5 000 users · 5 villes |
 | 🌍 **Scale** | An 2 | Premium + Tournois + Partenariats | 50 000 users · 10 villes |
 
-### ⚠️ Phase 0 — PoC (2 semaines)
+### ⚠️ Phase 0 - PoC (2 semaines)
 
 - ✅ GPS Tracking (enregistrement d'un run en temps réel)
 - ✅ Ghost Replay (rejouer sa propre course, sauvegarde locale)
@@ -171,7 +171,7 @@ La course à pied solo souffre de plusieurs problèmes fondamentaux :
 
 ## 💰 Modèle économique
 
-| 🟢 Gratuit | 🟡 Premium — 4,99 €/mois |
+| 🟢 Gratuit | 🟡 Premium - 4,99 €/mois |
 |---|---|
 | 3 ghost races / jour | Ghost races **illimitées** |
 | Classement ELO | Statistiques avancées |
@@ -179,7 +179,7 @@ La course à pied solo souffre de plusieurs problèmes fondamentaux :
 
 | Phase | Infra/mois | Revenus potentiels* | Marge brute |
 |---|---|---|---|
-| PoC | **0 €** | 0 € | — |
+| PoC | **0 €** | 0 € | - |
 | MVP (1 000 users) | ~45 € | ~400 € | **~89%** |
 | Scale (10 000 users) | ~230 € | ~4 000 € | **~94%** |
 
@@ -257,4 +257,4 @@ Tous les documents de référence sont disponibles dans le dossier [`info/`](./i
 
 ---
 
-> **GeoRace — Run. Ghost. Win.** 🏁
+> **GeoRace - Run. Ghost. Win.** 🏁

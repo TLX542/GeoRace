@@ -19,7 +19,7 @@ Objectif : architecture et étapes opérationnelles pour passer du MVP à une mi
 - [ ] Exécuter des tests de charge avec des clients synthétiques (k6 ou custom)
 
 ## Dette technique & plan
-- Dette : un seul schéma DB pour toutes les régions — plan : partitionner par ville, puis shard.
+- Dette : un seul schéma DB pour toutes les régions - plan : partitionner par ville, puis shard.
 - Remédiation : refactor de la couche d’accès aux données (3 sprints), ajout de scripts de migration.
 
 -- Fin.

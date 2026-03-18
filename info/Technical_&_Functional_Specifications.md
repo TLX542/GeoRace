@@ -4,11 +4,11 @@
 
 ---
 
-## ⚠️ Scope MVP - PoC 2 Semaines
+## Scope MVP - PoC 2 Semaines
 
 Le PoC livrable en 2 semaines est volontairement minimal.
 
-### ✅ Inclus dans le PoC
+### Inclus dans le PoC
 
 - GPS Tracking en temps réel (enregistrement du run)
 - Sauvegarde locale du run sur l'appareil (AsyncStorage)
@@ -16,7 +16,7 @@ Le PoC livrable en 2 semaines est volontairement minimal.
 - 1 ghost dummy pré-intégré (run hardcodé dans l'app)
 - Course contre le ghost dummy avec indicateur avance/retard
 
-### ❌ Hors scope PoC (prévu Phase 2+)
+### Hors scope PoC (prévu Phase 2+)
 
 - Authentification (OAuth, email/password)
 - Backend / serveur / base de données
@@ -128,7 +128,7 @@ Héberge : API container · Worker container · Redis · PostgreSQL · Nginx
 
 ---
 
-#### 🟡 Niveau 3 - Components (Backend)
+#### Niveau 3 - Components (Backend)
 
 | Module | Fonctionnalités |
 |--------|----------------|

@@ -233,7 +233,7 @@ export async function buildGhostFromPrefabAsync(prefab, anchor) {
     return ghost ? { ...ghost, id: prefab.id } : null;
   }
 
-  // Points-based prefab — synchronous path is sufficient
+  // Points-based prefab - synchronous path is sufficient
   return buildGhostFromPrefab(prefab, anchor);
 }
 

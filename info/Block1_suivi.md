@@ -7,16 +7,16 @@
 
 ## Référentiel de compétences (C1 → C5)
 
-### C1 — Recenser les besoins du client et des utilisateurs
+### C1 - Recenser les besoins du client et des utilisateurs
 
 #### Critère : Le candidat présente une analyse des besoins clients ainsi que les échanges ayant permis son élaboration et couvrant l’intégralité du scope fonctionnel [C1]
 
 **Statut :** ✅ Présent (templates & mapping)
 
 **Preuves :**
-- `info/Client_Needs_&_Functional_Scope.md` — L17-L263 — personas + user stories + backlog + MoSCoW/MVP
-- `info/recueil_besoins.md` — L1-L73 (tout le fichier) — méthode + guide + formats + checklist preuves
-- `info/tracability_matrix.csv` — L1-L5 (tout le fichier) — mapping des exigences vers specs/tests/lots
+- `info/Client_Needs_&_Functional_Scope.md` - L17-L263 - personas + user stories + backlog + MoSCoW/MVP
+- `info/recueil_besoins.md` - L1-L73 (tout le fichier) - méthode + guide + formats + checklist preuves
+- `info/tracability_matrix.csv` - L1-L5 (tout le fichier) - mapping des exigences vers specs/tests/lots
 
 **Manques :**
 - Ajout des preuves terrain réelles (CSV / verbatims) dans `info/research/raw/`.
@@ -28,25 +28,25 @@
 **Statut :** ✅ Présent (templates)
 
 **Preuves :**
-- `info/Context_Audit_&_Compliance.md` — L145-L153 — section accessibilité (WCAG/RGAA) + exigences
-- `info/docs_a11y.md` — L1-L26 (tout le fichier) — checklist documentaire et tests a11y
-- `info/specs_fonctionnelles.md` — L10-L11 + L23-L28 + L53-L57 — sections a11y (parcours + critères)
+- `info/Context_Audit_&_Compliance.md` - L145-L153 - section accessibilité (WCAG/RGAA) + exigences
+- `info/docs_a11y.md` - L1-L26 (tout le fichier) - checklist documentaire et tests a11y
+- `info/specs_fonctionnelles.md` - L10-L11 + L23-L28 + L53-L57 - sections a11y (parcours + critères)
 
 **À faire :**
 - Exécuter les tests a11y manuels et automatisés, déposer preuves dans `info/research/a11y_tests/`.
 
 ---
 
-### C2 — Réaliser un audit technique, fonctionnel et de sécurité
+### C2 - Réaliser un audit technique, fonctionnel et de sécurité
 
 #### Critère : Le dossier du candidat contient un compte-rendu d’audit technique, fonctionnel et de sécurité de l’environnement d’éxécution du projet mettant en lumière les contraintes et opportunités du contexte opérationnel [C2] 
 
 **Statut :** ✅ Présent (documents et templates)
 
 **Preuves :**
-- `info/Context_Audit_&_Compliance.md` — L7-L185 (tout le fichier) — audit contexte (concurrence) + audit technique + sécurité/RGPD + accessibilité
-- `info/Impacts_Risks_&_Mitigation.md` — **Partie 2 : Impact Environnemental (GreenIT)** — L283-L343 (couvre l'audit environnemental / GreenIT)
-- `info/specs_techniques.md` — L48-L61 — contraintes NFR + sécurité/RGPD (complément)
+- `info/Context_Audit_&_Compliance.md` - L7-L185 (tout le fichier) - audit contexte (concurrence) + audit technique + sécurité/RGPD + accessibilité
+- `info/Impacts_Risks_&_Mitigation.md` - **Partie 2 : Impact Environnemental (GreenIT)** - L283-L343 (couvre l'audit environnemental / GreenIT)
+- `info/specs_techniques.md` - L48-L61 - contraintes NFR + sécurité/RGPD (complément)
 
 **Manques :**
 - Si une forme exacte `audit_environnement.md` est demandée, créer/compléter à partir des éléments existants.
@@ -58,8 +58,8 @@
 **Statut :** ✅ Présent (template sections ajoutées)
 
 **Preuves :**
-- `info/recueil_besoins.md` — L16-L31 — méthodologie de recueil (méthodes, échantillon, outils)
-- `info/poc_tracking/README.md` — L5-L28 — méthode POC (tests, environnement, format de mesure, seuils)
+- `info/recueil_besoins.md` - L16-L31 - méthodologie de recueil (méthodes, échantillon, outils)
+- `info/poc_tracking/README.md` - L5-L28 - méthode POC (tests, environnement, format de mesure, seuils)
 
 ---
 
@@ -68,25 +68,25 @@
 **Statut :** ✅ Présent (checklist fournie)
 
 **Preuves :**
-- `info/docs_a11y.md` — L5-L24 — checklist docs + checklist produit + plan de tests & preuves
-- `info/Context_Audit_&_Compliance.md` — L145-L153 — exigences a11y à appliquer aux livrables
+- `info/docs_a11y.md` - L5-L24 - checklist docs + checklist produit + plan de tests & preuves
+- `info/Context_Audit_&_Compliance.md` - L145-L153 - exigences a11y à appliquer aux livrables
 
 **À faire :**
 - Appliquer la checklist aux livrables et joindre preuves dans PR/commits.
 
 ---
 
-### C3 — Rédiger les spécifications techniques et fonctionnelles
+### C3 - Rédiger les spécifications techniques et fonctionnelles
 
 #### Critère : Le dossier du candidat présente un corpus de documentations des spécifications techniques et fonctionnelles définissant le périmètre du projet considérant les contraintes identifiées durant l’audit [C3] 
 
 **Statut :** ✅ Présent
 
 **Preuves :**
-- `info/Technical_&_Functional_Specifications.md` — L7-L333 — scope + architecture + API + parcours + écrans clés
-- `info/specs_fonctionnelles.md` — L1-L64 (tout le fichier) — specs fonctionnelles testables
-- `info/specs_techniques.md` — L1-L78 (tout le fichier) — specs techniques + NFR
-- `info/tracability_matrix.csv` — L1-L5 (tout le fichier) — mapping REQ → specs/tests
+- `info/Technical_&_Functional_Specifications.md` - L7-L333 - scope + architecture + API + parcours + écrans clés
+- `info/specs_fonctionnelles.md` - L1-L64 (tout le fichier) - specs fonctionnelles testables
+- `info/specs_techniques.md` - L1-L78 (tout le fichier) - specs techniques + NFR
+- `info/tracability_matrix.csv` - L1-L5 (tout le fichier) - mapping REQ → specs/tests
 
 **Manques :**
 - Rédaction/complétude des critères d'acceptation par feature (à remplir dans les specs ou via issues/tests).
@@ -98,20 +98,20 @@
 **Statut :** ✅ Présent
 
 **Preuves :**
-- `info/docs_a11y.md` — L5-L20 — checklist + exigences (touch targets, contrast, etc.)
-- `info/specs_fonctionnelles.md` — L10-L11 + L23-L28 + L53-L57 — sections a11y intégrées aux specs
+- `info/docs_a11y.md` - L5-L20 - checklist + exigences (touch targets, contrast, etc.)
+- `info/specs_fonctionnelles.md` - L10-L11 + L23-L28 + L53-L57 - sections a11y intégrées aux specs
 
 ---
 
-### C4 — Chiffrer le projet
+### C4 - Chiffrer le projet
 
 #### Critère : Le dossier du candidat comporte une analyse financière des coûts de production et d’exploitation de la solution proposée en cherchant à optimiser les coûts et ressources au regard du budget transmis par le client [C4] 
 
 **Statut :** ✅ Présent
 
 **Preuves :**
-- `info/GeoRace_Costing_&_Technical_Sizing.md` — L18-L190 (au moins) — CAPEX/OPEX + coûts infra (PoC/MVP)
-- `info/chiffrage_budget.md` — L5-L40 — hypothèses + infra + template run recurring
+- `info/GeoRace_Costing_&_Technical_Sizing.md` - L18-L190 (au moins) - CAPEX/OPEX + coûts infra (PoC/MVP)
+- `info/chiffrage_budget.md` - L5-L40 - hypothèses + infra + template run recurring
 
 ---
 
@@ -120,22 +120,22 @@
 **Statut :** ✅ Présent
 
 **Preuves :**
-- `info/chiffrage_budget.md` — L12-L30 — scénarios Lean/Standard/Robuste
-- `info/Client_Needs_&_Functional_Scope.md` — L155-L206 + L232-L254 — MoSCoW + MVP (jalons temporels) servant de base de scénario
-- `info/GeoRace_Costing_&_Technical_Sizing.md` — L80-L147 — benchmarks VPS / carto / backup (base des hypothèses)
+- `info/chiffrage_budget.md` - L12-L30 - scénarios Lean/Standard/Robuste
+- `info/Client_Needs_&_Functional_Scope.md` - L155-L206 + L232-L254 - MoSCoW + MVP (jalons temporels) servant de base de scénario
+- `info/GeoRace_Costing_&_Technical_Sizing.md` - L80-L147 - benchmarks VPS / carto / backup (base des hypothèses)
 
 ---
 
-### C5 — Prévoir les impacts techniques et fonctionnels
+### C5 - Prévoir les impacts techniques et fonctionnels
 
 #### Critère : Le dossier du candidat comporte une étude prospective des voies d’évolution et de migration en s’appuyant sur l’audit technique réalisé [C5] 
 
 **Statut :** ✅ Présent (plan & script)
 
 **Preuves :**
-- `info/GeoRace.md` — L231-L270 — phase scale (an 2) + contraintes + risques (vue produit)
-- `info/evolution_migration.md` — L1-L25 (tout le fichier) — plan d’évolution/migration + triggers + checklist
-- `info/Impacts_Risks_&_Mitigation.md` — L118-L199 (au moins) — risques MVP/Scale + mitigations (orienté évolution)
+- `info/GeoRace.md` - L231-L270 - phase scale (an 2) + contraintes + risques (vue produit)
+- `info/evolution_migration.md` - L1-L25 (tout le fichier) - plan d’évolution/migration + triggers + checklist
+- `info/Impacts_Risks_&_Mitigation.md` - L118-L199 (au moins) - risques MVP/Scale + mitigations (orienté évolution)
 
 **Manques :**
 - Exécuter tests de charge et définir seuils précis (triggers) basés sur POC/metrics.
@@ -147,8 +147,8 @@
 **Statut :** ✅ Présent
 
 **Preuves :**
-- `info/GeoRace_Presentation.md` — L132-L204 — slides “Roadmap / Architecture / Viabilité” (support oral)
-- `info/speech_migration.md` — L1-L26 (tout le fichier) — script oral (2–3 minutes)
+- `info/GeoRace_Presentation.md` - L132-L204 - slides “Roadmap / Architecture / Viabilité” (support oral)
+- `info/speech_migration.md` - L1-L26 (tout le fichier) - script oral (2–3 minutes)
 
 ---
 

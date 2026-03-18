@@ -1,4 +1,4 @@
-# Registre des risques — GeoRace
+# Registre des risques - GeoRace
 
 Colonnes : id, risque, probabilité (F/M/E), impact (F/M/E), mitigation, propriétaire, statut, indicateur
 

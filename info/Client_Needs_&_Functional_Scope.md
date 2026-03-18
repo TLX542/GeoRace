@@ -154,7 +154,7 @@ Liste consolidée des fonctionnalités identifiées :
 
 ## 4. Priorisation - Méthode MoSCoW
 
-### 🟢 MUST HAVE - PoC 2 semaines
+### MUST HAVE - PoC 2 semaines
 
 Ce sans quoi GeoRace ne peut pas être testé :
 
@@ -166,7 +166,7 @@ Ce sans quoi GeoRace ne peut pas être testé :
 
 ---
 
-### 🟡 SHOULD HAVE - MVP Phase 2 (Mois 1-6)
+### SHOULD HAVE - MVP Phase 2 (Mois 1-6)
 
 - Authentification (OAuth + email)
 - Upload de runs vers un backend
@@ -180,7 +180,7 @@ Ce sans quoi GeoRace ne peut pas être testé :
 
 ---
 
-### 🔵 COULD HAVE - V2 (Mois 7-12)
+### COULD HAVE - V2 (Mois 7-12)
 
 - Détection des coureurs proches
 - Départ synchronisé (duel live)
@@ -197,7 +197,7 @@ Ce sans quoi GeoRace ne peut pas être testé :
 
 ---
 
-### 🔴 WON'T HAVE - Pour l'instant
+### WON'T HAVE - Pour l'instant
 
 - Coaching personnalisé avancé
 - Plans d'entraînement détaillés

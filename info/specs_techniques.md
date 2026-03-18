@@ -1,4 +1,4 @@
-# Spécifications techniques — GeoRace
+# Spécifications techniques - GeoRace
 
 Objectif : architecture, modèle de données, API & événements temps réel, NFR, sécurité, RGPD, déploiement et observabilité.
 
@@ -18,7 +18,7 @@ Objectif : architecture, modèle de données, API & événements temps réel, NF
 
 ---
 
-## 2. Modèle de données (entités — résumé)
+## 2. Modèle de données (entités - résumé)
 - User : id, username, email (hashé), elo, consent_flags, created_at
 - RaceSession : id, participants[], start_time, end_time, race_type, status
 - TelemetryPoint : id, raceSession_id, user_id, lat, lon, timestamp, accuracy, speed, device_state_hash

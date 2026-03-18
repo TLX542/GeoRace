@@ -12,7 +12,7 @@ Ce qu’on livre en MVP (30s)
 - Un parcours duel fonctionnel, des heuristiques anti‑triche basiques, des requêtes géospatiales sur PostGIS, et des dashboards pour mesurer latence et adoption.
 
 Comment on scale (60s)
-- Étape 1 : séparer les services — isoler matchmaker & ingestion pour scaler l’ingestion indépendamment.
+- Étape 1 : séparer les services - isoler matchmaker & ingestion pour scaler l’ingestion indépendamment.
 - Étape 2 : introduire des passerelles régionales et shard les données géospatiales par ville pour garder une faible latence locale.
 - Étape 3 : renforcer la prod avec autoscaling, monitoring, et runbooks ; ensuite seulement étendre à de nouvelles villes.
 
@@ -21,6 +21,6 @@ Risques & mitigations (20s)
 - Risque : pic d’ingestion → mitigation : backpressure, couches de queue.
 
 Call to action (10s)
-- Prochaine étape : exécuter les deux POCs (latence & équidistance) et revoir les coûts — cela donnera les seuils de déclenchement définitifs pour la migration.
+- Prochaine étape : exécuter les deux POCs (latence & équidistance) et revoir les coûts - cela donnera les seuils de déclenchement définitifs pour la migration.
 
 -- Fin.

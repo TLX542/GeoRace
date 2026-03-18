@@ -1,4 +1,4 @@
-# Documentation & checklist Accessibilité (A11Y) — GeoRace
+# Documentation & checklist Accessibilité (A11Y) - GeoRace
 
 Objectif : règles pour rédiger des spécifications accessibles et effectuer des contrôles produit.
 

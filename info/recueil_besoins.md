@@ -1,4 +1,4 @@
-# Recueil des besoins — GeoRace
+# Recueil des besoins - GeoRace
 
 But : documenter la collecte terrain et fournir preuves (compte‑rendus, verbatims, exports).
 

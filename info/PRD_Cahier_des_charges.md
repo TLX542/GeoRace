@@ -1,9 +1,9 @@
-# PRD / Cahier des charges — GeoRace (template)
+# PRD / Cahier des charges - GeoRace (template)
 
 Objectif : document formel portable (jury / client).
 
 ## 1. Résumé exécutif
-- Produit : GeoRace — application mobile de running compétitive en temps réel
+- Produit : GeoRace - application mobile de running compétitive en temps réel
 - Objectif business : acquisition X, rétention Y, conversion Z
 - Scope MVP (extraits) : inscription + calibration GPS + duel temps réel + classement ELO
 

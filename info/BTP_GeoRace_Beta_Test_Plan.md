@@ -1,4 +1,4 @@
-# BETA TEST PLAN (BTP) — GeoRace
+# BETA TEST PLAN (BTP) - GeoRace
 **Date :** 2026-03-16  
 **Repo :** TLX542/GeoRace  
 **Version :** v1.0  
@@ -29,28 +29,28 @@ La beta vise à prouver :
 
 ---
 
-## 3) Table des fonctionnalités (scope beta) — organisée par flow
+## 3) Table des fonctionnalités (scope beta) - organisée par flow
 
-### Flow A — Onboarding & démarrage
+### Flow A - Onboarding & démarrage
 | Feature ID | Rôle | Nom (verbe) | Description courte |
 |---|---|---|---|
 | **F-BETA-001** | R-01 | **Accepter les permissions localisation** | Demander et valider les permissions nécessaires au tracking GPS (message clair + fallback si refus) |
 | **F-BETA-002** | R-01 | **Lancer une Ghost Race** | Démarrer une session de course avec un ghost sélectionné (beta : ghost de référence / matching simple) |
 
-### Flow B — Course en cours (expérience centrale)
+### Flow B - Course en cours (expérience centrale)
 | Feature ID | Rôle | Nom (verbe) | Description courte |
 |---|---|---|---|
 | **F-BETA-003** | R-01 | **Visualiser la carte et la trajectoire** | Afficher la carte + la polyline du ghost + position utilisateur |
 | **F-BETA-004** | R-01 | **Afficher l’avance/retard** | Indiquer en temps réel si l’utilisateur est devant/derrière (UI compréhensible) |
 | **F-BETA-005** | R-01 | **Terminer une session** | Finir la course proprement, générer un résumé (distance, durée) |
 
-### Flow C — Résultat & historique
+### Flow C - Résultat & historique
 | Feature ID | Rôle | Nom (verbe) | Description courte |
 |---|---|---|---|
 | **F-BETA-006** | R-01 | **Afficher un résultat de duel** | Donner un résultat (victoire/défaite) basé sur le ghost + un récap clair |
 | **F-BETA-007** | R-01 | **Consulter l’historique local** | Afficher une liste simple des runs récents (beta : stockage local acceptable) |
 
-### Flow D — Feedback beta (indispensable Solution Track)
+### Flow D - Feedback beta (indispensable Solution Track)
 | Feature ID | Rôle | Nom (verbe) | Description courte |
 |---|---|---|---|
 | **F-BETA-008** | R-01 | **Soumettre un feedback structuré** | L’utilisateur envoie un feedback (form) lié à une session (UX + bugs + ressenti) |
@@ -86,10 +86,10 @@ La beta vise à prouver :
 - **≥ 5 tests utilisateurs “observés”** (proto ou V1)
 
 ### 5.2 Scénarios de test (exemples)
-- **S1 — Run normal (parc)** : démarrer → courir 10–15 min → terminer → feedback
-- **S2 — Run urbain (GPS instable)** : observer stabilité + ressenti
-- **S3 — Débutant** : compréhension de l’UI sans guidance
-- **S4 — Re-run** : 2e session (effet motivation)
+- **S1 - Run normal (parc)** : démarrer → courir 10–15 min → terminer → feedback
+- **S2 - Run urbain (GPS instable)** : observer stabilité + ressenti
+- **S3 - Débutant** : compréhension de l’UI sans guidance
+- **S4 - Re-run** : 2e session (effet motivation)
 
 ### 5.3 Preuves à archiver (pour jury)
 - Captures/vidéos (si possible) sur 2 devices différents
