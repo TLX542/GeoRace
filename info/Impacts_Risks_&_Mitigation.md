@@ -115,7 +115,7 @@
 
 ---
 
-### 🚀 RISQUES MVP PHASE 2 & SCALE
+### RISQUES MVP PHASE 2 & SCALE
 
 ---
 
@@ -125,11 +125,11 @@
 
 **Stratégie : Réduire + Accepter**
 
-- 🐳 **Docker Compose** avec `restart: always` sur tous les conteneurs.
-- 📊 **UptimeRobot** (gratuit) : alerte en moins de 5 minutes en cas de panne.
-- 💾 **Snapshots quotidiens Backblaze B2** pour restauration rapide.
-- 📋 **Runbook documenté** : procédure de restauration < 30 min.
-- ⚠️ Accepter l'absence de SLA en MVP/Alpha. Communiquer les maintenances aux testeurs.
+- **Docker Compose** avec `restart: always` sur tous les conteneurs.
+- **UptimeRobot** (gratuit) : alerte en moins de 5 minutes en cas de panne.
+- **Snapshots quotidiens Backblaze B2** pour restauration rapide.
+- **Runbook documenté** : procédure de restauration < 30 min.
+- Accepter l'absence de SLA en MVP/Alpha. Communiquer les maintenances aux testeurs.
 
 **Mitigation future :** Séparer la DB sur un VPS dédié à partir de 5 000 users.
 
@@ -141,10 +141,10 @@
 
 **Stratégie : Réduire + Éviter**
 
-- 🤖 **Ghosts synthétiques** pré-générés (OpenStreetMap, segments publics) pour pré-remplir le pool.
-- 🏙️ Focus sur **1-2 villes pilotes** pour densifier le pool sur une zone réduite.
-- 🔁 **Ghost vs soi-même** disponible en fallback quand aucun ghost correspondant n'existe.
-- 📢 **Bonus ELO** pour les utilisateurs dont les runs sont sélectionnés comme ghosts.
+- **Ghosts synthétiques** pré-générés (OpenStreetMap, segments publics) pour pré-remplir le pool.
+- Focus sur **1-2 villes pilotes** pour densifier le pool sur une zone réduite.
+- **Ghost vs soi-même** disponible en fallback quand aucun ghost correspondant n'existe.
+- **Bonus ELO** pour les utilisateurs dont les runs sont sélectionnés comme ghosts.
 
 ---
 
@@ -154,9 +154,9 @@
 
 **Stratégie : Réduire**
 
-- 🧹 **Pipeline de nettoyage GPS** dans le Ghost Worker : suppression des points > 30m de précision, interpolation des lacunes < 5s, filtre de Kalman / Douglas-Peucker.
-- ✅ **Seuil qualité minimum** : run rejeté si > 10% de points invalides.
-- 🗓️ Stockage brut temporaire (`GPS_TRACKS`) → promotion dans le pool uniquement après validation.
+- **Pipeline de nettoyage GPS** dans le Ghost Worker : suppression des points > 30m de précision, interpolation des lacunes < 5s, filtre de Kalman / Douglas-Peucker.
+- **Seuil qualité minimum** : run rejeté si > 10% de points invalides.
+- Stockage brut temporaire (`GPS_TRACKS`) → promotion dans le pool uniquement après validation.
 
 ---
 
@@ -173,9 +173,9 @@
 | Accélération impossible | Variation > 10 m/s² → suspicion |
 | Score de suspicion | 0-100 · Revue manuelle si > 70 |
 
-- 🛡️ Runs promus dans le pool uniquement avec `validated: true`.
-- 🚨 Utilisateurs signalés : ELO gelé + runs en quarantaine.
-- 👁️ **Tableau de bord admin** pour révision pendant l'Alpha.
+- Runs promus dans le pool uniquement avec `validated: true`.
+- Utilisateurs signalés : ELO gelé + runs en quarantaine.
+- **Tableau de bord admin** pour révision pendant l'Alpha.
 
 ---
 
@@ -185,10 +185,10 @@
 
 **Stratégie : Réduire + Transférer**
 
-- 📦 **Cache tuiles agressif** côté client (7 jours).
-- 🗺️ Pendant le Ghost Replay : streamer uniquement la polyline compressée, pas les tuiles complètes.
-- 🔄 Migration vers **OpenStreetMap + Leaflet + OSRM self-hosted** dès 2 000 users actifs.
-- 📊 **Alertes usage Mapbox** à 80% du seuil gratuit.
+- **Cache tuiles agressif** côté client (7 jours).
+- Pendant le Ghost Replay : streamer uniquement la polyline compressée, pas les tuiles complètes.
+- Migration vers **OpenStreetMap + Leaflet + OSRM self-hosted** dès 2 000 users actifs.
+- **Alertes usage Mapbox** à 80% du seuil gratuit.
 
 ---
 
