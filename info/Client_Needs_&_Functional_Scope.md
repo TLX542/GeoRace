@@ -242,7 +242,7 @@ Ce sans quoi GeoRace ne peut pas être testé :
 **Objectif :**
 - Valider que la mécanique Ghost Race est engageante
 - Obtenir des retours utilisateurs sur la sensation de compétition
-- D��cider si on investit dans le vrai MVP backend (Phase 2)
+- Décider si on investit dans le vrai MVP backend (Phase 2)
 
 ### MVP Phase 2 (Mois 1-6)
 
