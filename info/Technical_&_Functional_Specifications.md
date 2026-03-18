@@ -48,7 +48,7 @@ Le PoC livrable en 2 semaines est volontairement minimal.
 
 ---
 
-#### 🔵 Niveau 1 - Contexte
+#### Niveau 1 - Contexte
 
 **Acteurs externes :**
 - Utilisateurs (coureurs)
@@ -63,9 +63,9 @@ Une plateforme de compétition asynchrone immersive (Ghost Races) avec module du
 
 ---
 
-#### 🟢 Niveau 2 - Containers
+#### Niveau 2 - Containers
 
-##### 1️⃣ Mobile App (iOS / Android)
+##### Mobile App (iOS / Android)
 - React Native
 - GPS tracking
 - Mode Run Recorder
@@ -74,7 +74,7 @@ Une plateforme de compétition asynchrone immersive (Ghost Races) avec module du
 
 Application stateless, communique uniquement via REST + WebSocket.
 
-##### 2️⃣ Backend + Ghost Engine (Self-hosted VPS)
+##### Backend + Ghost Engine (Self-hosted VPS)
 - REST API
 - Auth JWT
 - WebSocket (duel)
@@ -83,7 +83,7 @@ Application stateless, communique uniquement via REST + WebSocket.
 
 L'API est stateless → scalable horizontalement.
 
-##### 3️⃣ Ghost Worker Container (Scalable Unit)
+##### Ghost Worker Container (Scalable Unit)
 Container indépendant :
 - Nettoyage GPS
 - Compression polyline
@@ -94,14 +94,14 @@ Container indépendant :
 
 Consomme les jobs via Redis Queue. Peut être dupliqué si charge ↑.
 
-##### 4️⃣ Redis Container (Queue Layer)
+##### Redis Container (Queue Layer)
 - BullMQ
 - Job queue asynchrone
 - Découplage API / Worker
 
 Permet : traitement non bloquant, parallélisation, scaling horizontal futur.
 
-##### 5️⃣ PostgreSQL + PostGIS Container
+##### PostgreSQL + PostGIS Container
 - Requêtes distance
 - Indexation géospatiale
 - Recherche ghost
@@ -109,13 +109,13 @@ Permet : traitement non bloquant, parallélisation, scaling horizontal futur.
 
 Peut être séparé sur autre VPS si charge ↑.
 
-##### 6️⃣ Nginx Reverse Proxy
+##### Nginx Reverse Proxy
 - TLS
 - Rate limiting
 - Routage vers containers
 - Sécurité de base
 
-##### 7️⃣ VPS Server (Phase 1)
+##### VPS Server (Phase 1)
 
 | Caractéristique | Valeur |
 |----------------|--------|
