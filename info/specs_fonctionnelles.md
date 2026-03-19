@@ -31,7 +31,7 @@ Objectif : découper en fonctionnalités testables, règles métier et critères
   - Match = 2 coureurs (MVP) ; durée configurable (défaut 10 min).
   - Critères matchmaking : distance géographique (<2 km), ELO +/- 200.
   - Abandon : si GPS perdu > 20s -> demande d’annulation possible ; procédure de contestation vers le support.
-- Critères d��acceptation (exemples) :
+- Critères d'acceptation (exemples) :
   - GIVEN two matched users start duel, WHEN both accept, THEN duel session begins and location updates sent at <= 1s frequency (configurable).
   - GIVEN one user loses GPS for >20s and returns within 1 minute, WHEN dispute filed, THEN admin tool shows raw telemetry.
 
