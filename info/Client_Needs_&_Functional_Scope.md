@@ -102,6 +102,12 @@
 - En tant qu'utilisateur, je veux voir un avatar fantôme en temps réel afin de ressentir la compétition.
 - En tant que compétiteur, je veux que le système me propose un adversaire de mon niveau automatiquement.
 - En tant que joueur, je veux que mon ELO évolue après chaque ghost race.
+- En tant qu'utilisateur, je veux pouvoir créer mes propres parcours de course (UGC) pour les partager avec la communauté.
+- En tant qu'utilisateur, je veux pouvoir choisir différents types de courses (sprint, marathon, etc.) avec des leaderboards dédiés pour chaque type.
+- En tant qu'utilisateur, je veux voir mes statistiques détaillées à la fin de chaque course ainsi que mes statistiques globales.
+- En tant qu'utilisateur, je veux avoir une liste d'amis avec une section dédiée pour comparer nos performances sur un leaderboard amis.
+- En tant qu'utilisateur, je veux pouvoir partager mes courses et défier mes amis directement.
+- En tant que compétiteur, je veux pouvoir prendre ma revanche après qu'un adversaire ait battu mon ghost.
 
 ### Duels Temps Réel
 
@@ -144,11 +150,18 @@ Liste consolidée des fonctionnalités identifiées :
 - Ghost Mode
 - Profils utilisateurs
 - Classements locaux
+- Leaderboards par type de course
+- Liste d'amis avec leaderboard amis dédié
 - Chat
 - Badges & achievements
 - Anti-triche GPS
 - Paramètres de confidentialité
 - Mode premium
+- **Système de création de courses (UGC)**
+- **Différents types de courses** (sprint, marathon, etc.)
+- **Statistiques détaillées de fin de course et globales**
+- **Système de partage des courses**
+- **Système de revenge**
 
 ---
 
@@ -177,6 +190,12 @@ Ce sans quoi GeoRace ne peut pas être testé :
 - Profils détaillés
 - Notifications intelligentes
 - Historique des duels
+- **Système de création de courses (UGC)**
+- **Différents types de courses** (sprint, marathon, etc.) avec leaderboards dédiés
+- **Statistiques détaillées de fin de course et globales**
+- **Liste d'amis avec leaderboard amis dédié**
+- **Système de partage des courses**
+- **Système de revenge**
 
 ---
 

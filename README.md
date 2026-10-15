@@ -55,6 +55,9 @@ La course à pied solo souffre de plusieurs problèmes fondamentaux :
 - Replay de sa trajectoire sur votre carte en temps réel
 - Indicateur d'avance/retard en temps réel
 - Calcul du résultat et mise à jour ELO à l'arrivée
+- **Système de placement ELO** : option de classement basé sur la vitesse sur distance fixe ou moyenne des courses
+- **Création de courses (UGC)** : capacité à créer et partager vos propres parcours de course
+- **Différents types de courses** : sprint, marathon, etc. avec leaderboards dédiés pour chaque type
 
 ### ⚖️ Système ELO
 
@@ -77,10 +80,15 @@ La course à pied solo souffre de plusieurs problèmes fondamentaux :
 
 ### 🏅 Social & Communauté
 
-- Profils : statistiques, ELO, historique des ghost races
+- Profils : statistiques détaillées, ELO, historique des ghost races
+- Statistiques de fin de course et statistiques globales
 - Classements locaux et globaux
+- Leaderboards par type de course (sprint, marathon, etc.)
+- Liste d'amis avec section dédiée pour le leaderboard amis
 - Badges & achievements
 - Événements communautaires hebdomadaires
+- **Système de partage des courses** : capacité à partager vos parcours et défier vos amis
+- **Système de revenge** : possibilité de prendre votre revanche après qu'un adversaire ait battu votre ghost
 
 ### 🛡️ Anti-triche
 
@@ -201,8 +209,30 @@ La course à pied solo souffre de plusieurs problèmes fondamentaux :
 | ⚡ Sans adversaire simultané | ✅ | ❌ | ❌ | ❌ |
 | 📍 N'importe quel parcours | ✅ | ❌ | ❌ | ❌ |
 | 📍 Tracking GPS | ✅ | ✅ | ✅ | ✅ |
+| 🏆 Création de courses (UGC) | ✅ | ❌ | ❌ | ❌ |
+| 🏃‍♂️ Différents types de courses | ✅ (sprint, marathon, etc.) | ❌ | ❌ | ❌ |
+| 📊 Stats détaillées & globales | ✅ | ❌ basiques | ❌ basiques | ❌ basiques |
+| 👥 Leaderboards amis | ✅ | ❌ | ❌ | ❌ |
+| 🔄 Système de partage & revenge | ✅ | ❌ | ❌ | ❌ |
 
 > 🏆 **GeoRace occupe un angle mort du marché.** Les grands acteurs sont trop ancrés dans le tracking social pour pivoter.
+
+### Principaux différenciateurs compétitifs
+
+GeoRace se démarque nettement des applications de course existantes grâce à son approche unique de la compétition asynchrone :
+
+| Fonctionnalité | **GeoRace** | Strava | Nike Run Club | Runkeeper | Avantages Clés |
+|---|:---:|:---:|:---:|:---:|:---|
+| 👻 **Course Fantôme Asynchrone** | ✅ **CENTRALE** | ⚠️ Segments | ⚠️ Guidés | ⚠️ Limité | Courir contre de VRAIS adversaires à tout moment, pas juste des segments ou des défis guidés |
+| 🎯 **Correspondance ELO Dynamique** | ✅ **CENTRALE** | ⚠️ Classement | ⚠️ Niveaux | ⚠️ Variable | Adversaires toujours à votre niveau exact pour des défis justes et stimulants |
+| 🗺️ **Tout Itinéraire Libre** | ✅ **CENTRALE** | ⚠️ Limité | ⚠️ Limité | ⚠️ Variable | Compétition sur N'IMPORTE QUEL parcours choisi, pas seulement des segments prédéfinis |
+| 👻 **Visuel Fantôme Temps Réel** | ✅ **UNIQUE** | ❌ | ❌ | ❌ | Expérience immersive : voir votre adversaire en tête-à-tête pendant votre course |
+| 🛡️ **Validation Anti-triche Proactive** | ✅ **CENTRALE** | ⚠️ Basique | ⚠️ Basique | ⚠️ Variable | Intégrité compétitive préservée grâce à la validation préalable de chaque performance |
+| 🔄 **Système de Revanche Instantané** | ✅ **CENTRALE** | ❌ | ❌ | ❌ | Reprenez immédiatement un duel après une défaite pour maintenir l'engagement |
+| 🏗️ **Créateur de Parcours UGC** | ✅ **CENTRALE** | ⚠️ Partage | ⚠️ Limité | ⚠️ Variable | Créez, sauvegardez et défiez sur VOS parcours préférés |
+| 🏃‍♂️ **Types de Courses Spécialisés** | ✅ **CENTRALE** (Sprint, Marathon, etc.) | ⚠️ Génériques | ⚠️ Génériques | ⚠️ Génériques | Classements dédiés par type d'entraînement pour un suivi précis |
+| 🎯 **Focus Pure Compétitif** | ✅ **CENTRALE** | ⚠️ Social | ⚠️ Motivational | ⚠️ Suivi | Transforme la course en VRAI sport compétitif, pas juste en suivi d'activité |
+| ⏰ **Vraie Asynchronie Totale** | ✅ **CENTRALE** | ❌ | ❌ | ❌ | Compétition 24/7 sans coordination d'emploi du temps nécessaire |
 
 ---
 

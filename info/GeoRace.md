@@ -34,6 +34,9 @@ Le cœur de GeoRace est la **Ghost Race** : vous courez contre le replay enregis
 - Replay de sa trajectoire sur votre carte pendant votre propre run
 - Indicateur d'avance/retard en temps réel
 - Calcul du résultat et mise à jour ELO à l'arrivée
+- **Système de placement ELO** : option de classement basé sur la vitesse sur distance fixe ou moyenne des courses
+- **Création de courses (UGC)** : capacité à créer et partager vos propres parcours de course
+- **Différents types de courses** : sprint, marathon, etc. avec leaderboards dédiés pour chaque type
 
 > **Chaque sortie devient une compétition. Vous n'êtes plus seul.**
 
@@ -77,10 +80,15 @@ Le duel en temps réel reste disponible comme fonctionnalité complémentaire, m
 
 ### 5. Aspect social et communautaire
 
-- Profils de coureurs : statistiques, ELO, historique des ghost races
+- Profils de coureurs : statistiques détaillées, ELO, historique des ghost races
+- Statistiques de fin de course et statistiques globales
 - Classements locaux et globaux
+- Leaderboards par type de course (sprint, marathon, etc.)
+- Liste d'amis avec section dédiée pour le leaderboard amis
 - Badges et achievements (première victoire ghost, 10 ghosts battus, etc.)
 - Événements communautaires hebdomadaires
+- **Système de partage des courses** : capacité à partager vos parcours et défier vos amis
+- **Système de revenge** : possibilité de prendre votre revanche après qu'un adversaire ait battu votre ghost
 
 ---
 
@@ -148,6 +156,11 @@ Le duel en temps réel reste disponible comme fonctionnalité complémentaire, m
 | Duel live (temps réel) | ✅ secondaire | ❌ | ❌ | ❌ |
 | Défis asynchrones | ✅ | Segments | Défis | ❌ |
 | Compétition sans contrainte horaire | ✅ | ❌ | ❌ | ❌ |
+| Création de courses (UGC) | ✅ | ❌ | ❌ | ❌ |
+| Différents types de courses | ✅ (sprint, marathon, etc.) | ❌ | ❌ | ❌ |
+| Stats détaillées & globales | ✅ | ❌ basiques | ❌ basiques | ❌ basiques |
+| Leaderboards amis | ✅ | ❌ | ❌ | ❌ |
+| Système de partage & revenge | ✅ | ❌ | ❌ | ❌ |
 
 ---
 
