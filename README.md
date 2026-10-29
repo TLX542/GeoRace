@@ -175,6 +175,29 @@ La course à pied solo souffre de plusieurs problèmes fondamentaux :
 - ✅ Indicateur d'avance/retard en temps réel
 - ❌ Pas d'auth · pas d'ELO · pas de backend · pas d'anti-triche
 
+### Backend local
+
+Le premier backend est disponible dans [`src/backend`](./src/backend). Il fournit
+l'authentification et la synchronisation des runs avec PostgreSQL.
+
+```bash
+cp src/backend/.env.example .env
+npm run db:up
+# renseigner JWT_SECRET (au moins 32 caractères)
+npm run backend:start
+```
+
+La base PostgreSQL est lancée par Docker et son schéma est initialisé par
+[`src/backend/init.sql`](./src/backend/init.sql). Pour arrêter le conteneur :
+
+```bash
+npm run db:down
+```
+
+Routes disponibles : `POST /auth/register`, `POST /auth/login`, `GET /me`,
+`POST /runs`, `GET /runs`, `GET /runs/:id` et `DELETE /runs/:id`.
+Les routes protégées utilisent `Authorization: Bearer <token>`.
+
 ---
 
 ## 💰 Modèle économique
