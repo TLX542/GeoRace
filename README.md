@@ -1,5 +1,7 @@
 # 🏁 GeoRace
 
+> **Application mobile native (sans Expo)** : le nouveau frontend Android/iOS TypeScript se trouve dans [`mobile/`](mobile/README.md). Lancez ses commandes depuis ce dossier. Le prototype Expo historique reste à la racine.
+
 > **Transformez chaque course en compétition.**
 
 GeoRace est une application mobile de course à pied compétitive qui transforme chaque sortie running en véritable compétition immersive. En courant contre le **fantôme enregistré** d'un autre coureur de votre niveau - votre **Ghost Race** - vous vivez l'adrénaline d'un duel réel, seul, à votre rythme, n'importe où et n'importe quand.
