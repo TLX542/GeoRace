@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: georace-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: georace
+      POSTGRES_USER: georace
+      POSTGRES_PASSWORD: georace-dev-password
+    ports:
+      - "5432:5432"
+    volumes:
+      - georace-postgres-data:/var/lib/postgresql/data
+      - ./src/backend/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U georace -d georace"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  georace-postgres-data:
