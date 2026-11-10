@@ -1,8 +1,43 @@
 import { create } from 'zustand';
 import { distanceMeters } from '../utils/distance';
 import { ensureLocationPermissions, startLocationWatch, getLastKnownLocation } from '../services/location';
-import { clearRuns, loadRuns, saveRun } from '../services/storage';
+import { api } from '../services/api';
+import { clearRuns as clearRunsLocal, loadRuns as loadRunsLocal, saveRun as saveRunLocal } from '../services/storage';
 import { buildGhostFromDummy, buildGhostFromPrefab, buildGhostFromPrefabAsync, buildGhostFromRun, ghostTimeAtCheckpoint } from '../services/ghost';
+
+/**
+ * Fetches the user's runs from the backend. Falls back to local AsyncStorage
+ * when the backend is unreachable so the app keeps working offline.
+ */
+async function loadRunsFromServer() {
+  try {
+    const { runs } = await api.getRuns();
+    return runs;
+  } catch (error) {
+    console.warn(
+      '[GeoRace] backend indisponible, utilisation du stockage local:',
+      error.message
+    );
+    return loadRunsLocal();
+  }
+}
+
+/**
+ * Persists a run to the backend. Falls back to local AsyncStorage when the
+ * backend is unreachable.
+ */
+async function persistRun(run) {
+  try {
+    await api.postRun(run);
+    return;
+  } catch (error) {
+    console.warn(
+      '[GeoRace] backend indisponible, sauvegarde locale:',
+      error.message
+    );
+    await saveRunLocal(run);
+  }
+}
 import { PREFAB_GHOSTS } from '../data/prefab-ghosts';
 import { paceFrom } from '../utils/time';
 
@@ -168,7 +203,8 @@ export const useRunStore = create((set, get) => {
       raceResults,
     };
 
-    const runs = await saveRun(run);
+    await persistRun(run);
+    await reloadRuns();
 
     set({
       isRunning: false,
@@ -176,7 +212,6 @@ export const useRunStore = create((set, get) => {
       watchSubscription: null,
       timerId: null,
       lastRun: run,
-      runs,
       raceFinished: true,
       raceResults,
       checkpoints: finalCheckpoints,
@@ -351,7 +386,7 @@ export const useRunStore = create((set, get) => {
     lastCrossedCheckpoint: null,
 
     async init() {
-      const runs = await loadRuns();
+      const runs = await loadRunsFromServer();
       set({ runs, lastRun: runs[0] || null });
     },
 
@@ -587,7 +622,8 @@ export const useRunStore = create((set, get) => {
         points: state.points,
       };
 
-      const runs = await saveRun(run);
+      await persistRun(run);
+      await reloadRuns();
 
       set({
         isRunning: false,
@@ -595,7 +631,6 @@ export const useRunStore = create((set, get) => {
         watchSubscription: null,
         timerId: null,
         lastRun: run,
-        runs,
         pausedMs: 0,
         pauseStartedAt: null,
         skipNextDistance: false,
@@ -605,12 +640,12 @@ export const useRunStore = create((set, get) => {
     },
 
     async reloadRuns() {
-      const runs = await loadRuns();
+      const runs = await loadRunsFromServer();
       set({ runs, lastRun: runs[0] || null });
     },
 
     async clearAllRuns() {
-      await clearRuns();
+      await clearRunsLocal();
       set({ runs: [], lastRun: null });
     },
 
