@@ -5,12 +5,12 @@ import { useRunStore } from '../stores/runStore';
 import { PREFAB_GHOSTS } from '../data/prefab-ghosts';
 
 export default function SettingsScreen() {
-  const { ghostMode, setGhostMode } = useRunStore((s) => ({
-    ghostMode: s.ghostMode,
-    setGhostMode: s.setGhostMode,
-  }));
+  const ghostMode = useRunStore((s) => s.ghostMode);
+  const setGhostMode = useRunStore((s) => s.setGhostMode);
+  const setRefreshPreview = useRunStore((s) => s.setRefreshPreview);
   const clearAllRuns = useRunStore((s) => s.clearAllRuns);
-  const { user, logout } = useAuthStore((s) => ({ user: s.user, logout: s.logout }));
+  const user = useAuthStore((s) => s.user);
+  const logout = useAuthStore((s) => s.logout);
 
   const handleClear = () => {
     Alert.alert('Supprimer les runs', 'Effacer tout l\'historique local ?', [
@@ -48,7 +48,10 @@ export default function SettingsScreen() {
             <TouchableOpacity
               key={ghost.id}
               style={[styles.choiceFull, ghostMode === key && styles.choiceActive]}
-              onPress={() => setGhostMode(key)}
+              onPress={() => {
+                setGhostMode(key);
+                setRefreshPreview(true);
+              }}
             >
               <Text style={styles.choiceText}>{ghost.name}</Text>
             </TouchableOpacity>

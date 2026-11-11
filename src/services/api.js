@@ -9,11 +9,13 @@ import { Platform } from 'react-native';
  *
  * Override in production with the EXPO_PUBLIC_API_BASE_URL env var.
  */
-const API_BASE_URL = __DEV__
-  ? Platform.OS === 'android'
-    ? 'http://10.0.2.2:3000'
-    : 'http://localhost:3000'
-  : process.env.EXPO_PUBLIC_API_BASE_URL || 'http://localhost:3000';
+const API_BASE_URL =
+  process.env.EXPO_PUBLIC_API_BASE_URL ||
+  (__DEV__
+    ? Platform.OS === 'android'
+      ? 'http://10.0.2.2:3000'
+      : 'http://localhost:3000'
+    : 'http://localhost:3000');
 
 let authToken = null;
 

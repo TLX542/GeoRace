@@ -40,9 +40,8 @@ ios/
 mobile/
 
 # Android build artifacts
-android/.gradle/
-android/build/
-android/app/build/
+android/*
+
 # Android signing keys
 *.jks
 *.keystore

@@ -32,6 +32,7 @@ export default function RunScreen() {
   const lastLocation = useRunStore((s) => s.lastLocation);
   const lastUpdateMs = useRunStore((s) => s.lastUpdateMs);
   const ghostMode = useRunStore((s) => s.ghostMode);
+  const setRefreshPreview = useRunStore((s) => s.setRefreshPreview);
   const lastRun = useRunStore((s) => s.lastRun);
   const raceFinished = useRunStore((s) => s.raceFinished);
   const raceResults = useRunStore((s) => s.raceResults);
@@ -68,17 +69,43 @@ export default function RunScreen() {
 
     const loadPreview = async () => {
       if (isRunning) return;
+      // Read the refresh flag without subscribing, so toggling it doesn't
+      // re-trigger this effect. It's set by SettingsScreen when a race is
+      // swapped, and cleared here once the new preview has been built.
+      const wasRefreshing = useRunStore.getState().refreshPreview;
+      // Clear the old path immediately so the map doesn't show a stale race
+      // while the new preview is being built.
+      if (!cancelled) setPreviewGhost(null);
+      if (!cancelled) setPreviewCoord(null);
       if (ghostMode === 'last' && lastRun) {
         const preview = buildGhostFromRun(lastRun);
         if (!cancelled) setPreviewGhost(preview);
+        if (wasRefreshing) setRefreshPreview(false);
         return;
       }
 
       if (ghostMode.startsWith('prefab:')) {
         const id = ghostMode.replace('prefab:', '');
         const prefab = PREFAB_GHOSTS.find((g) => g.id === id);
-        const preview = await buildGhostFromPrefabAsync(prefab);
+        if (!prefab) {
+          if (!cancelled) setPreviewGhost(null);
+          if (wasRefreshing) setRefreshPreview(false);
+          return;
+        }
+        let preview;
+        try {
+          preview = await Promise.race([
+            buildGhostFromPrefixAsync(prefab),
+            new Promise((_, reject) =>
+              setTimeout(() => reject(new Error('preview build timeout')), 10000)
+            ),
+          ]);
+        } catch {
+          // Fall back to straight-line preview if the async (OSRM) build fails or times out
+          preview = buildGhostFromPrefab(prefab);
+        }
         if (!cancelled) setPreviewGhost(preview);
+        if (wasRefreshing) setRefreshPreview(false);
         return;
       }
 
@@ -92,6 +119,7 @@ export default function RunScreen() {
           if (!cancelled) {
             setPreviewCoord(coord);
             setPreviewGhost(preview);
+            if (wasRefreshing) setRefreshPreview(false);
           }
         } catch (e) {
           // ignore preview errors
@@ -106,6 +134,7 @@ export default function RunScreen() {
   }, [ghostMode, lastRun, isRunning]);
 
   const activeGhost = isRunning ? ghostRun : previewGhost;
+  const previewKey = `${ghostMode}-${previewGhost?.points?.length ?? 0}`;
   const ghostPosition = useMemo(
     () => (isRunning ? ghostPositionAtTime(activeGhost, elapsedMs) : null),
     [activeGhost, elapsedMs, isRunning]
@@ -164,6 +193,7 @@ export default function RunScreen() {
   return (
     <View style={styles.container}>
       <MapRun
+        key={previewKey}
         startCoord={startCoord || previewCoord}
         ghostPoints={activeGhost?.points}
         ghostPosition={ghostPosition}
