@@ -67,6 +67,7 @@ export default function MapRun({ startCoord, ghostPoints, ghostPosition, checkpo
       >
         {ghostPoints?.length ? (
           <Polyline
+            key={`ghost-path-${ghostPoints.length}-${ghostPoints[0]?.lat},${ghostPoints[0]?.lng}`}
             coordinates={ghostPoints.map((p) => ({ latitude: p.lat, longitude: p.lng }))}
             strokeColor="#4A90E2"
             strokeWidth={4}

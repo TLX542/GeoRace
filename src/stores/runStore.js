@@ -373,6 +373,7 @@ export const useRunStore = create((set, get) => {
     runs: [],
     lastRun: null,
     ghostMode: 'prefab:dummy-nancy',
+    refreshPreview: false,
     ghostRun: null,
     lastLocation: null,
     lastUpdateMs: null,
@@ -392,6 +393,10 @@ export const useRunStore = create((set, get) => {
 
     setGhostMode(mode) {
       set({ ghostMode: mode });
+    },
+
+    setRefreshPreview(refresh) {
+      set({ refreshPreview: refresh });
     },
 
     setGhostPace(paceMsPerKm) {

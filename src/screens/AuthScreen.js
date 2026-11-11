@@ -10,7 +10,7 @@ import RegisterScreen from './RegisterScreen';
  * navigator.
  */
 export default function AuthScreen() {
-  const [mode, setMode] = useState<'login' | 'register'>('login');
+  const [mode, setMode] = useState('login');
 
   return (
     <View style={styles.container}>
